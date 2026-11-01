@@ -3,7 +3,7 @@
 
 用法：python3 tools/make_release.py <版本号>
 示例：python3 tools/make_release.py 0.1.0
-产物：dist/庄颜协议_第一部_v<版本>.epub / .txt / .zip（仅标准库，无外部依赖）
+产物：dist/zhuangyan-part1-v<版本>.epub / .txt / .zip（仅标准库，无外部依赖）
 """
 import html
 import re
@@ -179,14 +179,14 @@ def main():
     ver = sys.argv[1].lstrip("v")
     DIST.mkdir(exist_ok=True)
     chs = chapters()
-    epub = DIST / f"庄颜协议_第一部_v{ver}.epub"
-    txt = DIST / f"庄颜协议_第一部_v{ver}.txt"
-    z = DIST / f"庄颜协议_第一部_v{ver}.zip"
+    epub = DIST / f"zhuangyan-part1-v{ver}.epub"
+    txt = DIST / f"zhuangyan-part1-v{ver}.txt"
+    z = DIST / f"zhuangyan-part1-v{ver}.zip"
     build_epub(ver, chs, epub)
     build_txt(chs, txt)
     with zipfile.ZipFile(z, "w", zipfile.ZIP_DEFLATED) as zf:
-        zf.write(epub, epub.name)
-        zf.write(txt, txt.name)
+        zf.write(epub, f"zhuangyan-part1-v{ver}.epub")
+        zf.write(txt, f"zhuangyan-part1-v{ver}.txt")
         zf.write(LICENSE, "LICENSE.md")
     with zipfile.ZipFile(epub) as zf:
         first = zf.infolist()[0]
