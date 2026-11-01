@@ -34,6 +34,11 @@
 - **超分**：Real-ESRGAN animevideov3（默认档）+ SeedVR2 3B（精修档）
 - **编排**：剧本 → 分镜 → 角色基准图 → 批量生成 → 锁段 → 超分 → 配音字幕 → 合成
 
+## 发布
+
+- 最新发布：[GitHub Releases](https://github.com/dalizi2333/companion.compile/releases)——EPUB（电子书 APP）+ TXT（听书 APP）+ 许可声明
+- 打包工具：`python3 tools/make_release.py <版本号>`（纯标准库，可复现）
+
 ## 状态
 
 - 正文：重排新编 60 章完成（2026-11-01 快照），持续连载
