@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+<title>庄颜 · 晚霞画笔双星（极简版 · 四直边菱形）</title>
+<defs>
+  <linearGradient id="sunset2" x2="0" y2="1">
+    <stop offset="0" stop-color="#12142A"/><stop offset=".5" stop-color="#6E4070"/>
+    <stop offset=".72" stop-color="#E8534F"/><stop offset="1" stop-color="#FFC74D"/>
+  </linearGradient>
+</defs>
+<circle cx="500" cy="500" r="450" fill="url(#sunset2)"/>
+<path d="M453 584 L547 584 C531 658 514 731 500 821 C486 731 469 658 453 584Z" fill="#100D1B"/>
+<path d="M500,145 L630,494 L500,855 L370,494 Z" fill="#1B1730" stroke="#FFC74D" stroke-width="14"/>
+<path d="M402.8,585 L597.2,585" stroke="#FFC74D" stroke-width="14" fill="none"/>
+<path d="M500 366 C479 413 443 467 443 511 C443 551 466 574 477 585 L523 585 C534 574 557 551 557 511 C557 467 521 413 500 366Z" fill="#EF4B30"/>
+<g transform="translate(190 545) scale(1.0)"><path d="M0 -82 C8 -20 17 -11 76 0 C17 10 8 20 0 82 C-8 20 -17 10 -76 0 C-17 -11 -8 -20 0 -82Z" fill="#EF7BE8"/><path d="M0 -82 C8 -20 17 -11 76 0 C17 10 8 20 0 82 C-8 20 -17 10 -76 0 C-17 -11 -8 -20 0 -82Z" transform="scale(.62)" fill="#FFFFFF"/></g>
+<g transform="translate(810 533) scale(0.96)"><path d="M0 -82 C8 -20 17 -11 76 0 C17 10 8 20 0 82 C-8 20 -17 10 -76 0 C-17 -11 -8 -20 0 -82Z" fill="#FFD66F"/><path d="M0 -82 C8 -20 17 -11 76 0 C17 10 8 20 0 82 C-8 20 -17 10 -76 0 C-17 -11 -8 -20 0 -82Z" transform="scale(.62)" fill="#FFFFFF"/></g>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 420" width="780" height="1260" role="img" aria-labelledby="bt bd">
+  <title id="bt">星米新机 · 背面（几何定稿 2026-11-01）</title>
+  <desc id="bd">贴边横向高台相机岛（162×110，边距=岛内屏边框=5px，同心角 16/11），岛内近满幅背屏显示金色星轨A标志壁纸，左缘嵌入三颗 18px 小口径镜头，岛下横置胶囊闪光灯与感光点，机身下部居中星米品牌标识。机身深石墨渐变，浅色背景。</desc>
+  <defs>
+    <linearGradient id="gb" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#3B3F46"/>
+      <stop offset="1" stop-color="#22242A"/>
+    </linearGradient>
+    <radialGradient id="gs" cx="0.32" cy="0.22" r="1.3">
+      <stop offset="0" stop-color="#1B2130"/>
+      <stop offset="0.65" stop-color="#0D1015"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="260" height="420" fill="#F8F7F4"/>
+  <rect x="44" y="32" width="172" height="356" rx="21" fill="url(#gb)" stroke="#43474E" stroke-width="1"/>
+  <rect x="49" y="37" width="162" height="110" rx="16" fill="#26292F" stroke="#4A4F57" stroke-width="1.5"/>
+  <rect x="54" y="42" width="152" height="100" rx="11" fill="url(#gs)" stroke="#33373D" stroke-width="1"/>
+  <g transform="translate(143 92) scale(0.51667) translate(-60 -60)" opacity="0.92">
+    <g transform="translate(60 60) rotate(-20)">
+      <path d="M-44,0 C-16,-20 16,-20 44,0 C16,20 -16,20 -44,0 Z" fill="none" stroke="#E8A33D" stroke-width="6" stroke-linejoin="round"/>
+    </g>
+    <path d="M77.2,28.7 Q79.7,39.2 90.2,41.7 Q79.7,44.2 77.2,54.7 Q74.7,44.2 64.2,41.7 Q74.7,39.2 77.2,28.7 Z" fill="#E8A33D"/>
+    <circle cx="42.8" cy="78.3" r="4" fill="#E8A33D"/>
+  </g>
+  <circle cx="68" cy="64" r="9" fill="#1A1C20" stroke="#4A505A" stroke-width="1.5"/>
+  <circle cx="68" cy="64" r="5.5" fill="none" stroke="#101216" stroke-width="2"/>
+  <circle cx="68" cy="64" r="2.8" fill="none" stroke="#5A82DC" stroke-width="1.5" opacity="0.22"/>
+  <circle cx="68" cy="92" r="9" fill="#1A1C20" stroke="#4A505A" stroke-width="1.5"/>
+  <circle cx="68" cy="92" r="5.5" fill="none" stroke="#101216" stroke-width="2"/>
+  <circle cx="68" cy="92" r="2.8" fill="none" stroke="#5A82DC" stroke-width="1.5" opacity="0.22"/>
+  <circle cx="68" cy="120" r="9" fill="#1A1C20" stroke="#4A505A" stroke-width="1.5"/>
+  <circle cx="68" cy="120" r="5.5" fill="none" stroke="#101216" stroke-width="2"/>
+  <circle cx="68" cy="120" r="2.8" fill="none" stroke="#5A82DC" stroke-width="1.5" opacity="0.22"/>
+  <rect x="66" y="155" width="46" height="14" rx="7" fill="#1A1C20" stroke="#454B54" stroke-width="1"/>
+  <circle cx="125.5" cy="162.5" r="3.5" fill="#3F444C"/>
+  <g transform="translate(99 343) scale(0.18333) translate(-60 -60)">
+    <g transform="translate(60 60) rotate(-20)">
+      <path d="M-44,0 C-16,-20 16,-20 44,0 C16,20 -16,20 -44,0 Z" fill="none" stroke="#9AA0A8" stroke-width="6" stroke-linejoin="round"/>
+    </g>
+    <path d="M77.2,28.7 Q79.7,39.2 90.2,41.7 Q79.7,44.2 77.2,54.7 Q74.7,44.2 64.2,41.7 Q74.7,39.2 77.2,28.7 Z" fill="#9AA0A8"/>
+    <circle cx="42.8" cy="78.3" r="4" fill="#9AA0A8"/>
+  </g>
+  <text x="118" y="347" font-family="Noto Sans CJK SC, Noto Sans CJK JP, sans-serif" font-size="10" letter-spacing="3" fill="#8E949D">XINGMI</text>
+  <text x="130" y="408" text-anchor="middle" font-family="Noto Sans CJK SC, Noto Sans CJK JP, sans-serif" font-size="12" fill="#6B7280">星米新机 · 背面（几何定稿 2026-11-01）</text>
+</svg>

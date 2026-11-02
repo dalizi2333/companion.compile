@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 420" width="780" height="1260" role="img" aria-labelledby="zt zd">
+  <title id="zt">庄颜手机背面 · 星米性价比线（2026-11-01）</title>
+  <desc id="zd">星米高性价比线，形态参考 2022 Redmi Note 11 Pro：浅梦星河观感浅蓝白背板，直边扁平中框（机身圆角 16），左上小矩形相机模组（两大一小 + 闪光灯），下部居中小尺寸星米标识。无破损。</desc>
+  <defs>
+    <linearGradient id="zg" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#E3EAF2"/>
+      <stop offset="0.55" stop-color="#D3DEE8"/>
+      <stop offset="1" stop-color="#C4D1DD"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="260" height="420" fill="#F8F7F4"/>
+  <rect x="48" y="41" width="164" height="338" rx="16" fill="url(#zg)" stroke="#A8B4C0" stroke-width="1.5"/>
+  <rect x="58" y="51" width="54" height="54" rx="14" fill="#CBD6E0" stroke="#9FB0BE" stroke-width="1"/>
+  <circle cx="76" cy="69" r="9" fill="#22262C" stroke="#8FA0AE" stroke-width="2"/>
+  <circle cx="76" cy="69" r="4.5" fill="none" stroke="#0E1114" stroke-width="2"/>
+  <circle cx="74" cy="89" r="7" fill="#22262C" stroke="#8FA0AE" stroke-width="2"/>
+  <circle cx="74" cy="89" r="3.5" fill="none" stroke="#0E1114" stroke-width="1.5"/>
+  <circle cx="96" cy="65" r="5" fill="#22262C" stroke="#8FA0AE" stroke-width="1.5"/>
+  <circle cx="97" cy="88" r="4" fill="#E8E4D4" stroke="#9FB0BE" stroke-width="1"/>
+  <g transform="translate(112.5 356.5) scale(0.10833) translate(-60 -60)">
+    <g transform="translate(60 60) rotate(-20)">
+      <path d="M-44,0 C-16,-20 16,-20 44,0 C16,20 -16,20 -44,0 Z" fill="none" stroke="#7E8A96" stroke-width="6" stroke-linejoin="round"/>
+    </g>
+    <path d="M77.2,28.7 Q79.7,39.2 90.2,41.7 Q79.7,44.2 77.2,54.7 Q74.7,44.2 64.2,41.7 Q74.7,39.2 77.2,28.7 Z" fill="#7E8A96"/>
+    <circle cx="42.8" cy="78.3" r="4" fill="#7E8A96"/>
+  </g>
+  <text x="121" y="359.5" font-family="Noto Sans CJK SC, Noto Sans CJK JP, sans-serif" font-size="8" letter-spacing="2.5" fill="#7E8A96">XINGMI</text>
+  <text x="130" y="408" text-anchor="middle" font-family="Noto Sans CJK SC, Noto Sans CJK JP, sans-serif" font-size="12" fill="#6B7280">庄颜手机背面 · 星米性价比线（2026-11-01）</text>
+</svg>

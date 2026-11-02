@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 420" width="780" height="1260" role="img" aria-labelledby="ot od">
+  <title id="ot">罗辑旧机（iPhone X 轮廓）· 正面碎屏（2026-11-01）</title>
+  <desc id="od">银色不锈钢中框、黑色正面玻璃、顶部宽扁刘海（92×13，宽≈56%机屏宽、高≈真机等比——iPhone X 的"宽"正是年代识别点）；屏幕四周一档黑色玻璃边框（6px，2.5D 圆边），屏内圆角 18 ≈ 刘海高度；屏幕点亮显示暖底电子小说阅读界面，裂纹自刘海下角向外扩散、避开正文主体。第 1、2 章道具状态。机身圆角 18 ≈ 实机 10% 机宽。</desc>
+  <rect x="0" y="0" width="260" height="420" fill="#F8F7F4"/>
+  <rect x="44" y="32" width="172" height="356" rx="20" fill="#0D0F13" stroke="#B6BABF" stroke-width="2"/>
+  <rect x="50" y="38" width="160" height="344" rx="14" fill="#F2EDE2" stroke="#22262C" stroke-width="1"/>
+  <path d="M84,38 L176,38 L176,41 Q176,51 166,51 L94,51 Q84,51 84,41 Z" fill="#0B0D10"/>
+  <rect x="122" y="43" width="16" height="3" rx="1.5" fill="#1E232B"/>
+  <circle cx="142" cy="44.5" r="2" fill="#1A2028"/>
+  <text x="56" y="47" font-family="Noto Sans CJK SC, Noto Sans CJK JP, sans-serif" font-size="7" fill="#6B665C">21:07</text>
+  <rect x="178" y="41.5" width="14" height="6" rx="2" fill="none" stroke="#6B665C" stroke-width="0.8"/>
+  <rect x="193" y="43.5" width="1.5" height="2" fill="#6B665C"/>
+  <rect x="100" y="78" width="60" height="7" rx="3" fill="#5E594E"/>
+  <g fill="#9A9484" opacity="0.85">
+    <rect x="69" y="96" width="118" height="4.5" rx="2.25"/>
+    <rect x="69" y="107" width="124" height="4.5" rx="2.25"/>
+    <rect x="69" y="118" width="110" height="4.5" rx="2.25"/>
+    <rect x="69" y="134" width="121" height="4.5" rx="2.25"/>
+    <rect x="69" y="145" width="126" height="4.5" rx="2.25"/>
+    <rect x="69" y="156" width="102" height="4.5" rx="2.25"/>
+    <rect x="69" y="172" width="119" height="4.5" rx="2.25"/>
+    <rect x="69" y="183" width="124" height="4.5" rx="2.25"/>
+    <rect x="69" y="194" width="96" height="4.5" rx="2.25"/>
+    <rect x="69" y="210" width="122" height="4.5" rx="2.25"/>
+    <rect x="69" y="221" width="114" height="4.5" rx="2.25"/>
+    <rect x="69" y="232" width="126" height="4.5" rx="2.25"/>
+    <rect x="69" y="248" width="108" height="4.5" rx="2.25"/>
+    <rect x="69" y="259" width="122" height="4.5" rx="2.25"/>
+    <rect x="69" y="270" width="117" height="4.5" rx="2.25"/>
+    <rect x="69" y="286" width="121" height="4.5" rx="2.25"/>
+    <rect x="69" y="297" width="100" height="4.5" rx="2.25"/>
+    <rect x="69" y="308" width="119" height="4.5" rx="2.25"/>
+  </g>
+  <rect x="118" y="326" width="24" height="4" rx="2" fill="#B5AE9E"/>
+  <rect x="102" y="372" width="56" height="3" rx="1.5" fill="#CFC8B8" opacity="0.8"/>
+  <g stroke="#B9B2A2" stroke-width="1.5" opacity="0.5" fill="none" transform="translate(0.7 0.7)">
+    <path d="M169,50 L178,60 L182,72 L191,84"/>
+    <path d="M171,52 L165,64 L167,78 L163,92"/>
+  </g>
+  <g stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M169,50 L178,60 L182,72 L191,84" stroke-width="1.2" opacity="0.95"/>
+    <path d="M171,52 L165,64 L167,78 L163,92" stroke-width="0.9" opacity="0.85"/>
+    <path d="M178,60 L171,68" stroke-width="0.8" opacity="0.7"/>
+    <path d="M182,72 L189,68" stroke-width="0.8" opacity="0.7"/>
+    <path d="M169,50 L176,46" stroke-width="0.7" opacity="0.6"/>
+  </g>
+  <text x="130" y="408" text-anchor="middle" font-family="Noto Sans CJK SC, Noto Sans CJK JP, sans-serif" font-size="12" fill="#6B7280">罗辑旧机 · 正面碎屏（定稿 2026-11-01）</text>
+</svg>

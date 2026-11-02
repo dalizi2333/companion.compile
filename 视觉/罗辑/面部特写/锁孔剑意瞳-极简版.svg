@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-labelledby="mt md">
+<title id="mt">罗辑 · 锁孔剑意瞳（极简版 · 按概念稿修订）</title>
+<desc id="md">小图标/徽章：三停深蓝虹膜+左上冷晕+下缘暖晕、双剑格剑身、黑瞳亮缘锁孔、单线护手弧。与《锁暝虹膜独立概念.svg》同几何（等比缩放），无纤维无滤镜。</desc>
+<defs>
+  <radialGradient id="irisBase2" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#5C6983"/><stop offset="0.5" stop-color="#2A3C55"/><stop offset="1" stop-color="#0A1420"/>
+  </radialGradient>
+  <radialGradient id="bloomUL2" cx="0.33" cy="0.3" r="0.34">
+    <stop offset="0" stop-color="#7E97B8" stop-opacity="0.22"/>
+    <stop offset="1" stop-color="#7E97B8" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="ember2" cx="0.5" cy="0.76" r="0.7">
+    <stop offset="0" stop-color="#FFFCE8" stop-opacity="0.85"/>
+    <stop offset="0.3" stop-color="#FFDFBC" stop-opacity="0.62"/>
+    <stop offset="0.58" stop-color="#D48790" stop-opacity="0.36"/>
+    <stop offset="1" stop-color="#D48790" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="blade2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFDFF5" stop-opacity="0.35"/>
+    <stop offset="0.3" stop-color="#E8F7FF"/>
+    <stop offset="0.6" stop-color="#FFFFFF"/>
+    <stop offset="1" stop-color="#FFE3BC"/>
+  </linearGradient>
+  <linearGradient id="rim2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8BD6FF"/><stop offset="0.5" stop-color="#FFF6E4"/><stop offset="1" stop-color="#FBD0B9"/>
+  </linearGradient>
+  <radialGradient id="pupil2" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#030810"/><stop offset="1" stop-color="#141F2C"/>
+  </radialGradient>
+  <radialGradient id="keyHalo2" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#F2F7FF" stop-opacity="0.42"/>
+    <stop offset="1" stop-color="#D7E3F0" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<circle cx="500" cy="500" r="450" fill="url(#irisBase2)"/>
+<circle cx="500" cy="500" r="450" fill="url(#bloomUL2)"/>
+<circle cx="500" cy="500" r="450" fill="url(#ember2)"/>
+<circle cx="500" cy="500" r="450" fill="none" stroke="#0D141D" stroke-width="26"/>
+<path d="M500.0 59.5 C496.2 136.2 493.4 189.3 484.8 224.3 L475.4 240.4 L485.8 253.7 C493.4 287.8 490.5 318.1 485.8 356.9 L514.2 356.9 C509.5 318.1 506.6 287.8 514.2 253.7 L524.6 240.4 L515.2 224.3 C506.6 189.3 503.8 136.2 500.0 59.5 Z M483.9 621.3 C485.8 686.6 477.3 727.4 465.9 754.8 L479.2 770.9 C488.6 824.0 493.4 894.1 500.0 942.4 C506.6 894.1 511.4 824.0 520.8 770.9 L534.1 754.8 C522.7 727.4 514.2 686.6 516.1 621.3 Z" fill="none" stroke="#DFF3FF" stroke-width="6" opacity="0.18"/>
+<path d="M500.0 59.5 C496.2 136.2 493.4 189.3 484.8 224.3 L475.4 240.4 L485.8 253.7 C493.4 287.8 490.5 318.1 485.8 356.9 L514.2 356.9 C509.5 318.1 506.6 287.8 514.2 253.7 L524.6 240.4 L515.2 224.3 C506.6 189.3 503.8 136.2 500.0 59.5 Z M483.9 621.3 C485.8 686.6 477.3 727.4 465.9 754.8 L479.2 770.9 C488.6 824.0 493.4 894.1 500.0 942.4 C506.6 894.1 511.4 824.0 520.8 770.9 L534.1 754.8 C522.7 727.4 514.2 686.6 516.1 621.3 Z" fill="url(#blade2)"/>
+<path d="M200.6 634.5 Q274.5 730.2 353.2 722.6 Q414.7 697.1 448.8 653.5 M551.2 653.5 Q585.3 697.1 646.8 722.6 Q725.5 730.2 799.4 634.5" fill="none" stroke="#FFEDC8" stroke-width="5" opacity="0.85" stroke-linecap="round"/>
+<ellipse cx="500" cy="466" rx="140" ry="158" fill="url(#keyHalo2)"/>
+<path d="M500.0 345.6 C451.7 345.6 414.7 378.7 414.7 424.2 C414.7 457.4 428.9 478.2 453.6 492.4 C469.7 501.9 467.8 519.9 466.8 536.9 C464.0 576.7 454.5 608.9 435.6 626.9 Q500.0 642.1 564.4 626.9 C545.5 608.9 536.0 576.7 533.2 536.9 C532.2 519.9 530.3 501.9 546.4 492.4 C571.1 478.2 585.3 457.4 585.3 424.2 C585.3 378.7 548.3 345.6 500.0 345.6 Z" fill="url(#pupil2)" stroke="url(#rim2)" stroke-width="4.5"/>
+</svg>

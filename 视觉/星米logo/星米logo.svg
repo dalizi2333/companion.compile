@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512" role="img" aria-labelledby="t d">
+  <title id="t">星米品牌标识 · 米粒轨道星</title>
+  <desc id="d">米粒轮廓的轨道环旋转负二十度，一颗四芒星位于环线右上，对侧一粒小星点平衡；主色星芒金 #E8A33D。</desc>
+  <g transform="translate(60 60) rotate(-20)">
+    <path d="M-44,0 C-16,-20 16,-20 44,0 C16,20 -16,20 -44,0 Z" fill="none" stroke="#E8A33D" stroke-width="6" stroke-linejoin="round"/>
+  </g>
+  <path d="M77.2,28.7 Q79.7,39.2 90.2,41.7 Q79.7,44.2 77.2,54.7 Q74.7,44.2 64.2,41.7 Q74.7,39.2 77.2,28.7 Z" fill="#E8A33D"/>
+  <circle cx="42.8" cy="78.3" r="4" fill="#E8A33D"/>
+</svg>

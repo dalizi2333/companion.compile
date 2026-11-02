@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1000 1000">
+    <title>庄颜 · 晚霞、画笔与双星</title>
+    <desc>
+        正视虹膜母版。画笔笔尖朝上，笔杆朝下；
+        左粉右金两颗四角星为固定纹样，白色椭圆为独立反光。
+    </desc>
+
+    <defs>
+        <!-- 晚霞：上部着墨般的深色，逐渐过渡至下部金光 -->
+        <linearGradient id="sunset" x2="0" y2="1">
+            <stop stop-color="#101328"/>
+            <stop offset=".28" stop-color="#29205D"/>
+            <stop offset=".44" stop-color="#594293"/>
+            <stop offset=".60" stop-color="#D75355"/>
+            <stop offset=".75" stop-color="#FF7138"/>
+            <stop offset=".90" stop-color="#FFC74D"/>
+            <stop offset="1" stop-color="#FFF9BC"/>
+        </linearGradient>
+
+        <radialGradient id="sunlight" cx=".5" cy=".94" r=".62">
+            <stop stop-color="#FFFFE4" stop-opacity=".96"/>
+            <stop offset=".24" stop-color="#FFE979" stop-opacity=".75"/>
+            <stop offset=".65" stop-color="#FF9B40" stop-opacity=".08"/>
+            <stop offset="1" stop-color="#FF9B40" stop-opacity="0"/>
+        </radialGradient>
+
+        <linearGradient id="ink" x2="1" y2="1">
+            <stop stop-color="#11121F"/>
+            <stop offset=".6" stop-color="#30283E"/>
+            <stop offset="1" stop-color="#11131E"/>
+        </linearGradient>
+
+        <linearGradient id="gold-edge" x2="0" y2="1">
+            <stop stop-color="#A93049"/>
+            <stop offset=".47" stop-color="#FF8D42"/>
+            <stop offset=".82" stop-color="#FFE395"/>
+            <stop offset="1" stop-color="#FFF4BA"/>
+        </linearGradient>
+
+        <linearGradient id="bristles" x2="0" y2="1">
+            <stop stop-color="#9E1838"/>
+            <stop offset=".45" stop-color="#EE3B3D"/>
+            <stop offset=".8" stop-color="#FF9E42"/>
+            <stop offset="1" stop-color="#FFF6B8"/>
+        </linearGradient>
+
+        <radialGradient id="pink-star">
+            <stop stop-color="#FFFFFF"/>
+            <stop offset=".4" stop-color="#FFF8FF"/>
+            <stop offset="1" stop-color="#EF7BE8"/>
+        </radialGradient>
+
+        <radialGradient id="gold-star">
+            <stop stop-color="#FFFFFF"/>
+            <stop offset=".4" stop-color="#FFFFEB"/>
+            <stop offset="1" stop-color="#FFD66F"/>
+        </radialGradient>
+
+        <linearGradient id="fiber-visibility" x2="0" y2="1">
+            <stop offset=".35" stop-color="#000000"/>
+            <stop offset=".6" stop-color="#888888"/>
+            <stop offset="1" stop-color="#FFFFFF"/>
+        </linearGradient>
+
+        <mask id="warm-fibers">
+            <circle cx="500" cy="500" r="448"
+                    fill="url(#fiber-visibility)"/>
+            </mask>
+
+            <clipPath id="iris-clip">
+                <circle cx="500" cy="500" r="450"/>
+            </clipPath>
+
+            <!-- 可编辑的放射状纹理单元，局部坐标原点为虹膜中心 -->
+            <g id="fiber-sector" fill="none" stroke-linecap="round">
+                <path d="M0 -223 Q-7 -331 0 -433" stroke-width="3"/>
+                <path d="M13 -280 Q21 -355 28 -422" stroke-width="2"/>
+                <path d="M30 -246 Q48 -344 57 -436" stroke-width="4"/>
+                <path d="M51 -271 Q69 -348 83 -411" stroke-width="2"/>
+                <path d="M56 -205 Q90 -333 112 -422" stroke-width="3"/>
+                <path d="M82 -254 Q111 -337 139 -410" stroke-width="2"/>
+            </g>
+
+            <g id="all-fibers">
+                <use xlink:href="#fiber-sector"/>
+                <use xlink:href="#fiber-sector" transform="rotate(20)"/>
+                <use xlink:href="#fiber-sector" transform="rotate(40)"/>
+                <use xlink:href="#fiber-sector" transform="rotate(60)"/>
+                <use xlink:href="#fiber-sector" transform="rotate(80)"/>
+                <use xlink:href="#fiber-sector" transform="rotate(100)"/>
+                <use xlink:href="#fiber-sector" transform="rotate(120)"/>
+                <use xlink:href="#fiber-sector" transform="rotate(140)"/>
+                <use xlink:href="#fiber-sector" transform="rotate(160)"/>
+                <use xlink:href="#fiber-sector" transform="rotate(180)"/>
+                <use xlink:href="#fiber-sector" transform="rotate(200)"/>
+                <use xlink:href="#fiber-sector" transform="rotate(220)"/>
+                <use xlink:href="#fiber-sector" transform="rotate(240)"/>
+                <use xlink:href="#fiber-sector" transform="rotate(260)"/>
+                <use xlink:href="#fiber-sector" transform="rotate(280)"/>
+                <use xlink:href="#fiber-sector" transform="rotate(300)"/>
+                <use xlink:href="#fiber-sector" transform="rotate(320)"/>
+                <use xlink:href="#fiber-sector" transform="rotate(340)"/>
+            </g>
+
+            <!-- 细长菱形外轮廓，顶部和底部均沿竖直轴收尖 -->
+            <path id="pupil-outline"
+                  d="M500 145
+                  C479 224 407 330 370 494
+                  C411 572 472 678 500 855
+                  C528 678 589 572 630 494
+                  C593 330 521 224 500 145Z"/>
+
+            <!-- 四角星：四条内凹边，禁止替换为四边菱形 -->
+            <path id="four-point-star"
+                  d="M0 -82
+                  C8 -20 17 -11 76 0
+                  C17 10 8 20 0 82
+                  C-8 20 -17 10 -76 0
+                  C-17 -11 -8 -20 0 -82Z"/>
+            </defs>
+
+            <g id="iris-base">
+                <circle cx="500" cy="500" r="450" fill="url(#sunset)"/>
+                <circle cx="500" cy="500" r="447" fill="url(#sunlight)"/>
+            </g>
+
+            <!-- 虹膜纹理可以整体关闭，以制作小尺寸简化版 -->
+            <g id="iris-texture" clip-path="url(#iris-clip)">
+                <use xlink:href="#all-fibers"
+                     transform="translate(500 500)"
+                     stroke="#8970BF" opacity=".12"/>
+                <g mask="url(#warm-fibers)">
+                    <use xlink:href="#all-fibers"
+                         transform="translate(500 500)"
+                         stroke="#FFF1A2" opacity=".48"/>
+                    </g>
+                </g>
+
+                <g id="brush-pupil">
+                    <title>画笔瞳孔：外轮廓、朝上笔尖、束口、朝下笔杆</title>
+
+                    <use xlink:href="#pupil-outline"
+                         fill="url(#ink)" stroke="#6C2536" stroke-width="16"/>
+                    <use xlink:href="#pupil-outline"
+                         fill="none" stroke="url(#gold-edge)" stroke-width="8"/>
+
+                    <path id="pupil-inner-edge"
+                          d="M500 178
+                          C471 269 422 348 385 494
+                          C427 572 476 691 500 821
+                          C524 691 573 572 615 494
+                          C578 348 529 269 500 178Z"
+                          fill="none" stroke="#0D101C" stroke-width="9"/>
+
+                    <!-- 笔毫：尖端朝上，底部接束口 -->
+                    <path id="brush-tip"
+                          d="M500 366
+                          C479 413 443 467 443 511
+                          C443 551 466 574 477 585
+                          L523 585
+                          C534 574 557 551 557 511
+                          C557 467 521 413 500 366Z"
+                          fill="url(#bristles)" stroke="#16101D" stroke-width="9"/>
+
+                    <g id="bristle-lines" fill="none" stroke="#FFD27B"
+                       stroke-width="2" opacity=".32">
+                        <path d="M500 407 Q471 508 484 577"/>
+                        <path d="M500 439 Q492 523 495 580"/>
+                        <path d="M507 430 Q530 515 513 577"/>
+                    </g>
+
+                    <!-- 笔杆：与笔毫分开，防止整个符号读成一团火焰 -->
+                    <path id="brush-handle"
+                          d="M453 584 L547 584
+                          C531 658 514 731 500 821
+                          C486 731 469 658 453 584Z"
+                          fill="url(#ink)" stroke="#17131E" stroke-width="7"/>
+
+                    <path id="brush-ferrule"
+                          d="M454 585 Q500 579 546 585"
+                          fill="none" stroke="#66505A" stroke-width="6"/>
+                    </g>
+
+                    <g id="paired-stars">
+                        <title>固定虹膜纹样：成对的两颗四角星</title>
+
+                        <g id="star-left" transform="translate(190 545)">
+                            <use xlink:href="#four-point-star"
+                                 fill="url(#pink-star)" stroke="#B450AD" stroke-width="3"/>
+                            <use xlink:href="#four-point-star"
+                                 transform="scale(.72)" fill="#FFFAFF"/>
+                            </g>
+
+                            <g id="star-right" transform="translate(810 533) scale(.96)">
+                                <use xlink:href="#four-point-star"
+                                     fill="url(#gold-star)" stroke="#C98C3D" stroke-width="3"/>
+                                <use xlink:href="#four-point-star"
+                                     transform="scale(.72)" fill="#FFFFEB"/>
+                                </g>
+                            </g>
+
+                            <g id="limbal-ring" fill="none">
+                                <circle cx="500" cy="500" r="450"
+                                        stroke="#281C30" stroke-width="14"/>
+                                <circle cx="500" cy="500" r="439"
+                                        stroke="#9B5864" stroke-opacity=".35" stroke-width="4"/>
+                                </g>
+
+                                <!-- 反光独立于虹膜纹样，可随场景移动或关闭 -->
+                                <g id="surface-reflections" fill="#FFFAFD"
+                                   stroke="#DBBED5" stroke-width="4">
+                                    <ellipse cx="251" cy="339" rx="28" ry="42"
+                                             transform="rotate(37 251 339)"/>
+                                    <ellipse cx="732" cy="327" rx="24" ry="36"
+                                             transform="rotate(-33 732 327)"/>
+                                    </g>
+                                </svg>
