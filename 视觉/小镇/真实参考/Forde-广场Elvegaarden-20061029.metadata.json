@@ -1,0 +1,85 @@
+{
+  "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Fordetorg_elvegaarden.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Fordetorg_elvegaarden.jpg",
+  "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2985489",
+  "extmetadata": {
+    "DateTime": {
+      "value": "2007-10-28 13:36:04",
+      "source": "mediawiki-metadata",
+      "hidden": ""
+    },
+    "ObjectName": {
+      "value": "Fordetorg elvegaarden",
+      "source": "mediawiki-metadata"
+    },
+    "CommonsMetadataExtension": {
+      "value": 1.2,
+      "source": "extension",
+      "hidden": ""
+    },
+    "Categories": {
+      "value": "Shopping malls in Norway|Self-published work|Norway photographs taken on 2006-08-30|2006 in Førde|Taken with Nokia N80|Buildings in Førde, Sunnfjord|Retail buildings in Sunnfjord|Streets in Førde, Sunnfjord",
+      "source": "commons-categories",
+      "hidden": ""
+    },
+    "Assessments": {
+      "value": "",
+      "source": "commons-categories",
+      "hidden": ""
+    },
+    "ImageDescription": {
+      "value": "<a href=\"https://no.wikipedia.org/wiki/F%C3%B8rde_Torg\" class=\"extiw\" title=\"no:Førde Torg\">Førde Torg</a> og <a href=\"https://no.wikipedia.org/wiki/Elveg%C3%A5rden\" class=\"extiw\" title=\"no:Elvegården\">Elvegården</a> sett fra <a href=\"https://no.wikipedia.org/wiki/Handelshuset\" class=\"extiw\" title=\"no:Handelshuset\">Handelshuset Nord</a>.",
+      "source": "commons-desc-page"
+    },
+    "DateTimeOriginal": {
+      "value": "29 October 2006 (original upload date)",
+      "source": "commons-desc-page"
+    },
+    "Credit": {
+      "value": "<bdi lang=\"en\" dir=\"ltr\">Transferred from <span class=\"plainlinks\"><a class=\"external text\" data-mw-original-href=\"//no.wikipedia.org\" href=\"https://no.wikipedia.org\">no.wikipedia</a></span> to Commons.</bdi>",
+      "source": "commons-desc-page"
+    },
+    "Artist": {
+      "value": "Michael Shanks - <a href=\"https://no.wikipedia.org/wiki/User:SnowyM\" class=\"extiw\" title=\"no:User:SnowyM\">SnowyM</a> at <a class=\"external text\" data-mw-original-href=\"http://no.wikipedia.org\" href=\"https://no.wikipedia.org\">no.wikipedia</a>",
+      "source": "commons-desc-page"
+    },
+    "LicenseShortName": {
+      "value": "CC BY-SA 2.5",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "UsageTerms": {
+      "value": "Creative Commons Attribution-Share Alike 2.5",
+      "source": "commons-desc-page"
+    },
+    "AttributionRequired": {
+      "value": "true",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "Attribution": {
+      "value": "<a href=\"https://en.wikipedia.org/wiki/no:User:SnowyM\" class=\"extiw\" title=\"w:no:User:SnowyM\">SnowyM</a> at <a href=\"https://en.wikipedia.org/wiki/no:\" class=\"extiw\" title=\"w:no:\">Norwegian Wikipedia</a>",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "LicenseUrl": {
+      "value": "https://creativecommons.org/licenses/by-sa/2.5",
+      "source": "commons-desc-page"
+    },
+    "Copyrighted": {
+      "value": "True",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "Restrictions": {
+      "value": "",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "License": {
+      "value": "cc-by-sa-2.5",
+      "source": "commons-templates",
+      "hidden": ""
+    }
+  }
+}

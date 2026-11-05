@@ -1,0 +1,76 @@
+{
+  "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/947._S%C3%B8ndfjord%2C_Skydsst._Nedre_Vasenden_-_no-nb_digifoto_20160104_00029_bldsa_AL0947.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:947._S%C3%B8ndfjord,_Skydsst._Nedre_Vasenden_-_no-nb_digifoto_20160104_00029_bldsa_AL0947.jpg",
+  "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=46162609",
+  "extmetadata": {
+    "DateTime": {
+      "value": "2016-01-06 13:58:51",
+      "source": "mediawiki-metadata",
+      "hidden": ""
+    },
+    "ObjectName": {
+      "value": "947. Søndfjord, Skydsst. Nedre Vasenden - no-nb digifoto 20160104 00029 bldsa AL0947",
+      "source": "mediawiki-metadata"
+    },
+    "CommonsMetadataExtension": {
+      "value": 1.2,
+      "source": "extension",
+      "hidden": ""
+    },
+    "Categories": {
+      "value": "PD Norway|Images from Nasjonalbiblioteket|Log houses in Norway|Historical images of Sunnfjord|Coaching inns in Vestland|Vestland in the 1880s|Files uploaded by Nasjonalbiblioteket-bot|People of Sunnfjord|Gamle Vassenden bru|The Axel Lindahl Collection (Nasjonalbiblioteket)",
+      "source": "commons-categories",
+      "hidden": ""
+    },
+    "Assessments": {
+      "value": "",
+      "source": "commons-categories",
+      "hidden": ""
+    },
+    "ImageDescription": {
+      "value": "Bildet er hentet fra Nasjonalbibliotekets bildesamling\nVassenden, Jølster, Sogn og Fjordane",
+      "source": "commons-desc-page"
+    },
+    "DateTimeOriginal": {
+      "value": "between 1880 and 1890<div style=\"display: none;\">date QS:P,+1850-00-00T00:00:00Z/7,P1319,+1880-00-00T00:00:00Z/9,P1326,+1890-00-00T00:00:00Z/9</div>",
+      "source": "commons-desc-page"
+    },
+    "Credit": {
+      "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:National_Library_of_Norway\" class=\"extiw\" title=\"w:en:National Library of Norway\"><span title=\"Norwegian national library\">National Library of Norway</span></a>\n</bdi>",
+      "source": "commons-desc-page"
+    },
+    "Artist": {
+      "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Axel_Lindahl_(photographer)\" class=\"extiw\" title=\"w:en:Axel Lindahl (photographer)\"><span title=\"Swedish photographer (1841-1906)\">Axel Lindahl</span></a></bdi>",
+      "source": "commons-desc-page"
+    },
+    "LicenseShortName": {
+      "value": "Public domain",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "UsageTerms": {
+      "value": "Public domain",
+      "source": "commons-desc-page"
+    },
+    "AttributionRequired": {
+      "value": "false",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "Copyrighted": {
+      "value": "False",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "Restrictions": {
+      "value": "",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "License": {
+      "value": "pd",
+      "source": "commons-templates",
+      "hidden": ""
+    }
+  }
+}
