@@ -1,0 +1,62 @@
+{
+  "source": "影院纵剖面图_定位数据.json",
+  "basis": "整块6.20×4.55m物理幕面，非已确定有效播放画面；中轴观看，眼位按现图",
+  "angle_sign": "正为仰视，负为俯视",
+  "screen": {
+    "z": 0.6465,
+    "y": [
+      -2.775,
+      1.775
+    ]
+  },
+  "seats": [
+    {
+      "pos": "后排沙发",
+      "eye_z": 8.425,
+      "eye_y": 1.15,
+      "C": 0.338,
+      "beam_clear": 0.795,
+      "distance_to_screen_m": 7.778500000000001,
+      "bottom_angle_deg": -26.77532886121412,
+      "center_angle_deg": -11.976239243473994,
+      "top_angle_deg": 4.593828587486526,
+      "horizontal_fov_centerline_deg": 43.4579674921791
+    },
+    {
+      "pos": "阶梯一排T1",
+      "eye_z": 6.875,
+      "eye_y": 0.03,
+      "C": 0.442,
+      "beam_clear": 0.95,
+      "distance_to_screen_m": 6.2285,
+      "bottom_angle_deg": -24.24438161164156,
+      "center_angle_deg": -4.863737175647423,
+      "top_angle_deg": 15.650946892613016,
+      "horizontal_fov_centerline_deg": 52.92017397601689
+    },
+    {
+      "pos": "阶梯二排T2",
+      "eye_z": 5.725,
+      "eye_y": -0.93,
+      "C": 0.222,
+      "beam_clear": 1.195,
+      "distance_to_screen_m": 5.0785,
+      "bottom_angle_deg": -19.965893373070497,
+      "center_angle_deg": 4.839728559092437,
+      "top_angle_deg": 28.04144263379014,
+      "horizontal_fov_centerline_deg": 62.80115665033204
+    },
+    {
+      "pos": "阶梯三排T3",
+      "eye_z": 4.575,
+      "eye_y": -1.57,
+      "C": null,
+      "beam_clear": 1.119,
+      "distance_to_screen_m": 3.9285,
+      "bottom_angle_deg": -17.052496953292348,
+      "center_angle_deg": 15.235988638554838,
+      "top_angle_deg": 40.41339883860821,
+      "horizontal_fov_centerline_deg": 76.55431326908729
+    }
+  ]
+}

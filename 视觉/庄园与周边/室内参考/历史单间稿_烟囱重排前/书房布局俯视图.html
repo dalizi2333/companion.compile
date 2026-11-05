@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>挪威庄园 · 书房 L1-04 俯视图（2026-11-05 定稿拓扑重画）</title>
+<style>
+  /* 独立版主题变量兜底（对话内联版由宿主提供） */
+  :root {
+    color-scheme: light dark;
+    --background: light-dark(#f7f7f8, #17181a);
+    --foreground: light-dark(#1c1e22, #e8eaed);
+    --muted: light-dark(#e9eaec, #2a2d31);
+    --muted-foreground: light-dark(#5c626b, #a2a8b0);
+    --border: light-dark(#d4d6da, #3a3e44);
+    --viz-series-1: light-dark(#3b6fd4, #6c9bf0);
+    --viz-series-2: light-dark(#2e8b57, #57b47c);
+    --viz-series-3: light-dark(#c2452d, #e0705a);
+    --viz-series-4: light-dark(#7a4bb5, #a982d8);
+    --viz-series-5: light-dark(#c98a12, #e2b34e);
+  }
+  body {
+    margin: 16px; background: var(--background); color: var(--foreground);
+    font-family: system-ui, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+    font-size: 14px; font-weight: 400;
+  }
+  h2 { font-size: 16px; font-weight: 500; margin: 0 0 8px; }
+  h3 { font-size: 14px; font-weight: 500; margin: 0 0 4px; }
+  .text-small { font-size: 12px; }
+  .text-muted { color: var(--muted-foreground); }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>
+</head>
+<body>
+<div id="study-floorplan">
+  <style>
+    #study-floorplan { display: flex; flex-direction: column; gap: 14px; }
+    #study-floorplan .sp-main { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+    #study-floorplan .sp-plan-wrap { flex: 1.2 1 420px; min-width: 0; max-width: 600px; }
+    /* 画布内容 7.4m × 9.4m（东翼局部坐标 +1.1m 边距），等比盒 */
+    #study-floorplan .sp-plan { position: relative; width: 100%; aspect-ratio: 7.4 / 9.4; overflow: hidden; }
+    #study-floorplan .sp-legend { flex: 1 1 340px; min-width: 280px; display: flex; flex-direction: column; gap: 10px; }
+    #study-floorplan .sp-legend h3 { margin: 0; }
+    #study-floorplan .sp-row { display: flex; gap: 8px; align-items: flex-start; margin: 3px 0; }
+    #study-floorplan .sp-sw { width: 12px; height: 12px; border-radius: 3px; flex: none; margin-top: 3px; }
+    #study-floorplan .sp-abs { position: absolute; box-sizing: border-box; }
+
+    #study-floorplan .sp-room { border: 3px solid var(--foreground); background: transparent; z-index: 0; }
+    #study-floorplan .sp-s1 { background: color-mix(in srgb, var(--viz-series-1) 15%, transparent); border: 1.5px solid color-mix(in srgb, var(--viz-series-1) 55%, transparent); }
+    #study-floorplan .sp-furn { background: var(--muted); border: 1px solid var(--border); z-index: 3; }
+    #study-floorplan .sp-carpet { z-index: 1; border-radius: 2px; }
+
+    #study-floorplan .sp-cone {
+      transform-origin: 50% 100%; clip-path: polygon(50% 100%, 0 0, 100% 0);
+      background: color-mix(in srgb, var(--viz-series-5) 9%, transparent); z-index: 1;
+    }
+    #study-floorplan .sp-m {
+      width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      transform: translate(-50%, -50%); z-index: 5; font-weight: 500;
+      background: color-mix(in srgb, var(--viz-series-5) 18%, transparent); border: 1.5px solid color-mix(in srgb, var(--viz-series-5) 65%, transparent);
+    }
+
+    #study-floorplan .sp-label {
+      z-index: 4; color: var(--foreground); white-space: nowrap; transform: translate(-50%, -50%);
+    }
+    #study-floorplan .sp-label-v { writing-mode: vertical-rl; }
+    #study-floorplan .sp-margin { color: var(--muted-foreground); white-space: nowrap; }
+
+    #study-floorplan .sp-knock { background: var(--background); z-index: 6; }
+    #study-floorplan .sp-win {
+      background: var(--background); border-top: 2px solid var(--foreground); border-bottom: 2px solid var(--foreground);
+      border-left: 2px solid var(--foreground); border-right: 2px solid var(--foreground); z-index: 6;
+    }
+    #study-floorplan .sp-mullion { background: var(--foreground); width: 1.5px; z-index: 7; }
+
+    #study-floorplan .sp-darc-ne { border: 1px solid var(--muted-foreground); border-left: none; border-bottom: none; border-radius: 0 100% 0 0; z-index: 4; }
+    #study-floorplan .sp-darc-nw { border: 1px solid var(--muted-foreground); border-right: none; border-bottom: none; border-radius: 100% 0 0 0; z-index: 4; }
+    #study-floorplan .sp-leaf { background: var(--muted-foreground); z-index: 4; }
+
+    #study-floorplan .sp-dashed {
+      background: transparent; border: 1.5px dashed var(--muted-foreground); z-index: 3;
+    }
+    #study-floorplan .sp-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--foreground); z-index: 4; }
+  </style>
+
+  <h2 class="sp-head">挪威庄园 · 书房 L1-04 俯视图（2026-11-05 定稿拓扑重画）</h2>
+  <p class="sr-only">书房俯视图（定稿编号L1-04，东翼局部矩形5.2×7.2m）：西墙高书架北段通长，西门（南段）经更衣连接间入罗辑卧室，构成卧室—更衣—书房套间动线；南门接东翼走廊；东墙与会客室共墙无门；北墙临湖窗与电动窗帘。窗边小圆桌两椅、书桌终端、折叠梯常置位、厚地毯与01-02章梯子事故走位入图；36-SL窗边沙发组为虚线后续锚点。</p>
+
+  <div class="sp-main">
+    <div class="sp-plan-wrap">
+      <div class="sp-plan" role="img" aria-label="书房布局俯视图，详见旁边图例">
+
+        <!-- 房间与墙（东翼局部矩形 5.2×7.2m） -->
+        <div class="sp-abs sp-room" style="left:14.865%; top:11.630%; width:70.270%; height:76.596%;"></div>
+
+        <!-- 北墙临湖窗＋电动窗帘 -->
+        <div class="sp-abs sp-win" style="left:28.378%; top:11.630%; width:43.243%; height:9px; transform:translateY(-50%);"></div>
+        <div class="sp-abs sp-mullion" style="left:42.568%; top:11.630%; height:9px; transform:translateY(-50%);"></div>
+        <div class="sp-abs sp-mullion" style="left:57.432%; top:11.630%; height:9px; transform:translateY(-50%);"></div>
+        <div class="sp-abs sp-furn" style="left:23.649%; top:11.630%; width:4.73%; height:3.19%;"></div>
+        <div class="sp-abs sp-furn" style="left:76.351%; top:11.630%; width:4.73%; height:3.19%;"></div>
+
+        <!-- 西墙高书架（北段通长 y0–5.15，门位南移后南段不作书架） -->
+        <div class="sp-abs sp-furn" style="left:14.865%; top:11.630%; width:6.081%; height:54.787%;"></div>
+
+        <!-- 厚地毯（中段通行区，西缘翘角贴梯脚） -->
+        <div class="sp-abs sp-s1 sp-carpet" style="left:28.378%; top:35.106%; width:35.135%; height:31.915%;"></div>
+        <div class="sp-abs sp-dot" style="left:29.054%; top:36.170%; transform:translate(-50%,-50%);"></div>
+
+        <!-- 窗边小圆桌＋两椅（16-L 坐一下午；31-L 茶几） -->
+        <div class="sp-abs sp-furn" style="left:32.432%; top:21.277%; width:13.514%; height:10.638%; border-radius:50%;"></div>
+        <div class="sp-abs sp-furn" style="left:25%; top:23.936%; width:6.757%; height:5.319%;"></div>
+        <div class="sp-abs sp-furn" style="left:46.622%; top:23.936%; width:6.757%; height:5.319%;"></div>
+
+        <!-- 36-SL 窗边沙发组（虚线后续锚点，圆桌作端几） -->
+        <div class="sp-abs sp-dashed" style="left:24.324%; top:17.553%; width:13.514%; height:19.149%;"></div>
+
+        <!-- 折叠梯常置位（书架北端，折叠存放） -->
+        <div class="sp-abs sp-furn" style="left:20.946%; top:17.553%; width:6.081%; height:6.383%;"></div>
+
+        <!-- 书桌＋终端＋桌边立画（12-L 速写） -->
+        <div class="sp-abs sp-furn" style="left:20.946%; top:48.936%; width:9.459%; height:12.766%;"></div>
+        <div class="sp-abs sp-furn" style="left:21.622%; top:50.0%; width:1.081%; height:6.383%;"></div>
+        <div class="sp-abs sp-dot" style="left:26.351%; top:57.447%; transform:translate(-50%,-50%);"></div>
+        <div class="sp-abs sp-furn" style="left:30.405%; top:52.66%; width:6.081%; height:5.319%;"></div>
+
+        <!-- 西门（→更衣连接间→卧室，定稿 D2；铰链南，开向更衣连接间） -->
+        <div class="sp-abs sp-knock" style="left:14.865%; top:67.553%; width:9px; height:11.702%; transform:translateX(-50%);"></div>
+        <div class="sp-abs sp-leaf" style="left:14.865%; top:67.553%; width:2px; height:11.702%;"></div>
+        <div class="sp-abs sp-darc-nw" style="left:0%; top:67.553%; width:14.865%; height:11.702%;"></div>
+
+        <!-- 南门（→东翼走廊，定稿 D1；铰链东，开向书房） -->
+        <div class="sp-abs sp-knock" style="left:42.568%; top:88.298%; width:14.865%; height:9px;"></div>
+        <div class="sp-abs sp-leaf" style="left:57.432%; top:76.596%; width:2px; height:11.702%;"></div>
+        <div class="sp-abs sp-darc-nw" style="left:42.568%; top:76.596%; width:14.865%; height:11.702%;"></div>
+
+        <!-- 取景锥与机位 -->
+        <div class="sp-abs sp-cone" style="left:50%; top:80.851%; width:18%; height:22%; transform:translate(-50%,-100%) rotate(0deg);"></div>
+        <div class="sp-abs sp-cone" style="left:62.162%; top:79.787%; width:18%; height:22%; transform:translate(-50%,-100%) rotate(-12deg);"></div>
+        <div class="sp-abs sp-m text-small" style="left:50%; top:80.851%;">①</div>
+        <div class="sp-abs sp-m text-small" style="left:62.162%; top:79.787%;">②</div>
+
+        <!-- 图内文字标注 -->
+        <div class="sp-abs sp-label text-small sp-label-v" style="left:25.676%; top:37.234%;">高书架墙 · 顶层≈2.4m</div>
+        <div class="sp-abs sp-label text-small" style="left:52.027%; top:17.021%;">小圆桌＋两椅</div>
+        <div class="sp-abs sp-label text-small" style="left:38.514%; top:15.426%;">折叠梯常置位</div>
+        <div class="sp-abs sp-label text-small" style="left:36.5%; top:38.851%;">沙发组·36-SL 虚线</div>
+        <div class="sp-abs sp-label text-small" style="left:45.946%; top:51.064%;">厚地毯</div>
+        <div class="sp-abs sp-label text-small" style="left:33.108%; top:34.574%;">翘角</div>
+        <div class="sp-abs sp-label text-small" style="left:25.676%; top:64.9%;">书桌·终端</div>
+        <div class="sp-abs sp-label text-small" style="left:28.5%; top:73.4%;">西门→更衣连接间→卧室</div>
+
+        <!-- 边注与尺寸 -->
+        <div class="sp-abs sp-margin text-small" style="left:50%; top:6.383%; transform:translateX(-50%);">↑ 临湖窗 · 电动窗帘（16-L／42-L）</div>
+        <div class="sp-abs sp-margin text-small" style="right:1%; top:40%;">东墙外＝会客室 L1-05（16-L 隔壁，无直通门）</div>
+        <div class="sp-abs sp-margin text-small sp-label-v" style="left:4.5%; top:38%; transform:translate(-50%,-50%);">西墙外＝更衣连接间→罗辑卧室</div>
+        <div class="sp-abs sp-margin text-small" style="left:50%; top:92.5%; transform:translateX(-50%);">南门外＝东翼走廊 L1-06</div>
+        <div class="sp-abs sp-margin text-small" style="left:27%; top:97.5%; transform:translate(-50%,-50%);">（15° 斜墙按东翼网格展直）</div>
+        <div class="sp-abs sp-margin text-small sp-label-v" style="left:9.5%; top:57%; transform:translate(-50%,-50%);">≈7.2m</div>
+        <div class="sp-abs sp-margin text-small" style="left:50%; top:97.5%; transform:translateX(-50%);">≈5.2m</div>
+      </div>
+    </div>
+
+    <div class="sp-legend">
+      <div>
+        <h3>建筑级落位（2026-11-05 定稿）</h3>
+        <div class="sp-row"><span class="sp-sw sp-room" style="border:1.5px solid var(--foreground); background:transparent;"></span><span>书房＝东翼二层（＝主楼一层，双轨叫法）；东翼局部矩形 5.2×7.2m（37.44㎡），墙线与门洞为定稿值。</span></div>
+        <div class="sp-row"><span class="sp-sw sp-furn"></span><span>西门（西墙南段）→ 更衣连接间 L1-03 → 罗辑卧室：卧室—更衣—书房套间动线，38-L「哪扇门进去可以少走一段路」兑现；西墙全局带约 15° 转角，本图按东翼局部网格展直。</span></div>
+        <div class="sp-row"><span class="sp-sw sp-furn"></span><span>南门 → 东翼走廊 L1-06（16-L 工程师测试窗帘处）；东墙＝会客室 L1-05 共墙，无直通门（16-L「隔壁」定稿保持相邻不加门）。</span></div>
+      </div>
+      <div>
+        <h3>家具与事故走位（工作值）</h3>
+        <div class="sp-row"><span class="sp-sw sp-furn"></span><span>西墙高书架北段通长（顶层≈2.4m：罗辑伸手差一截、庄颜踩第二阶取画册）；门位南移后西墙南段 0.85m 不作书架。</span></div>
+        <div class="sp-row"><span class="sp-sw sp-furn"></span><span>折叠梯常置位＝书架北端折叠存放（坎特「书房的梯子挪动过」原位；39-L 工作人员借梯挂纸星）。</span></div>
+        <div class="sp-row"><span class="sp-sw sp-s1"></span><span>厚地毯中段：01-02 事故走位＝梯前脚压地毯西缘、翘角贴梯脚，罗辑站梯侧前方后退踩翘边失衡倒向地毯，庄颜自第二阶下地接住；「附近并没有沙发」为 01-02 时点（36-SL 后沙发才入画）。</span></div>
+        <div class="sp-row"><span class="sp-sw sp-furn"></span><span>窗边小圆桌＋两椅：16-L「坐一下午、翻画册」；31-L「书房的茶几」两杯茶即此桌；12-L 速写立桌边、05-L 画位注记。</span></div>
+      </div>
+      <div>
+        <h3>后续锚点（虚线，05 起宜家＋智能批次）</h3>
+        <div class="sp-row"><span class="sp-sw sp-dashed" style="border:1.5px dashed var(--muted-foreground); background:transparent;"></span><span>36-SL 窗边沙发组（可躺、毯、靠垫；小圆桌作端几）；书桌终端（31-L 受控入口本人登录、38-L 关终端起身）；电动窗帘沿用原帘位。</span></div>
+      </div>
+      <div>
+        <h3>机位</h3>
+        <div class="sp-row"><span class="sp-sw" style="background:color-mix(in srgb, var(--viz-series-5) 18%, transparent); border:1.5px solid color-mix(in srgb, var(--viz-series-5) 65%, transparent);"></span><span>① 全景（南门侧朝窗）② 近景（门侧右下朝窗）——与[第01至02章场景概念图](第01至02章场景概念图.md)「右下近景朝窗」取景一致。</span></div>
+      </div>
+      <p class="text-small text-muted">口径：墙线、门洞、邻接＝定稿值（[轮廓与Agent交接](主楼草台班子_定稿/草台班子_房间轮廓与Agent交接.md)）；家具、门扇方向、机位＝工作值。01–02 章固定＝家具置换前（传统旧家具、旧藏书含拉丁文旧版、旧地毯；无宜家、无全屋智能、无纸星）；05 起罗辑装智能家居时顺手置换宜家，旧物与新品混用均可，场景内保持稳定即可。窗外仅 Jølster—Førde 湖谷气质，不定视线与朝向。03-D 书房门口为 GalGame 场景，不作布局依据。对应正文：01-L／02-L／05-L／12-L／16-L／31-L／36-SL／38-L／39-L。</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

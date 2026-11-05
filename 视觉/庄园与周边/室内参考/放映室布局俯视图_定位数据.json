@@ -1,0 +1,236 @@
+{
+  "version": "2026-11-06-cinema-tiers-r2",
+  "coordinate": "西翼刚性局部，原点=X-01轮廓西北角，X东/Z南，m；生成器v非物理米数",
+  "origin_world_xz": [
+    -30.8643,
+    -8.2077
+  ],
+  "angle_y_rad": -0.17453292519943295,
+  "levels": {
+    "deck": 0,
+    "low": -3.2,
+    "tiers": {
+      "T1": -1.12,
+      "T2": -2.08
+    }
+  },
+  "screen": {
+    "center_xz": [
+      4.5,
+      0.6465
+    ],
+    "width_m": 6.2,
+    "height_m": 4.55,
+    "top_y": 1.775,
+    "bottom_y": -2.775
+  },
+  "deck_front_z": 7.2876,
+  "room_depth": 9.8481,
+  "tiers": [
+    {
+      "id": "T1",
+      "z0": 6.1,
+      "z1": 7.25,
+      "floor": -1.12,
+      "risers": 7,
+      "slab_x": [
+        0.3,
+        5.4
+      ],
+      "seats": {
+        "n": 7,
+        "x0": 0.85,
+        "pitch": 0.62,
+        "width": 0.54,
+        "depth": 0.55
+      },
+      "seat_center_z": 6.875
+    },
+    {
+      "id": "T2",
+      "z0": 4.95,
+      "z1": 6.1,
+      "floor": -2.08,
+      "risers": 12,
+      "slab_x": [
+        0.3,
+        5.4
+      ],
+      "seats": {
+        "n": 7,
+        "x0": 0.85,
+        "pitch": 0.62,
+        "width": 0.54,
+        "depth": 0.55
+      },
+      "seat_center_z": 5.725
+    }
+  ],
+  "sofa": {
+    "x0": 2.5,
+    "x1": 5.3,
+    "z0": 7.95,
+    "z1": 8.9
+  },
+  "stair": {
+    "x0": 5.55,
+    "x1": 6.65,
+    "ztop": 7.2876,
+    "zbot": 1.8807,
+    "n": 20,
+    "rise": 0.16,
+    "going": 0.2703
+  },
+  "doors": {
+    "C_D1": {
+      "plan": [
+        9.0,
+        7.8572
+      ],
+      "world": [
+        -23.3655,
+        1.093
+      ],
+      "width": 1.1
+    },
+    "C_D2": {
+      "plan": [
+        6.8,
+        8.335
+      ],
+      "world": [
+        -25.615,
+        1.1815
+      ],
+      "width": 1.1
+    },
+    "C_D3": {
+      "plan": [
+        9.0,
+        1.293
+      ],
+      "world": [
+        -22.2256,
+        -5.3715
+      ],
+      "width": 1.1
+    },
+    "C_D4": {
+      "plan": [
+        7.9,
+        9.8481
+      ],
+      "world": [
+        -24.7945,
+        2.8626
+      ],
+      "width": 1.1
+    }
+  },
+  "hvac_placeholders": {
+    "supply": [
+      {
+        "x": 1.2,
+        "z": 9.6,
+        "band_y": "≈2.4"
+      },
+      {
+        "x": 5.8,
+        "z": 9.6,
+        "band_y": "≈2.4"
+      }
+    ],
+    "return_grille": {
+      "x": 3.3,
+      "z": 9.6
+    },
+    "chilled_route": "南墙高位路由占位",
+    "condensate": "南墙检修立管占位",
+    "fresh_air": "独立新风支路占位"
+  },
+  "masking": {
+    "convention": "有效画面以幕面几何中心y-0.5居中；字幕带=画面底部0.10m",
+    "img_16_9": {
+      "w": 6.2,
+      "h": 3.49,
+      "y0": -2.245,
+      "y1": 1.245,
+      "sub": 0.1
+    },
+    "img_2_39": {
+      "w": 6.2,
+      "h": 2.59,
+      "y0": -1.795,
+      "y1": 0.795
+    },
+    "img_1_37": {
+      "w": 6.2,
+      "h": 4.53,
+      "y0": -2.755,
+      "y1": 1.775
+    },
+    "img_4_3": {
+      "w": 6.07,
+      "h": 4.55,
+      "y0": -2.775,
+      "y1": 1.775
+    },
+    "center_angle_limit_deg": 15.0,
+    "note": "复核修订：撤销原第三排；沙发为主参考座；参照log/餐厅采暖与影院幕高复核/影院观看角复算.json"
+  },
+  "sightline_checks": [
+    {
+      "pos": "后排沙发",
+      "eye_z": 8.425,
+      "eye_y": 1.15,
+      "C": 0.338,
+      "beam_clear": 0.795,
+      "dist": 7.78,
+      "ang_bottom_phys": -26.8,
+      "ang_center": -12.0,
+      "ang_top_phys": 4.6,
+      "ang_bottom_169": -23.6,
+      "ang_top_169": 0.7,
+      "hfov": 43.5
+    },
+    {
+      "pos": "阶梯一排T1",
+      "eye_z": 6.875,
+      "eye_y": 0.03,
+      "C": 0.442,
+      "beam_clear": 0.95,
+      "dist": 6.23,
+      "ang_bottom_phys": -24.2,
+      "ang_center": -4.9,
+      "ang_top_phys": 15.7,
+      "ang_bottom_169": -20.1,
+      "ang_top_169": 11.0,
+      "hfov": 52.9
+    },
+    {
+      "pos": "阶梯二排T2",
+      "eye_z": 5.725,
+      "eye_y": -0.93,
+      "C": null,
+      "beam_clear": 1.195,
+      "dist": 5.08,
+      "ang_bottom_phys": -20.0,
+      "ang_center": 4.8,
+      "ang_top_phys": 28.0,
+      "ang_bottom_169": -14.5,
+      "ang_top_169": 23.2,
+      "hfov": 62.8
+    }
+  ],
+  "beam": {
+    "lens_y": 2.95,
+    "window": [
+      2.6,
+      3.15
+    ],
+    "wall_top": 3.45,
+    "bottom_ray_at_door_path": 2.009,
+    "bottom_ray_at_front_walk": 1.551
+  },
+  "status": "阶梯座席与机房方案（剖面已校核）；设备/声学/结构/消防待深化，阶梯支承与地形另核"
+}

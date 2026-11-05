@@ -1,0 +1,287 @@
+{
+  "assumptions": {
+    "heading": 0,
+    "eastWingNorthAxis": "E=-sin(15deg),N=cos(15deg)",
+    "eastLowerFloorClearanceM": 0.2,
+    "buildingMinShoreSetbackM": 10,
+    "scope": "current repository slopes; later railway embankment is not modeled"
+  },
+  "candidates": [
+    {
+      "e": 62.771,
+      "n": 666.095,
+      "y": 5.6,
+      "heading": 0,
+      "shore": [
+        68.7596,
+        694.7542
+      ],
+      "shoreTangentDeg": -165,
+      "perpendicularErrorDeg": 0,
+      "diningSetbackM": 20,
+      "minBuildingSetbackM": 12.16,
+      "eastLowerFloorY": 2.4,
+      "eastTerrainRange": [
+        1.2,
+        2.17
+      ],
+      "southEntryTerrainY": 1.99,
+      "southEntryFillM": 3.61,
+      "northDiningTerrainY": 1.2,
+      "score": 1.88
+    },
+    {
+      "e": 64.0651,
+      "n": 661.2653,
+      "y": 5.9,
+      "heading": 0,
+      "shore": [
+        68.7596,
+        694.7542
+      ],
+      "shoreTangentDeg": -165,
+      "perpendicularErrorDeg": 0,
+      "diningSetbackM": 25,
+      "minBuildingSetbackM": 17.16,
+      "eastLowerFloorY": 2.7,
+      "eastTerrainRange": [
+        1.4,
+        2.47
+      ],
+      "southEntryTerrainY": 2.29,
+      "southEntryFillM": 3.61,
+      "northDiningTerrainY": 1.41,
+      "score": 3.38
+    },
+    {
+      "e": 65.3592,
+      "n": 656.4357,
+      "y": 6.2,
+      "heading": 0,
+      "shore": [
+        68.7596,
+        694.7542
+      ],
+      "shoreTangentDeg": -165,
+      "perpendicularErrorDeg": 0,
+      "diningSetbackM": 30,
+      "minBuildingSetbackM": 22.16,
+      "eastLowerFloorY": 3,
+      "eastTerrainRange": [
+        1.7,
+        2.76
+      ],
+      "southEntryTerrainY": 2.59,
+      "southEntryFillM": 3.61,
+      "northDiningTerrainY": 1.71,
+      "score": 4.88
+    },
+    {
+      "e": 55.1238,
+      "n": 664.1395,
+      "y": 5.6,
+      "heading": 0,
+      "shore": [
+        61.1123,
+        692.7988
+      ],
+      "shoreTangentDeg": -166.32,
+      "perpendicularErrorDeg": 1.32,
+      "diningSetbackM": 19.99,
+      "minBuildingSetbackM": 12.42,
+      "eastLowerFloorY": 2.4,
+      "eastTerrainRange": [
+        1.2,
+        2.14
+      ],
+      "southEntryTerrainY": 1.99,
+      "southEntryFillM": 3.61,
+      "northDiningTerrainY": 1.2,
+      "score": 7.129
+    },
+    {
+      "e": 70.3659,
+      "n": 668.225,
+      "y": 5.6,
+      "heading": 0,
+      "shore": [
+        76.3544,
+        696.8843
+      ],
+      "shoreTangentDeg": -163.67,
+      "perpendicularErrorDeg": 1.33,
+      "diningSetbackM": 19.99,
+      "minBuildingSetbackM": 11.66,
+      "eastLowerFloorY": 2.4,
+      "eastTerrainRange": [
+        1.2,
+        2.19
+      ],
+      "southEntryTerrainY": 1.99,
+      "southEntryFillM": 3.61,
+      "northDiningTerrainY": 1.2,
+      "score": 7.177
+    },
+    {
+      "e": 24.5894,
+      "n": 657.8345,
+      "y": 5.5,
+      "heading": 0,
+      "shore": [
+        30.578,
+        686.4938
+      ],
+      "shoreTangentDeg": -166.39,
+      "perpendicularErrorDeg": 1.39,
+      "diningSetbackM": 19.99,
+      "minBuildingSetbackM": 14.43,
+      "eastLowerFloorY": 2.3,
+      "eastTerrainRange": [
+        1.2,
+        2.08
+      ],
+      "southEntryTerrainY": 2,
+      "southEntryFillM": 3.5,
+      "northDiningTerrainY": 1.2,
+      "score": 7.423
+    },
+    {
+      "e": 56.4179,
+      "n": 659.3099,
+      "y": 5.9,
+      "heading": 0,
+      "shore": [
+        61.1123,
+        692.7988
+      ],
+      "shoreTangentDeg": -166.32,
+      "perpendicularErrorDeg": 1.32,
+      "diningSetbackM": 24.99,
+      "minBuildingSetbackM": 17.41,
+      "eastLowerFloorY": 2.7,
+      "eastTerrainRange": [
+        1.38,
+        2.44
+      ],
+      "southEntryTerrainY": 2.29,
+      "southEntryFillM": 3.61,
+      "northDiningTerrainY": 1.39,
+      "score": 8.629
+    },
+    {
+      "e": 71.66,
+      "n": 663.3954,
+      "y": 5.9,
+      "heading": 0,
+      "shore": [
+        76.3544,
+        696.8843
+      ],
+      "shoreTangentDeg": -163.67,
+      "perpendicularErrorDeg": 1.33,
+      "diningSetbackM": 24.99,
+      "minBuildingSetbackM": 16.64,
+      "eastLowerFloorY": 2.7,
+      "eastTerrainRange": [
+        1.41,
+        2.49
+      ],
+      "southEntryTerrainY": 2.29,
+      "southEntryFillM": 3.61,
+      "northDiningTerrainY": 1.42,
+      "score": 8.677
+    },
+    {
+      "e": 25.8835,
+      "n": 653.0048,
+      "y": 5.8,
+      "heading": 0,
+      "shore": [
+        30.578,
+        686.4938
+      ],
+      "shoreTangentDeg": -166.39,
+      "perpendicularErrorDeg": 1.39,
+      "diningSetbackM": 24.99,
+      "minBuildingSetbackM": 19.33,
+      "eastLowerFloorY": 2.6,
+      "eastTerrainRange": [
+        1.3,
+        2.38
+      ],
+      "southEntryTerrainY": 2.29,
+      "southEntryFillM": 3.51,
+      "northDiningTerrainY": 1.32,
+      "score": 8.923
+    },
+    {
+      "e": 57.712,
+      "n": 654.4803,
+      "y": 6.2,
+      "heading": 0,
+      "shore": [
+        61.1123,
+        692.7988
+      ],
+      "shoreTangentDeg": -166.32,
+      "perpendicularErrorDeg": 1.32,
+      "diningSetbackM": 29.99,
+      "minBuildingSetbackM": 22.41,
+      "eastLowerFloorY": 3,
+      "eastTerrainRange": [
+        1.68,
+        2.74
+      ],
+      "southEntryTerrainY": 2.59,
+      "southEntryFillM": 3.61,
+      "northDiningTerrainY": 1.69,
+      "score": 10.129
+    },
+    {
+      "e": 72.9541,
+      "n": 658.5658,
+      "y": 6.2,
+      "heading": 0,
+      "shore": [
+        76.3544,
+        696.8843
+      ],
+      "shoreTangentDeg": -163.67,
+      "perpendicularErrorDeg": 1.33,
+      "diningSetbackM": 29.99,
+      "minBuildingSetbackM": 21.62,
+      "eastLowerFloorY": 3,
+      "eastTerrainRange": [
+        1.71,
+        2.79
+      ],
+      "southEntryTerrainY": 2.59,
+      "southEntryFillM": 3.61,
+      "northDiningTerrainY": 1.72,
+      "score": 10.177
+    },
+    {
+      "e": 27.1776,
+      "n": 648.1752,
+      "y": 6.1,
+      "heading": 0,
+      "shore": [
+        30.578,
+        686.4938
+      ],
+      "shoreTangentDeg": -166.39,
+      "perpendicularErrorDeg": 1.39,
+      "diningSetbackM": 29.99,
+      "minBuildingSetbackM": 24.24,
+      "eastLowerFloorY": 2.9,
+      "eastTerrainRange": [
+        1.6,
+        2.68
+      ],
+      "southEntryTerrainY": 2.59,
+      "southEntryFillM": 3.51,
+      "northDiningTerrainY": 1.62,
+      "score": 10.423
+    }
+  ]
+}

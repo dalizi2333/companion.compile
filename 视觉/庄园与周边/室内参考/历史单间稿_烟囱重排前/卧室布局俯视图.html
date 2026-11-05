@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>挪威庄园 · 罗辑卧室 L1-02＋小过厅 L1-08 入口方案试排俯视图（2026-11-05）</title>
+<style>
+  /* 独立版主题变量兜底（对话内联版由宿主提供） */
+  :root {
+    color-scheme: light dark;
+    --background: light-dark(#f7f7f8, #17181a);
+    --foreground: light-dark(#1c1e22, #e8eaed);
+    --muted: light-dark(#e9eaec, #2a2d31);
+    --muted-foreground: light-dark(#5c626b, #a2a8b0);
+    --border: light-dark(#d4d6da, #3a3e44);
+    --viz-series-1: light-dark(#3b6fd4, #6c9bf0);
+    --viz-series-2: light-dark(#2e8b57, #57b47c);
+    --viz-series-3: light-dark(#c2452d, #e0705a);
+    --viz-series-4: light-dark(#7a4bb5, #a982d8);
+    --viz-series-5: light-dark(#c98a12, #e2b34e);
+  }
+  body {
+    margin: 16px; background: var(--background); color: var(--foreground);
+    font-family: system-ui, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+    font-size: 14px; font-weight: 400;
+  }
+  h2 { font-size: 16px; font-weight: 500; margin: 0 0 8px; }
+  h3 { font-size: 14px; font-weight: 500; margin: 0 0 4px; }
+  .text-small { font-size: 12px; }
+  .text-muted { color: var(--muted-foreground); }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>
+</head>
+<body>
+<div id="bedroom-floorplan">
+  <style>
+    #bedroom-floorplan { display: flex; flex-direction: column; gap: 14px; }
+    #bedroom-floorplan .bp-main { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+    #bedroom-floorplan .bp-plan-wrap { flex: 1.2 1 420px; min-width: 0; max-width: 600px; }
+    /* 画布内容 8.0m × 9.6m（主楼全局坐标 X1.9–9.9 / Z−4.55–5.05），等比盒 */
+    #bedroom-floorplan .bp-plan { position: relative; width: 100%; aspect-ratio: 8.0 / 9.6; overflow: hidden; }
+    #bedroom-floorplan .bp-legend { flex: 1 1 360px; min-width: 300px; display: flex; flex-direction: column; gap: 10px; }
+    #bedroom-floorplan .bp-legend h3 { margin: 0; }
+    #bedroom-floorplan .bp-row { display: flex; gap: 8px; align-items: flex-start; margin: 3px 0; }
+    #bedroom-floorplan .bp-sw { width: 12px; height: 12px; border-radius: 3px; flex: none; margin-top: 3px; }
+    #bedroom-floorplan .bp-abs { position: absolute; box-sizing: border-box; }
+
+    /* 墙体＝真实比例 0.21m 厚色条；房间＝地面色块（clip-path 多边形） */
+    #bedroom-floorplan .bp-wall { background: var(--foreground); z-index: 6; }
+    #bedroom-floorplan .bp-floor { background: transparent; z-index: 0; }
+    #bedroom-floorplan .bp-s1 { background: color-mix(in srgb, var(--viz-series-1) 13%, transparent); }
+    #bedroom-floorplan .bp-s4 { background: color-mix(in srgb, var(--viz-series-4) 14%, transparent); }
+    #bedroom-floorplan .bp-corridor { background: color-mix(in srgb, var(--muted) 80%, transparent); border-top: 1px dashed var(--border); }
+    #bedroom-floorplan .bp-furn { background: var(--muted); border: 1px solid var(--border); z-index: 3; }
+    #bedroom-floorplan .bp-furn-d { background: transparent; border: 1.5px dashed var(--muted-foreground); z-index: 3; }
+    #bedroom-floorplan .bp-zone { border: 1.5px dashed var(--viz-series-5); z-index: 2; }
+
+    #bedroom-floorplan .bp-label {
+      z-index: 8; color: var(--foreground); white-space: nowrap; transform: translate(-50%, -50%);
+    }
+    #bedroom-floorplan .bp-label-v { writing-mode: vertical-rl; }
+    #bedroom-floorplan .bp-margin { color: var(--muted-foreground); white-space: nowrap; z-index: 8; }
+
+    #bedroom-floorplan .bp-knock { background: var(--background); z-index: 7; }
+    #bedroom-floorplan .bp-win {
+      background: var(--background); border-top: 2px solid var(--foreground); border-bottom: 2px solid var(--foreground);
+      border-left: 2px solid var(--foreground); border-right: 2px solid var(--foreground); z-index: 7;
+    }
+    #bedroom-floorplan .bp-mullion { background: var(--foreground); width: 1.5px; z-index: 8; }
+
+    #bedroom-floorplan .bp-darc-ne { border: 1px solid var(--muted-foreground); border-left: none; border-bottom: none; border-radius: 0 100% 0 0; z-index: 4; }
+    #bedroom-floorplan .bp-darc-nw { border: 1px solid var(--muted-foreground); border-right: none; border-bottom: none; border-radius: 100% 0 0 0; z-index: 4; }
+    #bedroom-floorplan .bp-leaf { background: var(--muted-foreground); z-index: 5; }
+
+    #bedroom-floorplan .bp-cable { background: transparent; border-top: 1.5px dashed var(--viz-series-3); z-index: 4; }
+    #bedroom-floorplan .bp-cable-v { background: transparent; border-left: 1.5px dashed var(--viz-series-3); z-index: 4; }
+    #bedroom-floorplan .bp-sight { background: transparent; border-top: 1.5px dashed var(--viz-series-5); z-index: 4; }
+    #bedroom-floorplan .bp-route { background: transparent; border-top: 1.5px dashed var(--viz-series-2); z-index: 4; }
+    #bedroom-floorplan .bp-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--foreground); z-index: 6; }
+    #bedroom-floorplan .bp-dot-s5 { width: 5px; height: 5px; border-radius: 50%; background: var(--viz-series-5); z-index: 6; }
+    #bedroom-floorplan .bp-dot-s3 { width: 5px; height: 5px; border-radius: 50%; background: var(--viz-series-3); z-index: 6; }
+    #bedroom-floorplan .bp-ring { width: 7px; height: 7px; border-radius: 50%; border: 1px solid var(--foreground); background: transparent; z-index: 6; }
+    #bedroom-floorplan .bp-strip { width: 9px; height: 4px; border-radius: 1px; background: var(--viz-series-3); z-index: 5; }
+    #bedroom-floorplan .bp-phone { width: 4px; height: 7px; border-radius: 1px; background: var(--foreground); z-index: 5; }
+    #bedroom-floorplan .bp-eye { width: 9px; height: 9px; border-radius: 50%; background: var(--viz-series-5); border: 1.5px solid var(--background); z-index: 6; }
+  </style>
+
+  <h2 class="bp-head">挪威庄园 · 罗辑卧室 L1-02＋小过厅 L1-08 入口方案试排俯视图（2026-11-05）</h2>
+  <p class="sr-only">罗辑卧室入口方案试排图：共用隔墙南移0.60米（Z1.30→1.90），东侧保留1.5×0.95米入口凹位，卧室门0.9米设于凹位西墙（侧墙），铰链南端、开向卧室内、开启后贴隔墙；浅布草柜0.40×1.0米固定柜背为视线遮挡体、45度斜切角收口。视线校核两站位：走廊开口视线止于过厅西东墙，卧室门面西不可见；敲门等候位视线掠床尾南侧，枕位与主要床面全部遮挡。床1.8×2.0头靠西墙，52-SL插线板绕床尾走线改道东墙插座、避开全部门扇扫掠。墙体按真实比例0.21米厚绘制，门弧为完整开门扫掠范围。</p>
+
+  <div class="bp-main">
+    <div class="bp-plan-wrap">
+      <div class="bp-plan" role="img" aria-label="罗辑卧室入口方案俯视图，详见旁边图例">
+
+        <!-- ===== 地面色块 ===== -->
+        <!-- 罗辑卧室 L1-02（新墙线：矩形＋东南凹位缺口，≈17.62㎡） -->
+        <div class="bp-abs bp-floor" style="left:15%; top:8.854%; width:42.5%; height:58.333%; clip-path:polygon(0 0, 100% 0, 100% 83.04%, 55.88% 83.04%, 55.88% 100%, 0 100%);"></div>
+        <!-- 卧室小过厅 L1-08（新墙线：矩形＋东北入口凹位，≈7.55㎡） -->
+        <div class="bp-abs bp-floor bp-s1" style="left:15%; top:57.292%; width:42.5%; height:28.646%; clip-path:polygon(0 34.55%, 55.88% 34.55%, 55.88% 0, 100% 0, 100% 100%, 0 100%);"></div>
+        <!-- 更衣连接间 L1-03（定稿轮廓不变） -->
+        <div class="bp-abs bp-s4" style="left:57.5%; top:8.854%; width:35.794%; height:75%; clip-path:polygon(0 0, 34.92% 0, 100% 96.59%, 0 100%);"></div>
+        <!-- 私人走廊 L1-09（位置不变，仅露北段） -->
+        <div class="bp-abs bp-corridor" style="left:0; top:85.938%; width:57.5%; height:11.458%;"></div>
+
+        <!-- ===== 墙体（真实比例 0.21m 厚） ===== -->
+        <!-- 北墙（含北窗洞） -->
+        <div class="bp-abs bp-wall" style="left:13.688%; top:7.760%; width:57.625%; height:2.188%;"></div>
+        <!-- 西墙（壁炉墙，不开门） -->
+        <div class="bp-abs bp-wall" style="left:13.688%; top:7.760%; width:2.625%; height:79.271%;"></div>
+        <!-- 东墙（含东门 D1 洞） -->
+        <div class="bp-abs bp-wall" style="left:56.188%; top:7.760%; width:2.625%; height:79.271%;"></div>
+        <!-- 小过厅南墙（含走廊门洞） -->
+        <div class="bp-abs bp-wall" style="left:13.688%; top:84.844%; width:45.125%; height:2.188%;"></div>
+        <!-- 共用隔墙（新位 Z1.90，南移 0.60m） -->
+        <div class="bp-abs bp-wall" style="left:13.75%; top:66.094%; width:23.688%; height:2.188%;"></div>
+        <!-- 入口凹位西墙（新，含卧室门洞 Z1.00–1.90） -->
+        <div class="bp-abs bp-wall" style="left:37.438%; top:56.198%; width:2.625%; height:12.083%;"></div>
+        <!-- 入口凹位北墙（新，东端抵东门 D1 南门垛） -->
+        <div class="bp-abs bp-wall" style="left:37.438%; top:56.198%; width:21.375%; height:2.188%;"></div>
+        <!-- 更衣连接间北墙段 -->
+        <div class="bp-abs bp-wall" style="left:56.188%; top:7.760%; width:15.125%; height:2.188%;"></div>
+        <!-- 东斜墙（更衣—书房共墙，书房门缺口） -->
+        <div class="bp-abs bp-wall" style="left:70%; top:7.760%; width:65.625%; height:2.188%; transform-origin:0 50%; transform:rotate(75deg);"></div>
+        <div class="bp-abs bp-wall" style="left:90.544%; top:71.652%; width:10.625%; height:2.188%; transform-origin:0 50%; transform:rotate(75deg);"></div>
+        <!-- 更衣连接间南缘（接转接过厅） -->
+        <div class="bp-abs bp-wall" style="left:57.5%; top:82.760%; width:35.925%; height:2.188%; transform-origin:0 50%; transform:rotate(-4.9deg);"></div>
+
+        <!-- ===== 门洞缺口（底色切洞） ===== -->
+        <!-- 卧室门洞（新 D2，凹位西墙，0.9m） -->
+        <div class="bp-abs bp-knock" style="left:37.438%; top:57.813%; width:2.625%; height:9.375%;"></div>
+        <!-- 东门 D1 洞（1.1m，不变） -->
+        <div class="bp-abs bp-knock" style="left:56.188%; top:45.833%; width:2.625%; height:11.458%;"></div>
+        <!-- 走廊门洞（L1-08 D2，1.1m，不变） -->
+        <div class="bp-abs bp-knock" style="left:29.375%; top:84.844%; width:13.75%; height:2.188%;"></div>
+        <!-- 北窗（临湖，1.8m）＋电动窗帘 -->
+        <div class="bp-abs bp-win" style="left:25%; top:7.760%; width:22.5%; height:2.188%;"></div>
+        <div class="bp-abs bp-mullion" style="left:36.25%; top:7.760%; height:2.188%;"></div>
+        <div class="bp-abs bp-furn" style="left:20.625%; top:8.854%; width:4.375%; height:3.125%;"></div>
+        <div class="bp-abs bp-furn" style="left:47.5%; top:8.854%; width:4.375%; height:3.125%;"></div>
+
+        <!-- ===== 门扇与完整扫掠 ===== -->
+        <!-- 卧室门（0.9m，铰链南＝隔墙角，开向卧室内、开启后贴隔墙） -->
+        <div class="bp-abs bp-leaf" style="left:27.5%; top:67.188%; width:11.25%; height:2px; transform:translateY(-50%);"></div>
+        <div class="bp-abs bp-darc-nw" style="left:27.5%; top:57.813%; width:11.25%; height:9.375%;"></div>
+        <!-- 卧室东门 D1（1.1m，开向更衣连接间，扫掠在 L1-03 内） -->
+        <div class="bp-abs bp-leaf" style="left:57.5%; top:57.292%; width:13.75%; height:2px; transform:translateY(-50%);"></div>
+        <div class="bp-abs bp-darc-ne" style="left:57.5%; top:45.833%; width:13.75%; height:11.458%;"></div>
+        <!-- 走廊门（1.1m，铰链东，开向过厅内） -->
+        <div class="bp-abs bp-leaf" style="left:43.125%; top:74.479%; width:2px; height:11.458%; transform:translateX(-50%);"></div>
+        <div class="bp-abs bp-darc-nw" style="left:29.375%; top:74.479%; width:13.75%; height:11.458%;"></div>
+        <!-- 更衣—书房门（东斜墙缺口，扫掠在更衣连接间内） -->
+        <div class="bp-abs bp-leaf" style="left:86.985%; top:61.678%; width:13.75%; height:2px; transform-origin:0 50%; transform:rotate(75deg);"></div>
+        <div class="bp-abs bp-darc-nw" style="left:76.79%; top:61.29%; width:13.75%; height:11.458%;"></div>
+
+        <!-- ===== 家具（真实比例） ===== -->
+        <!-- 壁炉（西墙北段，与主客厅共烟道，不开门） -->
+        <div class="bp-abs bp-furn" style="left:15%; top:10.938%; width:5.25%; height:10.417%;"></div>
+        <!-- 床 1.8×2.0 头靠西墙＋枕头 -->
+        <div class="bp-abs bp-furn" style="left:16.375%; top:27.604%; width:25%; height:18.75%;"></div>
+        <div class="bp-abs bp-furn" style="left:16.375%; top:29.167%; width:6.25%; height:5.208%;"></div>
+        <div class="bp-abs bp-furn" style="left:16.375%; top:35.417%; width:6.25%; height:5.208%;"></div>
+        <!-- 床头柜：她侧（北，插线板）／他侧（南，手机＋表） -->
+        <div class="bp-abs bp-furn" style="left:16.375%; top:22.396%; width:6.25%; height:5.208%;"></div>
+        <div class="bp-abs bp-furn" style="left:16.375%; top:46.354%; width:6.25%; height:5.208%;"></div>
+        <div class="bp-abs bp-strip" style="left:19.375%; top:25%; transform:translate(-50%,-50%);"></div>
+        <div class="bp-abs bp-phone" style="left:18.125%; top:48.958%; transform:translate(-50%,-50%);"></div>
+        <div class="bp-abs bp-dot" style="left:20.625%; top:50%; transform:translate(-50%,-50%);"></div>
+        <!-- 浅布草柜（0.40×1.0m，柜背朝卧室门斜视线＝固定遮挡体，45°斜切角收口） -->
+        <div class="bp-abs bp-furn" style="left:40.063%; top:61.458%; width:5%; height:10.417%; clip-path:polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 100%);"></div>
+        <!-- 小凳／镜（工作值，按余量配置） -->
+        <div class="bp-abs bp-furn-d" style="left:21.25%; top:77%; width:5%; height:4.167%;"></div>
+        <div class="bp-abs bp-furn-d" style="left:16.313%; top:71%; width:0.7%; height:4.5%;"></div>
+        <!-- 夜灯（过厅） -->
+        <div class="bp-abs bp-dot" style="left:36%; top:79.5%; transform:translate(-50%,-50%); background:var(--viz-series-5);"></div>
+        <!-- 更衣连接间柜体：北墙浅柜＋东斜墙通长柜（尖角收口） -->
+        <div class="bp-abs bp-furn" style="left:57.5%; top:8.854%; width:12.5%; height:5.729%;"></div>
+        <div class="bp-abs bp-furn" style="left:70%; top:8.854%; width:63.75%; height:6.25%; transform-origin:0 0; transform:rotate(75deg);"></div>
+
+        <!-- ===== 52-SL 走线（改道：东墙插座→床尾东侧北上→她侧床头柜；避开全部门扇扫掠） ===== -->
+        <div class="bp-abs bp-dot-s3" style="left:56.25%; top:52.604%; transform:translate(-50%,-50%);"></div>
+        <div class="bp-abs bp-cable" style="left:44.375%; top:52.604%; width:11.875%;"></div>
+        <div class="bp-abs bp-cable-v" style="left:44.375%; top:25%; height:27.604%;"></div>
+        <div class="bp-abs bp-cable" style="left:20%; top:25%; width:24.375%;"></div>
+        <div class="bp-abs bp-dot-s3" style="left:44.375%; top:46.354%; transform:translate(-50%,-50%);"></div>
+
+        <!-- ===== 视线校核 ===== -->
+        <!-- 遮挡成立范围（过厅＋凹位；走廊同为全区遮挡） -->
+        <div class="bp-abs bp-zone" style="left:15%; top:57.292%; width:42.5%; height:28.646%;"></div>
+        <!-- 站A：走廊开口（4.8,4.45），两射线经门洞边止于过厅西/东墙 -->
+        <div class="bp-abs bp-eye" style="left:36.25%; top:93.75%; transform:translate(-50%,-50%);"></div>
+        <div class="bp-abs bp-sight" style="left:36.25%; top:93.75%; width:33.71%; transform-origin:0 50%; transform:rotate(-126.31deg);"></div>
+        <div class="bp-abs bp-sight" style="left:36.25%; top:93.75%; width:33.71%; transform-origin:0 50%; transform:rotate(-53.69deg);"></div>
+        <div class="bp-abs bp-dot-s5" style="left:16.313%; top:71.094%; transform:translate(-50%,-50%);"></div>
+        <div class="bp-abs bp-dot-s5" style="left:56.188%; top:71.094%; transform:translate(-50%,-50%);"></div>
+        <!-- 站B：敲门/等候位（凹位内门前），北线掠床尾南侧止于西墙，南线被隔墙角截断 -->
+        <div class="bp-abs bp-sight" style="left:49.375%; top:62.5%; width:37.41%; transform-origin:0 50%; transform:rotate(-152.07deg);"></div>
+        <div class="bp-abs bp-sight" style="left:49.375%; top:62.5%; width:14.09%; transform-origin:0 50%; transform:rotate(154.8deg);"></div>
+        <div class="bp-abs bp-dot-s5" style="left:16.313%; top:47.917%; transform:translate(-50%,-50%);"></div>
+        <div class="bp-abs bp-dot-s5" style="left:36.625%; top:67.5%; transform:translate(-50%,-50%);"></div>
+
+        <!-- ===== 折入动线（走廊→过厅→柜东转弯→凹位→卧室门→床尾） ===== -->
+        <div class="bp-abs bp-route" style="left:36.25%; top:91.146%; width:23.63%; transform-origin:0 50%; transform:rotate(-52.53deg);"></div>
+        <div class="bp-abs bp-route" style="left:50.625%; top:75.521%; width:15.63%; transform-origin:0 50%; transform:rotate(-90deg);"></div>
+        <div class="bp-abs bp-route" style="left:50.625%; top:62.5%; width:15%; transform-origin:0 50%; transform:rotate(180deg);"></div>
+        <div class="bp-abs bp-route" style="left:35.625%; top:62.5%; width:15.38%; transform-origin:0 50%; transform:rotate(-63.43deg);"></div>
+
+        <!-- ===== 27-L 敲门/等候位（＝视线站B） ===== -->
+        <div class="bp-abs bp-ring" style="left:49.375%; top:62.5%; transform:translate(-50%,-50%);"></div>
+
+        <!-- ===== 图内文字标注 ===== -->
+        <div class="bp-abs bp-label text-small" style="left:33%; top:13%;">罗辑卧室 L1-02 ≈17.6㎡</div>
+        <div class="bp-abs bp-label text-small" style="left:17.8%; top:16%;">壁炉</div>
+        <div class="bp-abs bp-label text-small" style="left:27%; top:15.8%;">床北 1.70m</div>
+        <div class="bp-abs bp-label text-small" style="left:30%; top:20.3%;">她侧·插线板 52-SL</div>
+        <div class="bp-abs bp-label text-small" style="left:28%; top:32%;">床 1.8×2.0 · 头西</div>
+        <div class="bp-abs bp-label text-small" style="left:30%; top:44.2%;">他侧·手机/表</div>
+        <div class="bp-abs bp-label text-small" style="left:27%; top:51.5%;">床南 1.90m</div>
+        <div class="bp-abs bp-label text-small" style="left:50.2%; top:36%;">52-SL 走线</div>
+        <div class="bp-abs bp-label text-small" style="left:49%; top:45%;">床尾 1.19m</div>
+        <div class="bp-abs bp-label text-small bp-label-v" style="left:19.3%; top:63%;">卧室门 0.9m</div>
+        <div class="bp-abs bp-label text-small" style="left:48.5%; top:59.2%;">27-L 敲门位</div>
+        <div class="bp-abs bp-label text-small" style="left:53%; top:62.5%;">＝站B</div>
+        <div class="bp-abs bp-label text-small" style="left:51%; top:66.5%;">入口凹位</div>
+        <div class="bp-abs bp-label text-small" style="left:43%; top:74.6%;">浅布草柜·柜背＝遮挡体</div>
+        <div class="bp-abs bp-label text-small" style="left:50%; top:72.2%;">45° 斜切角</div>
+        <div class="bp-abs bp-label text-small" style="left:51%; top:78.5%;">转弯 1.00m</div>
+        <div class="bp-abs bp-label text-small" style="left:26.5%; top:69%;">镜（面东·不映卧室）</div>
+        <div class="bp-abs bp-label text-small" style="left:28%; top:72.5%;">小过厅 L1-08 ≈7.5㎡</div>
+        <div class="bp-abs bp-label text-small" style="left:33%; top:83%;">进门净宽 1.10m</div>
+        <div class="bp-abs bp-label text-small" style="left:39.5%; top:81%;">夜灯</div>
+        <div class="bp-abs bp-label text-small" style="left:36.25%; top:89.5%;">站A·走廊开口</div>
+        <div class="bp-abs bp-label text-small" style="left:68%; top:65.5%;">更衣连接间 L1-03</div>
+        <div class="bp-abs bp-label text-small" style="left:65%; top:70%;">≈13.8㎡</div>
+        <div class="bp-abs bp-label text-small" style="left:71%; top:28%;">斜墙柜</div>
+        <div class="bp-abs bp-label text-small" style="left:73.5%; top:14.5%;">75°</div>
+
+        <!-- 边注 -->
+        <div class="bp-abs bp-margin text-small" style="left:40%; top:3%; transform:translateX(-50%);">↑ 临湖 · 北窗（38-L 屋外认窗 / 42-L 电动窗帘）</div>
+        <div class="bp-abs bp-margin text-small bp-label-v" style="left:8.125%; top:42%; transform:translate(-50%,-50%);">西墙＝壁炉墙·与主客厅共烟道·不开门</div>
+        <div class="bp-abs bp-margin text-small" style="right:1%; top:35%;">东＝更衣连接间 L1-03（套间动线→书房）</div>
+        <div class="bp-abs bp-margin text-small" style="right:1%; top:52%;">凹位东墙外＝L1-03</div>
+        <div class="bp-abs bp-margin text-small" style="left:30%; top:98.2%; transform:translateX(-50%);">私人走廊 L1-09（位置不变）→ 主门厅</div>
+        <div class="bp-abs bp-margin text-small" style="right:1%; top:97%;">↘ 转接过厅 → 东翼走廊</div>
+      </div>
+    </div>
+
+    <div class="bp-legend">
+      <div>
+        <h3>拓扑基底（定稿，不变）</h3>
+        <div class="bp-row"><span class="bp-sw" style="border:1.5px solid var(--foreground); background:transparent;"></span><span>L1-02＋L1-08 合并外轮廓与私人走廊 L1-09 位置＝定稿值不变（合并墙线 25.16㎡）；L1-03 更衣连接间轮廓与书房门不变。</span></div>
+        <div class="bp-row"><span class="bp-sw bp-furn"></span><span>北窗临湖、西墙＝壁炉墙与主客厅共烟道不开门、东门 D1（1.1m）→更衣连接间→书房套间动线——均不变；凹位不堵 D1（其北墙东端抵 D1 南门垛）。</span></div>
+      </div>
+      <div>
+        <h3>入口方案（2026-11-05 试排，待确认）</h3>
+        <div class="bp-row"><span class="bp-sw bp-s1"></span><span>共用隔墙南移 0.60m（Z1.30→1.90），面积还给卧室：L1-02 ≈17.62㎡、L1-08 ≈7.55㎡（入口凹位 1.5×0.95m 计入过厅）。</span></div>
+        <div class="bp-row"><span class="bp-sw bp-furn"></span><span>入口凹位：东侧局部凹入，<b>卧室门设于凹位西墙（侧墙）</b>——走廊→过厅→柜东 1.0m 通道→凹位→面西进门→床尾南侧，折入动线（绿虚线），不对床直线。</span></div>
+        <div class="bp-row"><span class="bp-sw bp-furn"></span><span>卧室门 0.9m：铰链南（隔墙角）、开向卧室内、开启后贴隔墙；与东门 D1 互不打架（D1 扫掠在 L1-03 内）。</span></div>
+        <div class="bp-row"><span class="bp-sw bp-furn"></span><span>浅布草柜 0.40×1.0m（约35–40cm 深）：<b>柜背朝卧室门斜视线，固定遮挡体</b>＋45° 斜切角收口使转身自然；夜灯、小凳、镜（西墙面东）按余量配置；主要衣物仍在 L1-03。</span></div>
+      </div>
+      <div>
+        <h3>视线校核（黄虚线＝视线，实心点＝止点）</h3>
+        <div class="bp-row"><span class="bp-sw" style="background:var(--viz-series-5);"></span><span>站A 走廊开口：视线止于过厅西/东墙（Z≈2.3m）；卧室门面西、位于隔墙以北——<b>两门同开亦无直视床/枕位通路</b>。</span></div>
+        <div class="bp-row"><span class="bp-sw" style="background:var(--viz-series-5);"></span><span>站B 敲门/等候位（凹位内门前）：北线掠床尾南侧（余量≥0.2m）止于西墙，南线被隔墙角截断——<b>枕位与主要床面全部遮挡</b>。</span></div>
+        <div class="bp-row"><span class="bp-sw" style="border:1.5px dashed var(--viz-series-5); background:transparent;"></span><span>遮挡成立范围＝过厅＋凹位＋走廊全区（黄虚框）：柜北＝门洞几何截断、柜南＝柜背实挡，不以门扇作遮挡。</span></div>
+      </div>
+      <div>
+        <h3>净宽（工作值；挪威规范数字不移植）</h3>
+        <div class="bp-row"><span class="bp-sw bp-furn"></span><span>进门 1.10m｜转弯（柜东）1.00m｜凹位站位 ≈1.0×0.95m｜床北（她侧）1.70m｜床南（他侧）1.90m｜床尾—东墙 1.19m（D1 通行）。主通行目标 0.9–1.0m ✓。</span></div>
+      </div>
+      <div>
+        <h3>家具与走线（工作值）</h3>
+        <div class="bp-row"><span class="bp-sw bp-furn"></span><span>床 1.8×2.0m 头靠西墙；她侧床头柜＝插线板＋拉接头（52-SL），他侧＝枕边手机（08-L）＋床头表（42-L）。</span></div>
+        <div class="bp-row"><span class="bp-sw" style="border-top:2px dashed var(--viz-series-3); background:transparent;"></span><span>52-SL 走线改道（避开全部门扇扫掠）：东墙插座→床尾东侧北上→她侧床头柜；"绕床尾"意象保留，充电物流不入正文。</span></div>
+      </div>
+      <div>
+        <h3>章节锚点（L 线）</h3>
+        <div class="bp-row"><span class="bp-sw bp-furn"></span><span>08-L 枕边手机 ✓｜27-L 敲门点＝凹位内卧室门外（图中圆圈）✓｜38-L 北窗认窗 ✓｜39-L 床缘过道 ✓｜42-L 窗帘/床头表 ✓｜52-SL 插线板绕床尾 ✓</span></div>
+      </div>
+      <p class="text-small text-muted">口径：外轮廓、邻接、L1-03 与私人走廊＝定稿值（[轮廓与Agent交接](主楼草台班子_定稿/草台班子_房间轮廓与Agent交接.md)）；<b>入口几何（隔墙/凹位/门位/门宽）＝2026-11-05 试排值，待用户确认后再同步 L1-02/L1-08 轮廓数据、房间轮廓图、图册、三维与 Agent 交接</b>；家具、走线、净宽、门扇方向＝工作值。墙厚/床框/柜体按真实比例绘制，门弧为完整开门扫掠范围。对应正文：08-L／27-L／38-L／39-L／42-L／52-SL。</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

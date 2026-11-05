@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>挪威庄园 · 主楼客厅 L1-01 俯视图（2026-11-05 定稿拓扑重画）</title>
+<style>
+  /* 独立版主题变量兜底（对话内联版由宿主提供） */
+  :root {
+    color-scheme: light dark;
+    --background: light-dark(#f7f7f8, #17181a);
+    --foreground: light-dark(#1c1e22, #e8eaed);
+    --muted: light-dark(#e9eaec, #2a2d31);
+    --muted-foreground: light-dark(#5c626b, #a2a8b0);
+    --border: light-dark(#d4d6da, #3a3e44);
+    --viz-series-1: light-dark(#3b6fd4, #6c9bf0);
+    --viz-series-2: light-dark(#2e8b57, #57b47c);
+    --viz-series-3: light-dark(#c2452d, #e0705a);
+    --viz-series-4: light-dark(#7a4bb5, #a982d8);
+    --viz-series-5: light-dark(#c98a12, #e2b34e);
+  }
+  body {
+    margin: 16px; background: var(--background); color: var(--foreground);
+    font-family: system-ui, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+    font-size: 14px; font-weight: 400;
+  }
+  h2 { font-size: 16px; font-weight: 500; margin: 0 0 8px; }
+  h3 { font-size: 14px; font-weight: 500; margin: 0 0 4px; }
+  .text-small { font-size: 12px; }
+  .text-muted { color: var(--muted-foreground); }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>
+</head>
+<body>
+<div id="living-room-floorplan">
+  <style>
+    #living-room-floorplan { display: flex; flex-direction: column; gap: 14px; }
+    #living-room-floorplan .sf-main { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+    #living-room-floorplan .sf-plan-wrap { flex: 1.4 1 460px; min-width: 0; max-width: 660px; }
+    /* 画布内容 10.6m × 9.2m（房间 8.4×7.4m + 四周边距），等比盒 */
+    #living-room-floorplan .sf-plan { position: relative; width: 100%; aspect-ratio: 10.6 / 9.2; overflow: hidden; }
+    #living-room-floorplan .sf-legend { flex: 1 1 340px; min-width: 280px; display: flex; flex-direction: column; gap: 10px; }
+    #living-room-floorplan .sf-legend h3 { margin: 0; }
+    #living-room-floorplan .sf-row { display: flex; gap: 8px; align-items: flex-start; margin: 3px 0; }
+    #living-room-floorplan .sf-sw { width: 12px; height: 12px; border-radius: 3px; flex: none; margin-top: 3px; }
+    #living-room-floorplan .sf-abs { position: absolute; box-sizing: border-box; }
+
+    #living-room-floorplan .sf-room { border: 3px solid var(--foreground); background: transparent; z-index: 0; }
+    #living-room-floorplan .sf-s1 { background: color-mix(in srgb, var(--viz-series-1) 15%, transparent); border: 1.5px solid color-mix(in srgb, var(--viz-series-1) 55%, transparent); }
+    #living-room-floorplan .sf-s4 { background: color-mix(in srgb, var(--viz-series-4) 18%, transparent); border: 1.5px solid color-mix(in srgb, var(--viz-series-4) 65%, transparent); }
+    #living-room-floorplan .sf-s5 { background: color-mix(in srgb, var(--viz-series-5) 18%, transparent); border: 1.5px solid color-mix(in srgb, var(--viz-series-5) 65%, transparent); }
+
+    #living-room-floorplan .sf-furn { background: var(--muted); border: 1px solid var(--border); z-index: 3; }
+    #living-room-floorplan .sf-carpet { z-index: 1; border-radius: 2px; }
+
+    #living-room-floorplan .sf-cone {
+      transform-origin: 50% 100%; clip-path: polygon(50% 100%, 0 0, 100% 0);
+      background: color-mix(in srgb, var(--viz-series-5) 9%, transparent); z-index: 1;
+    }
+
+    #living-room-floorplan .sf-m {
+      width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      transform: translate(-50%, -50%); z-index: 5; font-weight: 500;
+    }
+    #living-room-floorplan .sf-p {
+      width: 18px; height: 18px; border-radius: 50%; transform: translate(-50%, -50%); z-index: 5;
+    }
+
+    #living-room-floorplan .sf-label {
+      z-index: 4; color: var(--foreground); white-space: nowrap; transform: translate(-50%, -50%);
+    }
+    #living-room-floorplan .sf-label-v { writing-mode: vertical-rl; }
+    #living-room-floorplan .sf-margin { color: var(--muted-foreground); white-space: nowrap; }
+    #living-room-floorplan .sf-margin-r { color: var(--muted-foreground); white-space: nowrap; transform: none; }
+
+    #living-room-floorplan .sf-knock { background: var(--background); z-index: 6; }
+    #living-room-floorplan .sf-win {
+      background: var(--background); border-top: 2px solid var(--foreground); border-bottom: 2px solid var(--foreground);
+      border-left: 2px solid var(--foreground); border-right: 2px solid var(--foreground); z-index: 6;
+    }
+    #living-room-floorplan .sf-mullion { background: var(--foreground); width: 1.5px; z-index: 7; }
+
+    /* 门弧四向：中心角在无圆角的对角 */
+    #living-room-floorplan .sf-darc-ne { border: 1px solid var(--muted-foreground); border-left: none; border-bottom: none; border-radius: 0 100% 0 0; z-index: 4; }
+    #living-room-floorplan .sf-darc-nw { border: 1px solid var(--muted-foreground); border-right: none; border-bottom: none; border-radius: 100% 0 0 0; z-index: 4; }
+    #living-room-floorplan .sf-leaf { background: var(--muted-foreground); z-index: 4; }
+
+    #living-room-floorplan .sf-dashed {
+      background: transparent; border: 1.5px dashed var(--muted-foreground); z-index: 3;
+    }
+    #living-room-floorplan .sf-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--foreground); z-index: 4; }
+    #living-room-floorplan .sf-phone { width: 4px; height: 7px; border-radius: 1px; background: var(--foreground); z-index: 4; }
+    #living-room-floorplan .sf-tray {
+      background: color-mix(in srgb, var(--muted-foreground) 22%, transparent); border: 1px solid var(--border); z-index: 4;
+    }
+  </style>
+
+  <h2 class="sf-head">挪威庄园 · 主楼客厅 L1-01 俯视图（2026-11-05 定稿拓扑重画）</h2>
+  <p class="sr-only">主楼客厅布局俯视图（定稿编号L1-01，墙线8.4×7.4m）：北墙临湖窗墙，东段为可开启露台落地窗（38-L）；西墙北段智慧屏，座位组面西朝屏；东墙北段壁炉与罗辑卧室共烟道、不开门，南段外为卧室小过厅；南门通主门厅，西门通梯形家庭起居室。三座沙发、茶几、双扶手椅、厚地毯，标出罗辑、庄颜、叶女士座次与坎特门边站位及五个机位。</p>
+
+  <div class="sf-main">
+    <div class="sf-plan-wrap">
+      <div class="sf-plan" role="img" aria-label="主楼客厅布局俯视图，详见旁边图例">
+
+        <!-- 房间与墙（8.4×7.4m） -->
+        <div class="sf-abs sf-room" style="left:9.434%; top:9.783%; width:79.245%; height:80.435%;"></div>
+
+        <!-- 临湖窗墙（北墙）：西段四扇 + 东段一扇，中段为露台落地窗 -->
+        <div class="sf-abs sf-win" style="left:16.981%; top:9.783%; width:33.962%; height:9px; transform:translateY(-50%);"></div>
+        <div class="sf-abs sf-mullion" style="left:25.472%; top:9.783%; height:9px; transform:translateY(-50%);"></div>
+        <div class="sf-abs sf-mullion" style="left:33.962%; top:9.783%; height:9px; transform:translateY(-50%);"></div>
+        <div class="sf-abs sf-mullion" style="left:42.453%; top:9.783%; height:9px; transform:translateY(-50%);"></div>
+        <div class="sf-abs sf-win" style="left:69.811%; top:9.783%; width:14.151%; height:9px; transform:translateY(-50%);"></div>
+        <div class="sf-abs sf-mullion" style="left:76.887%; top:9.783%; height:9px; transform:translateY(-50%);"></div>
+        <div class="sf-abs sf-furn" style="left:14.151%; top:9.783%; width:2.83%; height:3.2%;"></div>
+        <div class="sf-abs sf-furn" style="left:50.943%; top:9.783%; width:2.83%; height:3.2%;"></div>
+
+        <!-- 露台落地窗（北窗墙中偏东，定稿 D1，38-L 可开启）＋纸星 -->
+        <div class="sf-abs sf-win" style="left:54.245%; top:9.783%; width:10.377%; height:9px; transform:translateY(-50%);"></div>
+        <div class="sf-abs sf-dot" style="left:59.434%; top:11.087%;"></div>
+
+        <!-- 厚地毯（座位组下） -->
+        <div class="sf-abs sf-s1 sf-carpet" style="left:30.189%; top:15.217%; width:37.736%; height:47.826%;"></div>
+
+        <!-- 座位组（面西朝智慧屏） -->
+        <div class="sf-abs sf-furn" style="left:49.057%; top:19.565%; width:8.491%; height:23.913%;"></div>
+        <div class="sf-abs sf-furn" style="left:36.792%; top:25%; width:8.491%; height:13.043%;"></div>
+        <div class="sf-abs sf-tray" style="left:37.736%; top:27.174%; width:4.717%; height:5.435%;"></div>
+        <div class="sf-abs sf-phone" style="left:43.868%; top:35.326%; transform:translate(-50%,-50%);"></div>
+        <div class="sf-abs sf-furn" style="left:31.132%; top:47.826%; width:7.547%; height:8.696%;"></div>
+        <div class="sf-abs sf-furn" style="left:56.604%; top:50%; width:7.547%; height:8.696%;"></div>
+        <div class="sf-abs sf-furn" style="left:70.755%; top:25%; width:4.717%; height:6.522%;"></div>
+        <div class="sf-abs sf-furn" style="left:9.434%; top:59.783%; width:4.245%; height:17.391%;"></div>
+
+        <!-- 智慧屏（西墙北段，16-L 起，虚线） -->
+        <div class="sf-abs sf-dashed" style="left:9.434%; top:15.217%; width:1.698%; height:16.304%;"></div>
+
+        <!-- 壁炉（东墙北段，与卧室西墙共烟道） -->
+        <div class="sf-abs sf-furn" style="left:84.717%; top:12.391%; width:3.962%; height:10.870%;"></div>
+
+        <!-- 南门（通主门厅，定稿 D2，铰链东） -->
+        <div class="sf-abs sf-knock" style="left:43.868%; top:90.217%; width:10.377%; height:9px;"></div>
+        <div class="sf-abs sf-leaf" style="left:54.245%; top:78.261%; width:2px; height:11.957%;"></div>
+        <div class="sf-abs sf-darc-nw" style="left:43.868%; top:78.261%; width:10.377%; height:11.957%;"></div>
+
+        <!-- 西门（通梯形家庭起居室，定稿 D3，铰链南） -->
+        <div class="sf-abs sf-knock" style="left:9.434%; top:44.022%; width:9px; height:11.957%; transform:translateX(-50%);"></div>
+        <div class="sf-abs sf-leaf" style="left:9.434%; top:55.978%; width:10.377%; height:2px;"></div>
+        <div class="sf-abs sf-darc-ne" style="left:9.434%; top:44.022%; width:10.377%; height:11.957%;"></div>
+
+        <!-- 取景锥 -->
+        <div class="sf-abs sf-cone" style="left:49.057%; top:80.435%; width:20%; height:24%; transform:translate(-50%,-100%) rotate(0deg);"></div>
+        <div class="sf-abs sf-cone" style="left:67%; top:18%; width:20%; height:24%; transform:translate(-50%,-100%) rotate(180deg);"></div>
+        <div class="sf-abs sf-cone" style="left:54.717%; top:63.043%; width:20%; height:24%; transform:translate(-50%,-100%) rotate(0deg);"></div>
+        <div class="sf-abs sf-cone" style="left:68.868%; top:64.13%; width:20%; height:24%; transform:translate(-50%,-100%) rotate(-42deg);"></div>
+        <div class="sf-abs sf-cone" style="left:30.5%; top:42%; width:20%; height:24%; transform:translate(-50%,-100%) rotate(75deg);"></div>
+
+        <!-- 人物座次/站位 -->
+        <div class="sf-abs sf-s4 sf-p" style="left:53.3%; top:30%;"></div>
+        <div class="sf-abs sf-label text-small" style="left:53.3%; top:36.5%;">罗辑</div>
+        <div class="sf-abs sf-s4 sf-p" style="left:33.019%; top:32.065%;"></div>
+        <div class="sf-abs sf-label text-small" style="left:33.019%; top:38.5%;">庄颜·立</div>
+        <div class="sf-abs sf-s4 sf-p" style="left:34.906%; top:52.174%;"></div>
+        <div class="sf-abs sf-label text-small" style="left:27%; top:52.174%;">叶女士</div>
+        <div class="sf-abs sf-s4 sf-p" style="left:49.057%; top:83.152%;"></div>
+        <div class="sf-abs sf-label text-small" style="left:64%; top:85.5%;">坎特＋工作人员</div>
+
+        <!-- 机位 -->
+        <div class="sf-abs sf-s5 sf-m" style="left:49.057%; top:80.435%;">①</div>
+        <div class="sf-abs sf-s5 sf-m" style="left:67%; top:18%;">②</div>
+        <div class="sf-abs sf-s5 sf-m" style="left:54.717%; top:63.043%;">③</div>
+        <div class="sf-abs sf-s5 sf-m" style="left:68.868%; top:64.13%;">④</div>
+        <div class="sf-abs sf-s5 sf-m" style="left:30.5%; top:42%;">⑤</div>
+
+        <!-- 图内文字标注 -->
+        <div class="sf-abs sf-label text-small sf-label-v" style="left:60.5%; top:31.522%;">沙发</div>
+        <div class="sf-abs sf-label text-small" style="left:41.2%; top:42.5%;">茶几</div>
+        <div class="sf-abs sf-label text-small" style="left:49.057%; top:58.696%;">厚地毯</div>
+        <div class="sf-abs sf-label text-small sf-label-v" style="left:13.2%; top:68%;">柜</div>
+        <div class="sf-abs sf-label text-small" style="left:73.5%; top:35%;">边几·灯</div>
+        <div class="sf-abs sf-label text-small" style="left:17.5%; top:23.37%;">智慧屏</div>
+        <div class="sf-abs sf-label text-small sf-label-v" style="left:81.5%; top:27%;">壁炉</div>
+        <div class="sf-abs sf-label text-small" style="left:27%; top:44.5%;">门→起居室</div>
+        <div class="sf-abs sf-label text-small" style="left:64%; top:15.8%;">纸星·露台落地窗</div>
+        <div class="sf-abs sf-label text-small" style="left:33%; top:92.5%;">南门→门厅</div>
+
+        <!-- 边注与尺寸 -->
+        <div class="sf-abs sf-margin text-small" style="left:49.057%; top:4.4%; transform:translateX(-50%);">↑ 临湖窗墙 · 湖面（Jølster—Førde 气质）· 露台未建模</div>
+        <div class="sf-abs sf-margin text-small" style="right:1%; top:21%;">东墙外＝罗辑卧室（壁炉墙共烟道）</div>
+        <div class="sf-abs sf-margin text-small" style="right:1%; top:56%;">东墙南段外＝卧室小过厅</div>
+        <div class="sf-abs sf-margin text-small" style="left:1%; top:33%;">西门外＝梯形家庭起居室</div>
+        <div class="sf-abs sf-margin text-small sf-label-v" style="left:4.245%; top:50%; transform:translate(-50%,-50%);">≈7.4m</div>
+        <div class="sf-abs sf-margin text-small" style="left:66%; top:96.8%;">≈8.4m</div>
+      </div>
+    </div>
+
+    <div class="sf-legend">
+      <div>
+        <h3>定稿拓扑（2026-11-05 白模，L1-01 矩形 8.4×7.4m）</h3>
+        <div class="sf-row"><span class="sf-sw sf-room" style="border:1.5px solid var(--foreground); background:transparent;"></span><span>墙线轮廓与门洞为定稿值：南门（D2）通主门厅·A楼梯；西门（D3）通梯形家庭起居室；北墙露台落地窗（D1）开向露台；东墙不开门。</span></div>
+        <div class="sf-row"><span class="sf-sw sf-furn"></span><span>北墙＝临湖窗墙：西段四扇＋东段一扇，中偏东为可开启露台落地窗（38-L「夏天打开可以走到外面」），纸星挂此扇（38/39-L）。</span></div>
+        <div class="sf-row"><span class="sf-sw sf-furn"></span><span>东墙北段＝壁炉墙：与罗辑卧室西墙共烟道（双拍板定稿），壁炉箱落本段北端；东墙南段外＝卧室小过厅。</span></div>
+      </div>
+      <div>
+        <h3>家具锚点（工作值；01–02 旧物，05 起可宜家置换）</h3>
+        <div class="sf-row"><span class="sf-sw sf-furn"></span><span>三座沙发面西朝智慧屏（视距≈4.2m，75 吋级成立）＋茶几：茶托盘与茶杯、手机、便笺与笔</span></div>
+        <div class="sf-row"><span class="sf-sw sf-furn"></span><span>扶手椅×2（茶几南北侧）、边几＋台灯近露台窗、西墙南段柜（绿植与挂画）</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s1"></span><span>厚地毯（座位组下）；窗前通行带保持——南门→露台落地窗动线沿东侧过</span></div>
+      </div>
+      <div>
+        <h3>人物座次 / 站位</h3>
+        <div class="sf-row"><span class="sf-sw sf-s4"></span><span>罗辑：沙发中位（01-L 就座读小说；05-L 独思十分钟、语音给坎特；16-L 坐大屏幕前视频电话）</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s4"></span><span>庄颜：茶几另一侧站立（01-L 交接；"站在茶几另一边"）</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s4"></span><span>叶女士：南扶手椅（05-L 茶叙；座次为设计决定）</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s4"></span><span>坎特＋工作人员：南门边（01-L 进出与站位；门厅侧）</span></div>
+      </div>
+      <div>
+        <h3>机位</h3>
+        <div class="sf-row"><span class="sf-sw sf-s5"></span><span>① 01-L 初见全景（南门侧朝窗：罗辑就座、庄颜立于茶几另一侧）</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s5"></span><span>② 01-L 反向看南门与门厅（V02：门口站位、两人去看画）</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s5"></span><span>③ 01-L 窗前（罗辑走到窗前看湖；38-L「那扇窗他每天都经过」）</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s5"></span><span>④ 05-L 茶叙双人（沙发＋扶手椅，茶具在茶几）</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s5"></span><span>⑤ 05-L 沙发独思近景（座前侧方机位；湖窗以窗光与玻璃反射入画）</span></div>
+      </div>
+      <div>
+        <h3>后续状态锚点（16-L 起智能改造）</h3>
+        <div class="sf-row"><span class="sf-sw sf-dashed" style="border:1.5px dashed var(--muted-foreground); background:transparent;"></span><span>智慧屏（西墙北段）：16-L 起入画（视频电话、维护提示）；75 吋级约 1.5m</span></div>
+        <div class="sf-row"><span class="sf-sw sf-furn"></span><span>桌上语音终端（27-L 找店、39-L 收走恢复手动）、窗边灯组与灯线开关（38-L）、纸星（38/39-L）</span></div>
+      </div>
+      <p class="text-small text-muted">口径：墙线、门洞、邻接＝定稿值（[轮廓与Agent交接](主楼草台班子_定稿/草台班子_房间轮廓与Agent交接.md)）；家具、机位、窗扇分格＝工作值。01–02 章固定置换前旧物（无宜家·无全屋智能·无纸星）；05 起＝罗辑装智能家居时顺手置换宜家，旧物与新品混用均可，场景内保持稳定即可。归属已定：24-L「窗边的小起居室」＝别墅西翼小起居室（另行出图）；27-L「回到起居室」＝本室。16-L 听得见走廊工程师：声径南门→主门厅→私人走廊→东翼走廊。05-L 主楼门口、湖边步道、归档室入口为后续场景组。走位工作稿，非建模定稿。</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

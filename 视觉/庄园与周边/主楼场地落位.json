@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "building": "草台班子",
+  "unit": "m",
+  "placement": {
+    "e": 62.771,
+    "n": 666.095,
+    "y": 5.6,
+    "heading": 0
+  },
+  "anchor": "主楼局部x=0,z=0；庄园E向东、N向北、y为湖面以上标高；heading按Three.js绕Y轴旋转",
+  "source": "室内参考/主楼草台班子_定稿/白模原始几何.json",
+  "scale": 1,
+  "status": "第二版位置保留；原生岩台与东翼陡坡补模，主楼早于铁路的建造逻辑已补齐",
+  "roof": "仅封顶体量，坡屋顶及立面另行设计",
+  "terrain_note": "主楼主要石基利用南侧原生岩台，岩面约5.06m、主生活层5.60m；东翼北端低地露明、南段借天然陡坡嵌入地窖。原先南门高出现地约3.6m仅是未补局部地貌时的区域坡面读数，不再视作未来铁路填高量。铁路后来沿既有岩台/地形补筑路堤，尚未画路或填土。",
+  "siting_check": {
+    "shore": [
+      68.7596,
+      694.7542
+    ],
+    "shoreTangentDeg": -165,
+    "perpendicularErrorDeg": 0,
+    "diningSetbackM": 20,
+    "minBuildingSetbackM": 12.16,
+    "eastLowerFloorY": 2.4,
+    "eastTerrainRange": [
+      1.2,
+      2.17
+    ],
+    "southEntryTerrainY": 1.99,
+    "northDiningTerrainY": 1.2,
+    "shoreTangentDegModulo180": 15,
+    "sampling": "此表为增补独立局部岩台/陡坡之前的区域坡面筛选快照；岸距与朝向仍适用，地面标高以含局部模型的页面读数为准。",
+    "southEntryFillM_obsolete": 3.61
+  },
+  "local_site_model": "主楼天然岩台与东翼陡坡.json"
+}
