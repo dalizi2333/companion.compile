@@ -1,0 +1,500 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>跨湖庄园四岸总图 · 边界巡查版</title>
+<style>
+:root { color-scheme: light; }
+body {
+  margin: 0; padding: 20px;
+  font-family: system-ui, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f5f5f4; color: #1c1917;
+  --background: #f5f5f4; --foreground: #1c1917;
+  --muted: #e7e5e4; --muted-foreground: #78716c; --border: #d6d3d1;
+  --viz-series-1: #4e79a7; --viz-series-2: #59a14f; --viz-series-3: #e15759;
+  --viz-series-4: #f28e2b; --viz-series-5: #b07aa1; --viz-series-6: #76b7b2;
+}
+.text-small { font-size: 12px; }
+.text-muted { color: #78716c; }
+.sf-head { font-size: 16px; margin: 0 0 4px; }
+</style></head><body>
+<div id="estate-master-map">
+  <style>
+    #estate-master-map { display: flex; flex-direction: column; gap: 14px; }
+    #estate-master-map .sf-main { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+    #estate-master-map .sf-plan-wrap { flex: 1.7 1 480px; min-width: 0; max-width: 760px; }
+    #estate-master-map .sf-plan { position: relative; width: 100%; aspect-ratio: 13 / 9; overflow: hidden; }
+    #estate-master-map .sf-plan-content { position: absolute; left: 0; top: 22.222222%; width: 100%; height: 77.777778%; }
+    #estate-master-map .sf-plan-content > svg { overflow: visible; }
+    #estate-master-map .sf-legend { flex: 1 1 320px; min-width: 250px; display: flex; flex-direction: column; gap: 10px; }
+    #estate-master-map .sf-legend h3 { margin: 0; }
+    #estate-master-map .sf-row { display: flex; gap: 8px; align-items: flex-start; margin: 3px 0; }
+    #estate-master-map .sf-sw { width: 12px; height: 12px; border-radius: 3px; flex: none; margin-top: 3px; }
+    #estate-master-map .sf-abs { position: absolute; box-sizing: border-box; }
+
+    #estate-master-map .sf-s1 { background: color-mix(in srgb, var(--viz-series-1) 13%, transparent); border: 1.5px solid color-mix(in srgb, var(--viz-series-1) 45%, transparent); }
+    #estate-master-map .sf-s2 { background: color-mix(in srgb, var(--viz-series-2) 22%, transparent); border: 1.5px solid color-mix(in srgb, var(--viz-series-2) 65%, transparent); }
+    #estate-master-map .sf-s3 { background: transparent; border: 2px dashed color-mix(in srgb, var(--viz-series-3) 70%, transparent); }
+    #estate-master-map .sf-s4 { background: color-mix(in srgb, var(--viz-series-4) 18%, transparent); border: 1.5px solid color-mix(in srgb, var(--viz-series-4) 65%, transparent); }
+    #estate-master-map .sf-s5 { background: color-mix(in srgb, var(--viz-series-5) 18%, transparent); border: 1.5px solid color-mix(in srgb, var(--viz-series-5) 65%, transparent); }
+
+    #estate-master-map .sf-b { background: var(--muted); border: 1.5px solid var(--border); z-index: 3; }
+    #estate-master-map .sf-grass {
+      background: color-mix(in srgb, var(--muted) 45%, transparent); border: 1px dashed var(--muted-foreground); z-index: 2;
+    }
+    #estate-master-map .sf-woods {
+      background: repeating-linear-gradient(45deg, color-mix(in srgb, var(--muted) 60%, transparent) 0 6px, color-mix(in srgb, var(--muted) 30%, transparent) 6px 12px);
+      border: 1px solid var(--border); z-index: 2;
+    }
+    #estate-master-map .sf-lake { z-index: 1; border-radius: 48% 2% 2% 48% / 50% 4% 4% 50%; clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 82%, 50% 88%, 25% 94%, 0% 100%); }
+    #estate-master-map .sf-boundary {
+      border: 2px solid color-mix(in srgb, var(--viz-series-3) 55%, transparent);
+      border-radius: 42% / 48%; z-index: 2; pointer-events: none;
+    }
+    #estate-master-map .sf-field {
+      background: color-mix(in srgb, var(--viz-series-2) 10%, transparent);
+      border: 1.5px dashed color-mix(in srgb, var(--viz-series-2) 45%, transparent);
+      z-index: 1;
+    }
+    #estate-master-map .sf-stream {
+      height: 2px; background: color-mix(in srgb, var(--viz-series-1) 60%, transparent);
+      transform-origin: 0 50%; z-index: 2; border-radius: 2px;
+    }
+    #estate-master-map .sf-sunken {
+      border: 1.5px dashed color-mix(in srgb, var(--viz-series-1) 45%, transparent);
+      z-index: 2;
+    }
+
+    #estate-master-map .sf-boat {
+      height: 0; border-top: 2px dashed color-mix(in srgb, var(--viz-series-1) 70%, transparent);
+      transform-origin: 0 50%; z-index: 2;
+    }
+    #estate-master-map .sf-phase {
+      width: 0; border-left: 2px dashed var(--muted-foreground); z-index: 1;
+    }
+
+    #estate-master-map .sf-m {
+      width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      transform: translate(-50%, -50%); z-index: 6; font-weight: 500;
+    }
+    #estate-master-map .sf-a {
+      width: 12px; height: 12px; border-radius: 50%; transform: translate(-50%, -50%); z-index: 5;
+    }
+
+    #estate-master-map .sf-label {
+      z-index: 5; color: var(--foreground); white-space: nowrap; transform: translate(-50%, -50%);
+    }
+    #estate-master-map .sf-label-v { writing-mode: vertical-rl; }
+    #estate-master-map .sf-margin { color: var(--muted-foreground); white-space: nowrap; z-index: 5; }
+
+    #estate-master-map .sf-arrowhead {
+      width: 0; height: 0; border-left: 8px solid color-mix(in srgb, var(--viz-series-3) 80%, transparent);
+      border-top: 6px solid transparent; border-bottom: 6px solid transparent; z-index: 3;
+    }
+    #estate-master-map .sf-scale {
+      height: 3px; background: var(--muted-foreground); z-index: 5;
+    }
+    @media (max-width: 620px) {
+      #estate-master-map .sf-optional { display: none; }
+    }
+  </style>
+
+  <h2 class="sf-head">跨湖庄园 · 四岸总图（大尺度工作稿 v2 · 路网重绘中）</h2>
+  <p class="text-small text-muted">已试画旧窄轨改建公路（棕色曲线）；南侧铺装道已试画；西岸及北岸沿湖步道已试画，北岸巡逻与南岸游客骑乘马道已试画（棕色虚线），旧里程暂不适用。</p>
+  <p class="sr-only">南岸主楼为罗辑住所；东北临湖北岸旧别墅设小博物馆、资料归档与访客客房，西翼连接小起居室及湖景露台。别墅南侧为08-L写生草地，湖景窗可直接望见。05-L自北岸工作间沿湖送资料到别墅西翼，车辆从更北的宅园陆侧绕行。东岸宴会厅兼作员工用餐，旁设中央厨房，主楼保留私人小餐厅及小厨房。北岸私人区分界参照八坡线地形的山脊试排，阳坡梯田与宅园果树区分别顺脊西、脊东调整。旧窄轨改建公路已试排，其余道路待重绘。</p>
+
+  <div class="sf-main">
+    <div class="sf-plan-wrap">
+      <div class="sf-plan" role="img" aria-label="跨湖庄园四岸总图，详见旁边图例">
+        <!-- 北坡峡谷向旧图框以北延伸 200 图上单位；内部仍用原 1300×700 坐标，已有地物不整体移位。 -->
+        <div class="sf-plan-content">
+
+        <!-- 现水位岸线：北岸作业层留陆地，旧船坞保留水下；公共跑马草坪上缘贴湖南岸。 -->
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:1;pointer-events:none" aria-label="北岸作业建筑留在陆地，南岸草坪贴湖，公共码头岸段竖直">
+          <path d="M360 268 Q410 268 450 266 Q505 265 550 265 L650 285 L900 300 L1015 293 L1065 270 L1073 313 L950 350 L950 447 Q800 447 650 447 Q550 447 470 444 Q415 451 370 448 Q334 440 305 419 Q278 403 266 379 Q246 357 250 344 Q285 272 360 268 Z" fill="#4e79a7" fill-opacity=".13" stroke="#4e79a7" stroke-opacity=".45" stroke-width="1.5"/>
+        </svg>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:46%; top:50.7%;">湖面（深蓝／灰蓝）</div>
+
+        <!-- 旧窄轨路基改建公路：曲线试排，主哨在道路右侧，不让道路穿过哨位符号。 -->
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:4;pointer-events:none" aria-label="旧窄轨改建公路：北岸绕宅园，经过主哨左侧，沿南岸至主楼">
+          <path d="M270 503 C302 522 323 542 359 537 C395 532 418 510 465 506 C507.50 501.67 585.83 496.83 650 495 C714.17 493.17 794.17 496.83 850 495 C905.83 493.17 951.50 493.67 985 484 C1018.50 474.33 1036.33 465.50 1051 437 C1065.67 408.50 1075.67 327.33 1073 313 L1065 270 C1062.33 255.67 1062.00 235.33 1050 218 C1038.00 200.67 1010.67 175.00 993 166 C975.33 157.00 962.00 161.17 944 164 C926.00 166.83 905.67 175.33 885 183 C864.33 190.67 859.17 201.00 820 210 C780.83 219.00 701.67 231.67 650 237 C598.33 242.33 542.00 243.50 510 242 C478.00 240.50 483.83 229.67 458 228 C432.17 226.33 372.17 231.33 355 232" fill="none" stroke="#faf7ef" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M270 503 C302 522 323 542 359 537 C395 532 418 510 465 506 C507.50 501.67 585.83 496.83 650 495 C714.17 493.17 794.17 496.83 850 495 C905.83 493.17 951.50 493.67 985 484 C1018.50 474.33 1036.33 465.50 1051 437 C1065.67 408.50 1075.67 327.33 1073 313 L1065 270 C1062.33 255.67 1062.00 235.33 1050 218 C1038.00 200.67 1010.67 175.00 993 166 C975.33 157.00 962.00 161.17 944 164 C926.00 166.83 905.67 175.33 885 183 C864.33 190.67 859.17 201.00 820 210 C780.83 219.00 701.67 231.67 650 237 C598.33 242.33 542.00 243.50 510 242 C478.00 240.50 483.83 229.67 458 228 C432.17 226.33 372.17 231.33 355 232" fill="none" stroke="#b88759" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <!-- 对外支路：由内部主线分出，过主哨，再沿坝下旧码头陆侧向外。 -->
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:4;pointer-events:none" aria-label="对外道路，经主哨卡及废弃坝下码头">
+          <path d="M1083 335 C1094 327 1101 325.5 1115 325.5 C1150 326 1170 317 1200 313 C1237 308 1268 302 1300 299" fill="none" stroke="#faf7ef" stroke-width="8" stroke-linecap="round"/>
+          <path d="M1083 335 C1094 327 1101 325.5 1115 325.5 C1150 326 1170 317 1200 313 C1237 308 1268 302 1300 299" fill="none" stroke="#b88759" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:95%;top:47%;">对外道路→</div>
+        <!-- 南线小铺装道：贴南侧园地外缘，分界东侧设接公路支路。 -->
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:4;pointer-events:none" aria-label="南侧铺装步道及接公路支路">
+          <path d="M122 510 C162 531 184 545 210 559 C263 590 284 604 320 613 C354 628 392 639 425 644 C472 653 508 654 550 654 C584 654 622 655 650 653 C716 650 770 648 821 642 C850 623 870 603 895 586 C920 562 938 538 963 523 C982 515 991 520 1005 509 C1040 493 1082 478 1112 452 C1127 433 1132 410 1135 395" fill="none" stroke="#4e79a7" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M660 653 C665 620 672 570 674 535 C675 514 663 491 680 472" fill="none" stroke="#4e79a7" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M122 510 C170 499 223 503 270 506 L270 503" fill="none" stroke="#4e79a7" stroke-width="2.6"/></svg>
+        <!-- 沿湖步道：西岸近宅联系、北岸送资料支路；不将雨程画为连续有顶长廊。 -->
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:4;pointer-events:none" aria-label="西岸步道、北岸雨程与写生点支路">
+          <path d="M270 503 C260 477 248 454 239 424 C227 390 229 359 229 329 C229 299 237 279 248 261 C255 244 276 236 298 232 L337 232" fill="none" stroke="#609154" stroke-width="2.7" stroke-linecap="round"/>
+          <path d="M650 237 C655 258 663 276 688 279 C729 284 780 280 810 279 C837 276 854 264 867 251 C878 240 889 230 902 221" fill="none" stroke="#609154" stroke-width="2.7" stroke-linecap="round"/>
+          <!-- 短檐到归档室的局部有顶廊道，两端与露天路衔接 -->
+          <path d="M867 251 L873 223 L889 218 L902 221" fill="none" stroke="#a89c83" stroke-width="6" stroke-linejoin="round"/>
+          <path d="M867 251 L873 223 L889 218 L902 221" fill="none" stroke="#609154" stroke-width="2" stroke-linejoin="round"/>
+          <!-- 散步支路经矮树、缓坡抵长椅，终止于低木栏 -->
+          <path d="M841 269 C860 265 878 270 893 277 C906 282 924 282 939 283" fill="none" stroke="#609154" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <!-- 马道：北侧巡护与南侧原游客骑乘分开；南线位于原公共区。 -->
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:4;pointer-events:none" aria-label="北岸巡逻马道与南岸游客骑马上坡体验环线">
+          <g fill="none" stroke="#8d7958" stroke-width="2.8" stroke-dasharray="6 3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M246 450 C236 418 237 376 241 345 C249 313 278 278 310 244 C341 210 368 176 374 149 C383 117 381 78 369 47 C389 23 426 38 460 42 C506 49 546 64 580 82 C616 92 659 83 695 70 C739 52 780 20 815 -12 C842 -33 866 -49 881 -68 C878 -18 851 34 835 74 C829 85 843 88 865 90 C918 100 981 125 1014 145 C1048 169 1075 201 1080 240 C1080 252 1070 248 1069 228 C1068 211 1062 199 1054 190 C1063 215 1058 228 1046 238"/>
+            <!-- 东北绕行段与北岸公路拉开距离，在引水渠下方陆地转弯，接别墅停车区，不跨河。 -->
+            <path d="M610 85 C625 116 637 150 645 183 C660 204 660 225 654.129 236.56"/>
+            <path d="M945 463 C890 458 814 464 740 470 C710 471 687 467 680 477 C669 490 685 514 686 540 L689 619 C746 606 817 589 870 570 C903 553 930 517 945 487 C951 476 951 469 945 463 Z"/>
+            <!-- 坡上体验支环：沿溪抵坡脚，以发卡弯逐级爬升，再沿坡回到第二草坪与草坪环线。 -->
+            <path d="M1135 395 C1131 429 1112 453 1080 468 C1036 486 978 493 945 487 C953 494 965 498 982 500 C988 502 987 505 982 508 L952 527 C946 532 950 535 958 532 L1010 517 C1017 515 1020 519 1014 524 L982 550 C977 555 982 558 989 553 L1032 529 C1039 525 1043 529 1038 535 L1015 553 C994 569 969 583 947 595 C923 608 883 622 862 610 C853 604 851 594 852 588 C854 580 863 575 870 570"/>
+          <path d="M124 398 C117 350 145 251 175 180 C197 135 230 111 270 84 C306 65 342 49 369 47 C332 82 282 145 214 257 C189 305 161 360 124 398 Z"/>
+<path d="M945 463 C965 450 963 421 960 400 C967 397 978 400 988 402"/>
+          </g>
+        </svg>
+        <!-- 自野餐区后侧接出独立上山马道，顺真实坡面爬升，接已有坡上折返。 -->
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:4;pointer-events:none" aria-label="南岸马道上山连接段">
+          <path d="M1038 433 C1065 438 1090 438 1105 444 C1115 449 1110 459 1100 466 C1079 482 1050 497 1031 515 C1024 523 1025 531 1038 535" fill="none" stroke="#8d7958" stroke-width="2.8" stroke-dasharray="6 3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <!-- 地形与水系示意；林线外利用安排不等于庄园所有权或安保范围。 -->
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:1;pointer-events:none" aria-label="西侧山体、北侧林线及三条山溪">
+          <defs><pattern id="estate-mountain-hatch" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 12 L12 0" stroke="#b6b3ab" stroke-width=".8"/></pattern></defs>
+          <path d="M67 245 C101 218 144 158 170 138 C182 124 185 119 191 119 C231 109 259 120 280 122 C306 126 337 123 349 138 C355 168 338 211 331 230 C312 253 275 290 250 322 C227 367 214 405 194 430 C160 466 125 484 94 499 C63 516 24 525 0 539 L-80 580 L-80 260 C-15 260 35 274 67 245 Z" fill="url(#estate-mountain-hatch)" stroke="#aaa79e" stroke-width="1.5"/>
+          <!-- 山脚紧挨西岸通路，湖山夹道不具汽车通行宽度。 -->
+          <path d="M349 138 C355 168 338 211 331 230 C312 253 275 290 250 322 C227 367 214 405 194 430 C160 466 125 484 94 499 C63 516 24 525 0 539" fill="none" stroke="#aaa79e" stroke-width="2"/>
+          <!-- 林线延伸到图外，非地籍线；安保以其内侧范围为限。 -->
+          <path d="M175 110 C240 76 281 34 340 24 C391 9 426 15 460 21 C535 36 592 47 641 61 C682 76 718 23 746 2" fill="none" stroke="#b16b64" stroke-width="2" stroke-dasharray="7 3"/>
+          <!-- 北岸农庄溪流，经水磨旁入湖 -->
+          <path d="M330 0 C350 26 359 37 382 51 C415 71 432 83 442 110 C459 133 474 151 479 179 C485 208 484 239 490 269" fill="none" stroke="#4e79a7" stroke-width="3.5"/>
+          <!-- 旧业主领地北坡峡谷山溪：沿正式地形凹谷转折，下游接坝下河流；上游伸出旧总图北缘。 -->
+          <path d="M905 -139 C901 -107 892 -76 891 -47 C888 -13 891 35 890 82 C906 94 931 103 961 115 C988 124 1016 125 1045 142 C1055 150 1059 156 1063 160 C1080 176 1097 185 1112 198 C1126 217 1140 237 1151 251 C1149 262 1134 274 1124 280" fill="none" stroke="#4e79a7" stroke-width="3.5"/>
+          <!-- 东南山溪自山地向湖汇入，经过接待区与骑乘区之间。 -->
+          <path d="M1209 454 C1183 441 1162 453 1133 456 C1094 470 1054 482 1016 492 C995 497 978 489 966 474 C958 462 955 449 950 447" fill="none" stroke="#4e79a7" stroke-width="3.5"/>
+          <!-- 峡谷西侧短支流，在谷底弯折处汇入主溪。 -->
+          <path d="M838 80 C858 82 877 84 890 82" fill="none" stroke="#4e79a7" stroke-width="3.5"/>
+        </svg>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:11%;top:43%;">西山</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:17%;top:54%;writing-mode:vertical-rl;">湖山夹道·禁汽车</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:76%;top:15%;">别墅高台</div>
+        <!-- 庄园边界（实际范围＝巡查参照线） -->
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:2;pointer-events:none" aria-label="庄园新范围，西侧贴山，北坡沿峡谷外缘，东侧沿河岸">
+          <path d="M190 105 C244 76 280 43 340 31 C386 13 422 22 458 28 C531 41 593 53 640 67 C689 85 715 37 746 8 C805 -15 878 -119 930 -155 C926 -112 915 -80 915 -47 C912 -13 915 34 914 65 C915 79 936 84 961 96 C989 109 1019 111 1055 128 C1070 138 1084 154 1097 171 C1130 202 1160 244 1200 291 C1192 333 1183 381 1152 411 C1140 450 1100 490 1068 520 C1022 560 950 590 921 620 C894 638 873 646 850 654 C680 680 456 681 305 640 C279 620 251 611 215 595 C177 580 145 565 125 547 C107 526 101 510 98 495 C94 469 91 402 88 340 C87 296 97 240 115 195 C131 158 161 127 190 105 Z" fill="none" stroke="#5b9b64" stroke-opacity=".9" stroke-width="3.5"/>
+        </svg>
+        <div class="sf-abs sf-label text-small" style="left:14%; top:25%;">庄园边界（绿线）</div>
+
+        <!-- 田地与生产分区（坡向分工） -->
+        <!-- 正式八坡线地形复核：梯田退到北岸山脊西侧，脊顶留作分界参照，不把生产地块画成跨脊矩形。 -->
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:2;pointer-events:none" aria-label="北岸阳坡梯田，沿山脊西侧坡面分带">
+          <path d="M505 108 C529 104 555 106 579 113 C585 140 597 169 608 192 L617 211 C582 218 543 221 505 218 C510 181 510 142 505 108 Z" fill="#59a14f" fill-opacity=".1" stroke="#86b67f" stroke-width="1.5" stroke-dasharray="5 3"/>
+          <path d="M509 142 C534 142 558 146 587 151 M509 176 C539 177 571 180 600 186" fill="none" stroke="#86b67f" stroke-width="1" stroke-dasharray="3 4"/>
+        </svg>
+        <div class="sf-abs sf-field" style="left:33.462%; top:25.714%; width:4.615%; height:7.143%;"></div>
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:1;pointer-events:none" aria-label="草坪与菜园错开，预留南岸公路走廊">
+          <path d="M410 458 L470 447 L632 447 L632 474 L405 501 Z" fill="#59a14f" fill-opacity=".1" stroke="#86b67f" stroke-width="1.5" stroke-dasharray="5 3"/>
+          <path d="M408 534 L520 506 L520 616 L375 594 Z" fill="#59a14f" fill-opacity=".1" stroke="#86b67f" stroke-width="1.5" stroke-dasharray="5 3"/>
+        </svg>
+        <div class="sf-abs sf-field" style="left:40.385%; top:72%; width:8.846%; height:16%;"></div>
+        <div class="sf-abs sf-grass" style="left:32.5%; top:35.214%; width:5.192%; height:2.5%;"></div>
+        <!-- 溪流（自北山下，供磨坊锯木） -->
+        <div class="sf-abs sf-b" style="left:34.423%; top:28.571%; width:1.346%; height:2.286%;"></div>
+        <div class="sf-abs sf-b" style="left:36.269%; top:28.714%; width:1.346%; height:2.571%;"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:42.308%; top:23.286%;">阳坡梯田</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:34.615%; top:27%;">水磨·锯木场</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:40%; top:35.5%;">打谷场</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:43%; top:66%;">家族骑乘草坪</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:35%; top:81%;">菜园·花圃</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:45%; top:80%;">干草场·牧场</div>
+
+        <!-- 私人区｜原公共区分界：北岸以正式地形的山脊走势为依据之一；湖面与南岸仍延续原线。 -->
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:3;pointer-events:none" aria-label="私人区与原公共区分界，北岸参照山脊，南岸延续原线">
+          <path d="M589 54 C598 84 608 111 619 139 C632 172 646 207 654 226 C655 240 652 264 650 285" fill="none" stroke="#8b8579" stroke-width="3.2" stroke-dasharray="7 5"/>
+          <path d="M650 285 L650 653" fill="none" stroke="#8b8579" stroke-width="3.2" stroke-dasharray="7 5"/>
+        </svg>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:40%; top:11.5%;">一期（西部）</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:61%; top:11.5%;">二期（东部）</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:48.077%; top:72.5%;">私人区｜原公共区分界</div>
+
+        <div class="sf-abs" style="left:25%;top:32%;width:3%;height:2%;background:#e3dfd6;border:1px dotted #9c9282;z-index:2;"></div>
+        <!-- 北岸建筑分栋试排：间距展开，编号置于体量左侧，单栋用途为本轮工作分配。 -->
+        <div class="sf-abs sf-b" title="N1 后坡仓库" style="left:23%;top:13%;width:3.5%;height:2.8%;transform:rotate(0deg);"></div>
+        <div class="sf-abs sf-label" style="left:21.4%;top:14%;font-size:10px;color:#594c39;">N1</div>
+        <div class="sf-abs sf-b" title="N2 设备·后勤房" style="left:31%;top:13%;width:2.8%;height:3.1%;transform:rotate(15deg);"></div>
+        <div class="sf-abs sf-label" style="left:29.4%;top:14%;font-size:10px;color:#594c39;">N2</div>
+        <div class="sf-abs sf-b" title="N3 旧住宅·账房" style="left:21%;top:21%;width:3.8%;height:3.8%;transform:rotate(-45deg);"></div>
+        <div class="sf-abs sf-label" style="left:19.4%;top:22%;font-size:10px;color:#594c39;">N3</div>
+        <div class="sf-abs sf-b" title="N4 职工住宿" style="left:30%;top:21%;width:3.2%;height:4.1%;transform:rotate(-45deg);"></div>
+        <div class="sf-abs sf-label" style="left:28.4%;top:22%;font-size:10px;color:#594c39;">N4</div>
+        <div class="sf-abs sf-b" title="N5 清洁工作间·资料用房" style="left:21%;top:28.5%;width:3.2%;height:3.8%;transform:rotate(-15deg);"></div>
+        <div class="sf-abs sf-label" style="left:19.4%;top:29.5%;font-size:10px;color:#594c39;">N5</div>
+        <div class="sf-abs sf-b" title="N6 马厩·车马棚" style="left:28%;top:28%;width:3%;height:4.2%;transform:rotate(0deg);"></div>
+        <div class="sf-abs sf-label" style="left:26.4%;top:29%;font-size:10px;color:#594c39;">N6</div>
+        <div class="sf-abs sf-b" title="N7 旧畜舍改机修仓储" style="left:35%;top:28.5%;width:2.8%;height:3.8%;transform:rotate(15deg);"></div>
+        <div class="sf-abs sf-label" style="left:33.4%;top:29.5%;font-size:10px;color:#594c39;">N7</div>
+        <div class="sf-abs sf-b" title="N8 旧船屋·作业棚" style="left:23%;top:34%;width:2.2%;height:3%;transform:rotate(-30deg);"></div>
+        <div class="sf-abs sf-label" style="left:21.4%;top:35%;font-size:10px;color:#594c39;">N8</div>
+        <div class="sf-abs sf-b" title="N9 临水作业棚" style="left:29%;top:34%;width:2%;height:3%;transform:rotate(-30deg);"></div>
+        <div class="sf-abs sf-label" style="left:27.4%;top:35%;font-size:10px;color:#594c39;">N9</div>
+        <div class="sf-abs sf-b" title="N10 临水储物棚" style="left:35%;top:34%;width:1.8%;height:3%;transform:rotate(-30deg);"></div>
+        <div class="sf-abs sf-label" style="left:33.4%;top:35%;font-size:10px;color:#594c39;">N10</div>
+        <div class="sf-abs sf-label text-small" style="left:27%;top:8%;">北岸老核心</div>
+        <!-- 南岸建筑试排：独立于旧路网；东翼低层外伸、上层退收。坐标为概念体量，不代表视线高程已验证。 -->
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:3;pointer-events:none" aria-label="南岸折线建筑群：西翼、中央主楼、东翼退台">
+          <g transform="translate(-48 30)">
+          <!-- 西翼窗前写生草地：留在建筑与湖之间 -->
+          <path d="M318 417 L344 431 L358 411 L332 396 Z" fill="#cfe0bd" fill-opacity=".7" stroke="#86a774" stroke-dasharray="3 3"/>
+          <!-- 连廊连接三个体量，避免分成独立小楼 -->
+          <path d="M319 448 L342 458 M389 474 L418 481" fill="none" stroke="#9c9282" stroke-width="12"/>
+          <!-- 西翼：沿西岸斜向延伸，北端湖景窗 -->
+          <path d="M293 399 L307 391 L335 443 L320 452 Z" fill="#ddd5c6" stroke="#887b68" stroke-width="2"/>
+          <path d="M302 398 L309 394" stroke="#4e79a7" stroke-width="4"/>
+          <!-- 主楼：北面湖景、南面取光；湖侧门廊露台 -->
+          <path d="M350 420 L390 442 L364 488 L324 466 Z" fill="#e7dfd0" stroke="#887b68" stroke-width="2"/>
+          <path d="M350 420 L390 442 L397 430 L357 408 Z" fill="#f3ece0" stroke="#aa9b82" stroke-width="1.5"/>
+          <path d="M355 416 L385 433" stroke="#4e79a7" stroke-width="3"/>
+          <!-- 东翼−1层临湖外伸：厨房及服务空间；虚线表示低层外轮廓 -->
+          <path d="M404 430 L448 440 L435 493 L391 483 Z" fill="#d3b584" fill-opacity=".55" stroke="#aa8050" stroke-width="2" stroke-dasharray="5 3"/>
+          <!-- 东翼上层退到陆侧，临湖外伸部分保持低屋顶 -->
+          <path d="M404 456 L437 464 L430 493 L397 485 Z" fill="#ddd5c6" stroke="#887b68" stroke-width="2"/>
+          <path d="M407 458 L432 464" stroke="#4e79a7" stroke-width="3"/>
+          <!-- 西翼湖侧小露台，保留与写生草地的视线 -->
+          <path d="M311 413 L320 408 L335 435 L326 440 Z" fill="#f3ece0" stroke="#aa9b82"/>
+          </g>
+        </svg>
+        <div class="sf-abs sf-label text-small" style="left:23.8%; top:77%;">南岸主楼群</div>
+        <div class="sf-abs sf-label text-small" style="left:23.8%; top:81%;font-size:10px;">待补：主楼旁老厕屋（位置未定）</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:19.3%; top:58.3%;">西翼</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:33.3%; top:74.3%;">东翼上层</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:35.3%; top:61.8%;">−1层外伸</div>
+
+        <!-- 西岸：园务小屋短檐、廊道、树林、小码头 -->
+        <div class="sf-abs sf-b" style="left:65.5%; top:30%; width:1.654%; height:1.857%;"></div>
+        <div class="sf-abs sf-b" style="left:67%; top:31%; width:2.385%; height:1%;"></div>
+        <div class="sf-abs sf-sunken" style="left:28.7%; top:61.2%; width:1.538%; height:1.429%; transform:rotate(13deg);"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:29%; top:57.8%;">淹没旧码头</div>
+        <div class="sf-abs sf-sunken" style="left:23.8%; top:59.8%; width:1.346%; height:1%; transform:rotate(30deg);"></div>
+        <!-- 北岸淹没旧船坞（水坝垫高湖位后没入水中） -->
+        <div class="sf-abs sf-sunken" style="left:33.077%; top:39.286%; width:2.692%; height:2.857%; background:#4e79a71a;"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:40%; top:45.5%; background:#f5f5f4dd; padding:2px;">旧船坞（水下遗迹）</div>
+        <!-- 生产码头↔菜园服务小径（沿主楼东侧，穿南岸车道平交，贴弧线，跟随主楼新位置） -->
+        <div class="sf-abs sf-woods" style="left:14.423%; top:46.786%; width:3.077%; height:10.357%;"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:15%; top:47.5%;">树林</div>
+
+        <!-- 湖边步道沿线：矮树、草地·长椅 -->
+        <div class="sf-abs sf-woods" style="left:62%; top:37.5%; width:2.2%; height:2.286%;"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:66%; top:44%;">写生草地·长椅</div>
+
+        <!-- 原公共区旧别墅：临湖西翼归档／客房，陆侧车辆入口；不绘道路。 -->
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:3;pointer-events:none" aria-label="旧别墅、小博物馆、访客客房及南侧写生草地">
+          <path d="M660 238 L845 214 L900 261 L660 279 Z" fill="#59a14f" fill-opacity=".09" stroke="#86b67f" stroke-dasharray="5 3"/>
+          <path d="M854 250 L908 268 L945 280 L905 295 L851 278 Z" fill="#cfe0bd" stroke="#86a774" stroke-dasharray="4 3"/>
+          <path d="M895 208 L932 173 L975 165 L1040 211 L1022 230 L1061 264 L1033 273 L993 242 L974 258 Z" fill="#e7dfd0" stroke="#887b68" stroke-width="2"/>
+          <path d="M895 208 L920 185 L960 216 L936 239 Z" fill="#d8cbb4" stroke="#887b68" stroke-width="2"/>
+          <path d="M910 232 L940 253 L932 265 L902 244 Z" fill="#f3ece0" stroke="#aa9b82"/>
+          <path d="M909 225 L934 243" stroke="#4e79a7" stroke-width="3"/>
+          <!-- 西翼入口、陆侧停车位 -->
+          <path d="M902 221 L889 230" stroke="#b46d50" stroke-width="4"/>
+          <!-- 停车区嵌入别墅东北缺口，不在楼外另放孤立方框 -->
+          <path d="M1025 231 L1040 216 L1056 243 L1041 247 Z" fill="#ece9df" stroke="#a59a84" stroke-width="1.5" stroke-dasharray="3 2"/>
+          <path d="M1030 231 L1040 226 M1036 240 L1047 234" stroke="#a59a84" stroke-width="1.2"/>
+          <text x="1044" y="241" font-size="10" text-anchor="middle" fill="#6e756e">P</text>
+          <path d="M1050 232 L1059 229" stroke="#b88759" stroke-width="3"/>
+          <!-- 长椅面向南侧湖水，木栏外是陡岸端点 -->
+          <path d="M898 278 L915 283 M901 281 L899 286 M912 284 L910 289" fill="none" stroke="#876b48" stroke-width="3"/>
+          <path d="M936 279 L950 286 M938 276 L935 283 M945 280 L942 287 M951 283 L948 290" fill="none" stroke="#876b48" stroke-width="2"/>
+          <path d="M955 290 l5 6 M962 287 l5 6 M969 284 l5 6" stroke="#9c9282" stroke-width="1.5"/>
+        </svg>
+        <div class="sf-abs sf-label text-small" style="left:75%;top:21%;">别墅｜博物馆·客房</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:72%;top:37%;">西翼归档·客房</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:85%;top:32%;">别墅停车</div>
+        <!-- 东岸：餐饮会客建筑＋原公共区设施 -->
+        <div class="sf-abs sf-b" style="left:76.154%; top:47.143%; width:5%; height:7.143%;"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:76.154%; top:56.8%;">宴会厅（兼员工用餐）·中央厨房</div>
+        <div class="sf-abs sf-b" style="left:71.731%; top:50%; width:1.538%; height:1.429%;"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:72.5%; top:53.571%;">公共码头</div>
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:3;pointer-events:none" aria-label="公路东侧访客停车场">
+          <rect x="1100" y="350" width="46" height="38" rx="3" fill="#ece9df" stroke="#a59a84" stroke-width="1.5" stroke-dasharray="4 2"/>
+          <path d="M1083 370 L1100 370" stroke="#b88759" stroke-width="3"/>
+          <path d="M1103 359 L1116 359 M1103 370 L1116 370 M1103 381 L1116 381 M1130 359 L1143 359 M1130 370 L1143 370 M1130 381 L1143 381" stroke="#a59a84" stroke-width="1.3"/>
+          <text x="1123" y="374" text-anchor="middle" font-size="16" fill="#6e756e">P</text>
+        </svg>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:89%; top:58%;">访客停车场</div>
+<svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:2;pointer-events:none" aria-label="南岸公共区地块顺溪与路网收边">
+          <path d="M695 466 C765 460 859 458 932 462 L925 494 C849 496 774 497 700 502 Z" fill="#d4ddba" fill-opacity=".22" stroke="#8f9c79" stroke-width="1.5" stroke-dasharray="5 3"/>
+          <path d="M710 510 C770 505 835 502 900 500 L889 541 C837 552 773 558 711 560 Z" fill="#d4ddba" fill-opacity=".22" stroke="#8f9c79" stroke-width="1.5" stroke-dasharray="5 3"/>
+          <path d="M711 575 C754 573 809 568 856 560 L847 590 C800 602 749 612 708 610 Z" fill="#d4ddba" fill-opacity=".22" stroke="#8f9c79" stroke-width="1.5" stroke-dasharray="5 3"/>
+          <path d="M968 409 L1009 411 L1018 440 L982 448 L968 430 Z" fill="#d4ddba" fill-opacity=".22" stroke="#8f9c79" stroke-width="1.5" stroke-dasharray="5 3"/>
+          <path d="M1046 410 C1060 406 1081 409 1095 421 L1084 451 C1068 445 1056 434 1044 425 Z" fill="#d4ddba" fill-opacity=".22" stroke="#8f9c79" stroke-width="1.5" stroke-dasharray="5 3"/>
+</svg>
+        <!-- 原公共区：跑马体验＋划艇棚＋野餐草坪 -->
+        <div class="sf-abs sf-b" style="left:73.462%; top:57.143%; width:1.923%; height:3.571%;"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:76.846%; top:62.857%;">马厩·调教场</div>
+        <div class="sf-abs sf-b" style="left:73.462%; top:53.929%; width:1.346%; height:2.143%;"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:84.615%; top:64.286%;">野餐草坪</div>
+        <!-- 牵骑线（调教场→东岸南界林缘往返）＋东端观景台 -->
+        <div class="sf-abs sf-label sf-optional text-small" style="left:81.346%; top:65.571%;">牵骑线</div>
+        <div class="sf-abs sf-b" style="left:74.231%; top:47.857%; width:1.923%; height:2.857%;"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:75.192%; top:45%;">观景台</div>
+        <!-- 东北坝口：湖岸收束→横坝；引水渠与坝下河流分别向图右延伸。 -->
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:3;pointer-events:none" aria-label="东北岸水坝、引水渠及坝下河流">
+          <!-- 引水渠：规则双岸，接坝前湖水 -->
+          <path d="M1065 270 L1110 247 L1200 236 L1300 232" fill="none" stroke="#4e79a7" stroke-width="3"/>
+          <!-- 坝下河流：从坝后沿峡谷向东北伸出，宽度随岸形变化 -->
+          <path d="M1065 270 C1115 235 1208 200 1300 74 L1300 100 C1216 214 1116 283 1073 313 Z" fill="#b8d3e5" stroke="#4e79a7" stroke-width="2"/>
+          <!-- 横坝封住湖口，与引水口相邻 -->
+          <path d="M1065 270 L1073 313" fill="none" stroke="#716e68" stroke-width="9"/>
+          <path d="M1065 270 L1073 313" fill="none" stroke="#d6d0c5" stroke-width="4"/>
+          <!-- 坝下码头位于下游河岸，避免仍留在湖内 -->
+          <path d="M1202 219 L1195 209 L1220 185" fill="none" stroke="#927d65" stroke-width="5" stroke-dasharray="6 3"/>
+          <path d="M1198 223 L1207 216 M1205 199 L1210 204 M1217 188 L1223 193" fill="none" stroke="#927d65" stroke-width="2"/>
+          <path d="M1202 221 L1214 240" fill="none" stroke="#927d65" stroke-width="1"/>
+        </svg>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:81.5%; top:36%;">水坝</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:92%; top:33.5%;">引水渠</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:94%; top:25%;">坝下河流</div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:93%; top:33%;">废弃坝下码头</div>
+        <!-- 分界以东：南岸沿湖公共草坪＋跑马马道（一端接铺装小路支线与公路交叉口）；公园北坡果树 -->
+        <div class="sf-abs sf-label sf-optional text-small" style="left:61.923%; top:69%;">沿湖草坪·跑马</div>
+        <!-- 铁路主题公园下方扩展第二跑马草坪；与沿湖草坪分开，随新溪线与马道收边。 -->
+        <div class="sf-abs sf-label text-small" style="left:60%; top:84.2857%;">第二跑马草坪</div>
+        <!-- 铁路主题公园（南岸小车辆段＋短轨保留） -->
+        <div class="sf-abs sf-b" style="left:59.615%; top:73.571%; width:2.692%; height:3.214%;"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:58.654%; top:77.5%;">铁路主题公园</div>
+        <!-- 宅园果树区顺脊东侧较缓坡面下移，北侧/东侧车道走廊保持通畅。 -->
+        <svg class="sf-abs" viewBox="0 0 1300 700" style="inset:0;width:100%;height:100%;z-index:2;pointer-events:none" aria-label="北岸宅园与果树花季，顺山脊东侧缓坡调整">
+          <path d="M655 146 C693 128 744 131 795 146 C813 160 822 176 825 190 C776 202 722 216 671 218 C666 194 661 169 655 146 Z" fill="#59a14f" fill-opacity=".1" stroke="#86b67f" stroke-width="1.5" stroke-dasharray="5 3"/>
+          <path d="M667 174 C710 157 764 160 811 177" fill="none" stroke="#86b67f" stroke-width="1" stroke-dasharray="3 4"/>
+        </svg>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:56.923%; top:25.714%;">宅园·果树花季</div>
+
+        <!-- 湖边步道（西岸合并段）：②→⑤→④b→分岔口→长椅→低木栏端点（步行观景端） -->
+
+        <!-- 马道西段（步／马共用）：分岔口→④a 树林转弯→③停车院 -->
+
+        <!-- 更北小马道（北线巡查）：近附楼群分岔→沿北边界→东端主哨卡 -->
+
+        <!-- 铺装小路（南线巡查）：分岔口→主楼后缘→沿南边界→东端主哨卡，贴湖岸弧线，跟随主楼新位置 -->
+
+        <!-- 巡查线接车道支线（私人区以东·分界外） -->
+        <!-- 四小哨＝分界线与四条线的交叉点 -->
+        <div class="sf-abs sf-s5 sf-a" style="left:46.0887%; top:12.2204%;"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:43.2%; top:14%;">小哨</div>
+        <div class="sf-abs sf-s5 sf-a" style="left:50.3176%; top:33.7943%;"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:47%; top:35.8%;">小哨</div>
+        <div class="sf-abs sf-s5 sf-a" style="left:50%; top:70.7143%;"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:52%; top:70%;">小哨</div>
+        <div class="sf-abs sf-s5 sf-a" style="left:50%; top:93.2857%;"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:50%; top:94%;">小哨</div>
+
+        <!-- 车道：南线（柏油路西延至分岔口，贴湖岸弧线，跟随主楼新位置） -->
+        <!-- 车道：北线（服务附楼群停车院） -->
+        <!-- 对外道路 -->
+
+        <!-- 船运联系（历史遗产） -->
+        <div class="sf-abs sf-boat" style="left:34.4%; top:42%; width:10%; transform:rotate(111deg);"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:29.5%; top:51%;">船运联系（历史遗产）</div>
+
+        <!-- 05-L 场景组标记 -->
+        <div class="sf-abs sf-s4 sf-m text-small" style="left:23.8%; top:69.3%;">②</div>
+        <div class="sf-abs sf-s4 sf-m text-small" style="left:27.3077%; top:33.1429%;">③</div>
+        <div class="sf-abs sf-s4 sf-m text-small" style="left:63%; top:39%;">④a</div>
+        <div class="sf-abs sf-s4 sf-m text-small" style="left:67%; top:32%;">④b</div>
+        <div class="sf-abs sf-s4 sf-m text-small" style="left:70%; top:31%;">⑤</div>
+
+        <!-- 60-DL 晚宴 -->
+        <div class="sf-abs sf-s4 sf-m text-small" style="left:78.654%; top:50.714%;">宴</div>
+
+        <!-- 后续外景锚点 -->
+        <div class="sf-abs sf-s5 sf-a" style="left:69.7%; top:40%;"></div>
+        <div class="sf-abs sf-s5 sf-a" style="left:73%; top:40.5%;"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:77%; top:43%;">低木栏·陡岸</div>
+        <div class="sf-abs sf-s5 sf-a" style="left:20.385%; top:63.929%;"></div>
+        <div class="sf-abs sf-s5 sf-a" style="left:84.7%; top:46.5%;"></div>
+        <div class="sf-abs sf-label sf-optional text-small" style="left:85%; top:49.5%;">主哨卡</div>
+
+        <!-- 车道与路名注记 -->
+
+        <!-- 边注与比例尺 -->
+        <!-- 指北针：正北=图上右上方 -->
+        <div class="sf-abs" style="left:93%; top:8%; transform:translate(-50%,-50%); z-index:6;">
+          <svg width="40" height="40" viewBox="0 0 40 40" style="display:block;">
+            <line x1="20" y1="35" x2="20" y2="5" stroke="currentColor" stroke-width="1.5" transform="rotate(45 20 20)"/>
+            <polygon points="20,2 23,10 17,10" fill="currentColor" transform="rotate(45 20 20)"/>
+            <text x="28" y="12" font-size="10" fill="currentColor" font-weight="bold" transform="rotate(45 28 12)">N</text>
+          </svg>
+        </div>
+        <div class="sf-abs sf-margin text-small sf-label-v" style="left:1.6%; top:50%; transform:translate(-50%,-50%);">西 · 山地陡峭（无外接道路）</div>
+        <div class="sf-abs sf-margin text-small" style="left:50%; top:96.8%; transform:translateX(-50%);">南 · 背坡低 · 留天空开口（主楼南向取日照）｜ 陆侧高地＝全景视点方向</div>
+        <div class="sf-abs sf-scale" style="left:5%; top:93.5%; width:7.692%;"></div>
+        <div class="sf-abs sf-margin text-small" style="left:8.846%; top:95.8%; transform:translateX(-50%);">≈200m</div>
+      </div>
+      <p class="text-small text-muted">真北见右上指北针，湖轴西南—东北。地形口径：西侧山体将湖岸压成仅供步行／骑马的窄道。红褐虚线为林线，绿线为庄园范围；林线外树林可有家族开发利用安排，所有权暂未定（当地贵族／政府候选），安保不向林线外巡逻。东北旧业主地块覆盖一条山溪，别墅位于高台；东南山溪汇入湖泊。溪流过路处按小桥／涵洞示意，精确坡度待定。</p>
+      <div style="margin:12px 0; padding:12px 16px; border:1px solid #d6d3d1; border-radius:6px; background:#fffdf8; font-size:14px; line-height:1.8;">
+        <p><strong>南岸待补设施（2026-11-06）：</strong>主楼旁另建老厕屋，源于水库/供水卫生要求；本轮仅备注，具体位置、尺寸及污物收集处置另定。主楼本体和东翼不设厕所，家用厕所集中保留在西翼；洗浴设施可继续存在。</p><strong>北岸建筑群 · 分栋编号（本轮功能试排）</strong>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px 18px;">
+          <div><b>N1</b>　后坡仓库</div>
+          <div><b>N2</b>　设备·后勤房</div>
+          <div><b>N3</b>　旧住宅·账房</div>
+          <div><b>N4</b>　职工住宿</div>
+          <div><b>N5</b>　清洁工作间·资料用房</div>
+          <div><b>N6</b>　马厩·车马棚</div>
+          <div><b>N7</b>　旧畜舍改机修仓储</div>
+          <div><b>N8</b>　旧船屋·作业棚</div>
+          <div><b>N9</b>　临水作业棚</div>
+          <div><b>N10</b>　临水储物棚</div>
+        </div>
+        <div style="color:#4e79a7;">旧船坞为蓝色虚线水下遗迹；现役建筑均在陆地。N5前方留停车作业院，分栋用途可继续细化。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sf-legend">
+      <div>
+        <h3>庄园边界与两线巡查（本图核心）</h3>
+        <div class="sf-row"><span class="sf-sw" style="border:2px solid color-mix(in srgb, var(--viz-series-3) 55%, transparent); background:transparent;"></span><span>庄园边界（绿线）＝实际范围；红褐虚线为林线：两条巡查线沿边界内侧闭合巡逻；西岸湖山相夹处最窄，无可耕建之地</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s2"></span><span>北线巡查＝马道（分岔口→④a 树林转弯→③停车院，步／马共用西段）＋更北小马道（近附楼群分岔→贴北边界→东端）；北缘陡→骑马土路</span></div>
+        <div class="sf-row"><span class="sf-sw" style="background:color-mix(in srgb, var(--viz-series-1) 70%, transparent);"></span><span>南线巡查＝铺装小路：主楼南侧→园圃外缘→南边界→东端停车场；步行铺装路</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s2"></span><span>北岸附楼至旧别墅的送资料路线与散步路线有重合：矮树后开阔湖景、缓坡与观湖长椅，低木栏设于小路尽头，栏外为较陡湖岸；路网线形待重绘。</span></div>
+        <div class="sf-row"><span class="sf-sw sf-b"></span><span>分岔口＝柏油路西端＋南北巡查线分岔枢纽（园务值班屋设此；12-L 告别在此）</span></div>
+        <div class="sf-row"><span class="sf-sw sf-b"></span><span>接车道：两巡查线支线在私人区以东（分界外）接上车道；东端主哨卡汇合</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s5"></span><span>哨位＝主哨卡（对外唯一）＋四小哨＝分界线与四条线的交叉点：北·巡逻马道｜北·岸车道｜南·岸车道｜南·铺装小路；分岔口园务值班屋为巡护岗（非哨位）</span></div>
+      </div>
+      <div>
+        <h3>四岸分工（母设定 §4）</h3>
+        <div class="sf-row"><span class="sf-sw sf-b"></span><span>北岸老核心＝生产农庄院落→后勤区（分栋·朝向不完全整齐）：旧住宅·账房｜清洁工作间·资料用房（石板停车院）｜马厩·车马棚｜草料仓·储物·高脚粮仓（stabbur）｜畜舍（改机修仓储）｜职工住宿（1988–95 改建）｜船屋·旧码头；临水装卸层垂直岸线、平行伸水码头，向阳建筑带南／东南向，高差以顺坡折返道路连接</span></div>
+        <div class="sf-row"><span class="sf-sw sf-b"></span><span>南岸主楼群（罗辑住所，体量试排）：西翼沿岸斜伸、中央主楼转折、东翼接续，连廊保持室内连通。东翼−1层服务空间与小厨房向湖岸外伸（棕色虚线），上层退向陆侧（实线）；蓝线为湖景开窗示意。中央客厅保留湖景，西翼端窗看湖与写生草地，小起居室通临湖露台。厨房“后侧”按入口与使用动线理解，不绑定公路侧。低层屋顶与客厅视线高差待剖面核验。建筑群整体向图左下平移，南湖岸与南侧两处旧码头同步调整；旧路网已删除，下一步曲线重绘。</span></div>
+        <div class="sf-row"><span class="sf-sw sf-b"></span><span>东北旧别墅＝小博物馆、资料归档与访客客房；西翼接小起居室、湖景窗及露台，南侧写生草地对应08-L／24-L。红侧西翼步行抵达，车辆绕宅园北侧停陆侧。东岸宴会厅通过换桌兼作员工用餐，中央厨房设在旁边；南岸主楼仅保留私人小餐厅、小厨房。</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s3"></span><span>车道：北岸附楼停车院→宅园北侧→别墅陆侧→主哨左侧→东岸接待区→南岸主楼后缘；对外支路由主线分出，经主哨及坝下旧码头陆侧向外；“车道绕过去还远些”＝南北车辆往来须绕湖东端，公路从主哨左侧经过；今车道以约 1970 年停运的窄轨路基改建</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s1"></span><span>船运联系（历史遗产·已沉）：北岸旧码头↔南岸场院码头（1830 年代末启用的南岸第一处设施，主楼东侧，服务小径直连菜园·后部服务——货物卸在生产侧，不扰主楼清净）；主楼正门另有 1856 私用小码头（抵达庭院配套·垂钓）——19 世纪末水坝协议后坝成蓄水，三处码头与北岸旧船坞没入水中，窄轨接替两岸集货、绕坝至坝下码头转驳下游船运，绕湖土路同步改善，晴水可见旧木</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s1"></span><span>窄轨（邻业主运输线·19 世纪末—约 1970）＝两岸集货、东端绕坝至坝下码头转驳下游船运；约 1970 随地产售出仍在运营，家族接手后停运，路基改建为今车道（坡度弯道经检查局部改线）</span></div>
+        <div class="sf-row"><span class="sf-sw sf-b"></span><span>东岸＝接管前公园＋预约私厨（60-DL 晚宴落点）；原公共区设施＝公共码头·划艇棚·公园步道·访客停车场·野餐草坪（接管前对客，接管后内部用）；接管后主哨卡为唯一常规入口，北↔南内部通行不过哨卡</span></div>
+        <div class="sf-row"><span class="sf-sw sf-field"></span><span>跑马体验（1970s 公园化落地）＝公共马厩＋调教场＋沿湖公共草坪马道（分界以东贴湖南岸）＋牵骑线（东岸南界林缘往返），冬季雪橇——约 1970 二期“休闲设施未整体推进”的轻量兑现；马匹经东端车线由北岸运抵，不走私人区；接管后停对外、转内部马房</span></div>
+        <div class="sf-row"><span class="sf-sw sf-field"></span><span>花季与打卡点＝园中果树花季＋羽扇豆（1970s 种植·入侵种 2000s 起清除）＋东端观景台西望全湖轴线；挪威式打卡＝观景台与步道目的地，不做人工花田</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s1"></span><span>东岸历史＝邻业主经营供水与运输：19 世纪末筑出湖蓄水坝（业主承诺承担陆路运输与修缮后家族同意），配套房＝住宅兼事务所·仓房·坝务小屋；约 1970 业主为筹措水源调查资金售出地产与铁路资产（供水及坝务权利另行保留），东岸转公共区域；住宅兼事务所与仓房 1995–2006 改建宴会厅·预约餐饮，坝务小屋仍作维护值班、不并入宴会厅</span></div>
+        <div class="sf-row"><span class="sf-sw sf-field"></span><span>铁路主题公园（南岸小车辆段＋短轨保留，公园化时代遗产景点）＝库房·检修设施·短轨展出；游客从东侧公园合法游线接入、与住宅生活区分流，无西侧入口；PDC 接管后停开</span></div>
+      </div>
+      <div>
+        <h3>田地与生产（工作值·坡向分工）</h3>
+        <div class="sf-row"><span class="sf-sw sf-field"></span><span>南岸缓坡＝阴坡：干草场·牧场（役马干草，挨主楼园圃）＋菜园·花圃（背坡留日照）；北岸阳坡陡坡＝梯田果·薯·麦（Sogn 峡湾果树传统，手工打理）——两坡都放，按坡向分职</span></div>
+        <div class="sf-row"><span class="sf-sw sf-field"></span><span>溪口水磨·锯木场与打谷场·草料堆场贴生产院落；马匹调教沿马道西段（步／马共用），放牧随南岸干草场（割后放牧）；家族骑乘草坪＝1890s 休闲（冬季湖面直线冰道＝1832 挪威首次正规赛马格式）</span></div>
+        <div class="sf-row"><span class="sf-sw sf-b"></span><span>西岸腹地陡峭＝除正文元素（树林、短檐、廊道、木栏、长椅）与步／马道外不布置生产设施；正规赛马场＝想建未建（挂 1959–66 二期"休闲设施未整体推进"）；stabbur 与冰窖入清单不占图面</span></div>
+      </div>
+      <div>
+        <h3>05-L 雨程（送资料·同一条路）</h3>
+        <div class="sf-row"><span class="sf-sw sf-s4"></span><span>05-L：③北岸工作间取件→④a沿湖树林转弯→④b别墅西侧短檐→廊道→⑤别墅西翼归档。车辆从更北陆侧绕行，停别墅东侧，线路与距离待重绘。</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s4"></span><span>步行及车行距离随新布局重测（须满足“车道绕过去还远些”）；道具流：自行车经东岸车路另运先到、长伞＝车门伞槽、黑色轿车、硬纸夹资料</span></div>
+      </div>
+      <div>
+        <h3>后续外景锚点</h3>
+        <div class="sf-row"><span class="sf-sw sf-s5"></span><span>08-L罗辑专程在别墅会合；写生点在别墅南、宅园东的临湖草地，与05-L雨程部分重合；低木栏外为陡岸，24-L别墅西翼窗直接看写生草地。东翼东侧预留旧码头至菜园服务通路，南岸公路从家族骑乘草坪与菜园之间通过，线形待绘。</span></div>
+        <div class="sf-row"><span class="sf-sw sf-s5"></span><span>12-L 分岔口告别·附楼方向灯光（指北岸）；29/38-L 出界后沿湖段→山路；船运联系＝历史遗产</span></div>
+      </div>
+      <div>
+        <h3>尺度与分期（本图取值·工作值）</h3>
+        <div class="sf-row"><span class="sf-sw sf-s1"></span><span>湖≈1.4×0.4km（东西向长湖）；北线巡查全程≈2.5km（马道西段＋更北小马道）；南线巡查全程≈2.1km；湖边步道（②→低木栏）≈0.4km；车道≈2.6km（东端汇合→唯一对外路）</span></div>
+        <div class="sf-row"><span class="sf-sw sf-phase" style="width:2px;height:12px;border-radius:0;"></span><span>分界虚线＝私人区｜原公共区分界；北岸参照山脊走势衔接岸边，脊西为阳坡梯田、脊东较缓坡为宅园果树区，湖面及南岸延续原线（兼一期/二期开发重心线）；两巡查线在此各有支线接车道</span></div>
+      </div>
+      <p class="text-small text-muted">口径：用户手绘拓扑为意图依据（庄园范围≈红圈；橙/绿两线＝南北边境巡查，西岸与步道合并）；岸线、高程、地籍、建筑朝向不锁死。南主楼面湖北，日照按低背坡核。地形与岸线景观用户另行研究，本图只做功能与尺度安排。旧同岸图几何与公里数退役；引文依据见《庄园视觉设计_正文参考交接.md》。</p>
+    </div>
+  </div>
+</div>
+</body></html>
