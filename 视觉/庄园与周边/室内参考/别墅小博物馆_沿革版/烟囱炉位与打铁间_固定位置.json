@@ -1,0 +1,481 @@
+{
+  "site_version": 13,
+  "coordinate_system": {
+    "frame": "villa local X/Z",
+    "placement": {
+      "e": 790,
+      "n": 1940,
+      "y": 25.2,
+      "heading": 45
+    },
+    "transform": "E=e+cos(a)*X+sin(a)*Z; N=n+sin(a)*X-cos(a)*Z",
+    "note": "局部Z朝住宅下坡面，不等于正南；a=heading"
+  },
+  "retained_chimneys": [
+    {
+      "id": "VC1",
+      "name": "旧宅西侧灶炉烟囱",
+      "rect": [
+        12.1,
+        -28.45,
+        0.9,
+        0.9
+      ],
+      "phase": 0,
+      "floors": [
+        0,
+        1
+      ],
+      "top_height_working": 9.2,
+      "note": "贴旧厨房/原餐室隔墙，上穿原卧室隔墙角。灶与各层铁炉使用同一砖芯内独立烟道。",
+      "channels": [
+        "VC1-H01",
+        "VC1-H02",
+        "VC1-H03",
+        "VC1-H04"
+      ],
+      "base_level": 25.2,
+      "status": "旧宅整体平移/工业组保留"
+    },
+    {
+      "id": "VC2",
+      "name": "旧宅东侧炉烟囱",
+      "rect": [
+        16.25,
+        -28.45,
+        0.9,
+        0.9
+      ],
+      "phase": 0,
+      "floors": [
+        0,
+        1
+      ],
+      "top_height_working": 9.2,
+      "note": "贴旧书房/客厅隔墙，上穿旧孩子房/卧室隔墙，避免楼梯与房门。",
+      "channels": [
+        "VC2-H05",
+        "VC2-H06",
+        "VC2-H07",
+        "VC2-H08"
+      ],
+      "base_level": 25.2,
+      "status": "旧宅整体平移/工业组保留"
+    },
+    {
+      "id": "VC7",
+      "name": "工坊打铁炉独立烟囱",
+      "rect": [
+        -29.849999999999998,
+        -22.849999999999998,
+        0.9,
+        0.9
+      ],
+      "phase": 1,
+      "floors": [
+        0
+      ],
+      "top_height_working": 8,
+      "note": "位于砖砌修配间西墙边；打铁炉集烟罩独立接入，与水力轴孔、蒸汽机轴孔及木料仓分开。",
+      "channels": [
+        "VC7-H20"
+      ],
+      "base_level": 25.2,
+      "status": "旧宅整体平移/工业组保留"
+    },
+    {
+      "id": "VC8",
+      "name": "旧蒸汽锅炉独立烟囱",
+      "rect": [
+        -16.0,
+        -51.2,
+        1.2,
+        1.2
+      ],
+      "phase": 3,
+      "floors": [
+        0
+      ],
+      "top_height_working": 10,
+      "note": "旧锅炉房北外墙独立基座，避开北门及保存附屋；设备拆售后保留旧基座/烟囱，馆务不再接锅炉排烟。",
+      "channels": [
+        "VC8-H21"
+      ],
+      "base_level": 25.2,
+      "status": "旧宅整体平移/工业组保留"
+    }
+  ],
+  "candidate_new_house_chimneys": [
+    {
+      "id": "VC3",
+      "center": [
+        -20,
+        20
+      ],
+      "top": 30.8,
+      "status": "候选砖芯，旧炉位接入作废，V00联合校核"
+    },
+    {
+      "id": "VC4",
+      "center": [
+        -10,
+        20
+      ],
+      "top": 30.8,
+      "status": "候选砖芯，旧炉位接入作废，V00联合校核"
+    },
+    {
+      "id": "VC5",
+      "center": [
+        -20,
+        30
+      ],
+      "top": 25.8,
+      "status": "候选砖芯，旧炉位接入作废，V00联合校核"
+    },
+    {
+      "id": "VC6",
+      "center": [
+        -6,
+        12
+      ],
+      "top": 30.8,
+      "status": "候选砖芯，旧炉位接入作废，V00联合校核"
+    }
+  ],
+  "retained_hearths": [
+    {
+      "id": "H01",
+      "room_id": "H1",
+      "chimney_id": "VC1",
+      "channel_id": "VC1-H01",
+      "floor": 0,
+      "point": [
+        11.65,
+        -28.9
+      ],
+      "reserve": [
+        11.15,
+        -29.3,
+        1,
+        0.8
+      ],
+      "kind": "kitchen_range",
+      "phase": 0,
+      "retired_phase": 6,
+      "flue_path": [
+        [
+          11.65,
+          -28.9
+        ],
+        [
+          12.55,
+          -28.0
+        ]
+      ],
+      "level": 25.2
+    },
+    {
+      "id": "H02",
+      "room_id": "H4",
+      "chimney_id": "VC1",
+      "channel_id": "VC1-H02",
+      "floor": 0,
+      "point": [
+        12.55,
+        -27.15
+      ],
+      "reserve": [
+        12.15,
+        -27.55,
+        0.8,
+        0.8
+      ],
+      "kind": "iron_stove",
+      "phase": 0,
+      "retired_phase": 6,
+      "flue_path": [
+        [
+          12.55,
+          -27.15
+        ],
+        [
+          12.55,
+          -28.0
+        ]
+      ],
+      "level": 25.2
+    },
+    {
+      "id": "H03",
+      "room_id": "H6",
+      "chimney_id": "VC1",
+      "channel_id": "VC1-H03",
+      "floor": 1,
+      "point": [
+        12.0,
+        -28.9
+      ],
+      "reserve": [
+        11.6,
+        -29.3,
+        0.8,
+        0.8
+      ],
+      "kind": "iron_stove",
+      "phase": 0,
+      "retired_phase": 2,
+      "flue_path": [
+        [
+          12.0,
+          -28.9
+        ],
+        [
+          12.55,
+          -28.0
+        ]
+      ],
+      "level": 28.4
+    },
+    {
+      "id": "H04",
+      "room_id": "H9",
+      "chimney_id": "VC1",
+      "channel_id": "VC1-H04",
+      "floor": 1,
+      "point": [
+        12.55,
+        -27.15
+      ],
+      "reserve": [
+        12.15,
+        -27.55,
+        0.8,
+        0.8
+      ],
+      "kind": "iron_stove",
+      "phase": 0,
+      "retired_phase": 6,
+      "flue_path": [
+        [
+          12.55,
+          -27.15
+        ],
+        [
+          12.55,
+          -28.0
+        ]
+      ],
+      "level": 28.4
+    },
+    {
+      "id": "H05",
+      "room_id": "H3",
+      "chimney_id": "VC2",
+      "channel_id": "VC2-H05",
+      "floor": 0,
+      "point": [
+        16.7,
+        -28.9
+      ],
+      "reserve": [
+        16.3,
+        -29.3,
+        0.8,
+        0.8
+      ],
+      "kind": "iron_stove",
+      "phase": 0,
+      "retired_phase": 6,
+      "flue_path": [
+        [
+          16.7,
+          -28.9
+        ],
+        [
+          16.7,
+          -28.0
+        ]
+      ],
+      "level": 25.2
+    },
+    {
+      "id": "H06",
+      "room_id": "H5",
+      "chimney_id": "VC2",
+      "channel_id": "VC2-H06",
+      "floor": 0,
+      "point": [
+        16.7,
+        -27.1
+      ],
+      "reserve": [
+        16.3,
+        -27.5,
+        0.8,
+        0.8
+      ],
+      "kind": "iron_stove",
+      "phase": 0,
+      "retired_phase": 6,
+      "flue_path": [
+        [
+          16.7,
+          -27.1
+        ],
+        [
+          16.7,
+          -28.0
+        ]
+      ],
+      "level": 25.2
+    },
+    {
+      "id": "H07",
+      "room_id": "H8",
+      "chimney_id": "VC2",
+      "channel_id": "VC2-H07",
+      "floor": 1,
+      "point": [
+        16.7,
+        -28.9
+      ],
+      "reserve": [
+        16.3,
+        -29.3,
+        0.8,
+        0.8
+      ],
+      "kind": "iron_stove",
+      "phase": 0,
+      "retired_phase": 2,
+      "flue_path": [
+        [
+          16.7,
+          -28.9
+        ],
+        [
+          16.7,
+          -28.0
+        ]
+      ],
+      "level": 28.4
+    },
+    {
+      "id": "H08",
+      "room_id": "H10",
+      "chimney_id": "VC2",
+      "channel_id": "VC2-H08",
+      "floor": 1,
+      "point": [
+        16.7,
+        -27.1
+      ],
+      "reserve": [
+        16.3,
+        -27.5,
+        0.8,
+        0.8
+      ],
+      "kind": "iron_stove",
+      "phase": 0,
+      "retired_phase": 2,
+      "flue_path": [
+        [
+          16.7,
+          -27.1
+        ],
+        [
+          16.7,
+          -28.0
+        ]
+      ],
+      "level": 28.4
+    },
+    {
+      "id": "H20",
+      "room_id": "F1",
+      "chimney_id": "VC7",
+      "channel_id": "VC7-H20",
+      "floor": 0,
+      "point": [
+        -28.45,
+        -22.35
+      ],
+      "reserve": [
+        -29.2,
+        -23.0,
+        1.5,
+        1.3
+      ],
+      "kind": "forge",
+      "phase": 1,
+      "retired_phase": 7,
+      "flue_path": [
+        [
+          -28.45,
+          -22.35
+        ],
+        [
+          -29.4,
+          -22.4
+        ]
+      ],
+      "level": 25.2
+    },
+    {
+      "id": "H21",
+      "room_id": "S1",
+      "chimney_id": "VC8",
+      "channel_id": "VC8-H21",
+      "floor": 0,
+      "point": [
+        -14.2,
+        -47.8
+      ],
+      "reserve": [
+        -15.299999999999999,
+        -48.699999999999996,
+        2.2,
+        1.8
+      ],
+      "kind": "steam_boiler",
+      "phase": 3,
+      "retired_phase": 4,
+      "flue_path": [
+        [
+          -14.2,
+          -47.8
+        ],
+        [
+          -15.4,
+          -48.5
+        ],
+        [
+          -15.4,
+          -50.6
+        ]
+      ],
+      "level": 25.2
+    }
+  ],
+  "new_house_hearths_status": "旧A/B炉位撤销，V00联合确定新接入",
+  "forge": {
+    "room_id": "F1",
+    "chimney_id": "VC7",
+    "hearth_id": "H20",
+    "anvil": [
+      -26.8,
+      -21
+    ],
+    "tool_coal_box": [
+      -25.6,
+      -23.2
+    ],
+    "quench_bucket": [
+      -27.2,
+      -19.3
+    ],
+    "note": "工具/合页/机件的小型打铁修配，不是冶炼厂；砖砌间内火工，木料留在东侧材仓，热加工不占水力传动路线。"
+  }
+}

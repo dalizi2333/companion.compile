@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="790" viewBox="0 0 850 790"><rect width="850" height="790" fill="#fafbfb"/><style>text{font-family:"Noto Sans CJK SC",sans-serif;fill:#263746;font-size:14px}</style>
+<text x="30" y="30" font-size="22">场地v13 · 新宅1层 · 楼面20.8m</text>
+<rect x="125" y="410" width="540" height="280" fill="#eee5d4" stroke="#607787" stroke-width="2"/>
+<rect x="505" y="410" width="72.0" height="80" fill="none" stroke="#a77643" stroke-width="2"/>
+<path d="M 125 598.0 L 125 622.0" stroke="white" stroke-width="8"/><path d="M 125 598.0 L 125 622.0" stroke="#3593a0" stroke-width="4"/><text x="133" y="598">EXT-L-W · 1.2m</text>
+<rect x="256.0" y="401.0" width="18.0" height="18.0" fill="#b8946a" stroke="#607787" stroke-width="2"/>
+<text x="277" y="415">VC3候选</text>
+<rect x="456.0" y="401.0" width="18.0" height="18.0" fill="#b8946a" stroke="#607787" stroke-width="2"/>
+<text x="477" y="415">VC4候选</text>
+<rect x="256.0" y="601.0" width="18.0" height="18.0" fill="#b8946a" stroke="#607787" stroke-width="2"/>
+<text x="277" y="615">VC5候选</text>
+<rect x="536.0" y="241.0" width="18.0" height="18.0" fill="#b8946a" stroke="#607787" stroke-width="2"/>
+<text x="557" y="255">VC6候选</text>
+<text x="245" y="330">27×14m；内部隔墙及门窗待V00重排</text>
+<text x="385" y="450">主梯重叠工作区</text>
+<text x="30" y="720">蓝线＝对外门口工作值；棕色＝候选烟囱；不显示旧A/B隔墙与旧室内门洞。</text>
+<text x="30" y="748">局部X向右 / Z向下；heading=45°，不是正东/正南。四个对外门口仍需扫掠校核。</text>
+<text x="30" y="775">南侧外梯和独立台座已取消；旧房间面积只作功能目标，不能作为新边界。</text></svg>

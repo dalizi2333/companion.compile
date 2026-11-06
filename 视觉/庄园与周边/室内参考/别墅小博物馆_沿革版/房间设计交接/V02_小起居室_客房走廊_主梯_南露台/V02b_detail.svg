@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="676" height="572" viewBox="0 0 676 572">
+<rect width="676" height="572" fill="#fafbfb"/>
+<style>text{font-family:"Noto Sans CJK SC",sans-serif;fill:#263746;font-size:13px}.s{font-size:10px;fill:#5a6b76}.dim{font-size:9.5px;fill:#a77643}.step{font-size:9px;fill:#8a7a5c}</style>
+<text x="26" y="34" font-size="19">V02 · 24-L 连续走位序列 · 客房门→梯口→沙发→露台</text>
+<defs><clipPath id="cpV02b"><rect x="0" y="82" width="676" height="490"/></clipPath></defs>
+<g clip-path="url(#cpV02b)">
+<rect x="60.0" y="96.0" width="556.8000000000001" height="412.80000000000007" fill="#ffffff" stroke="#263746" stroke-width="3"/>
+<rect x="84.0" y="-68.4" width="72.0" height="176.4" fill="#eceff1" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="90" y="-52" font-size="11" fill="#3a4c58">生活储藏A</text>
+<text x="90" y="-38" class="s">U13a 22.0㎡</text>
+<rect x="259.2" y="-168.0" width="43.2" height="276.0" fill="#f1ede4" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="265" y="-152" font-size="11" fill="#3a4c58">客廊纵巷</text>
+<text x="265" y="-138" class="s">GB2 20.7㎡</text>
+<rect x="159.6" y="15.6" width="96.0" height="92.4" fill="#eceff1" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="166" y="32" font-size="11" fill="#3a4c58">生活储藏B</text>
+<text x="166" y="46" class="s">U13b 15.4㎡</text>
+<rect x="306.0" y="15.6" width="96.0" height="92.4" fill="#eceff1" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="312" y="32" font-size="11" fill="#3a4c58">生活储藏C</text>
+<text x="312" y="46" class="s">U13c 15.4㎡</text>
+<rect x="405.6" y="-68.4" width="63.6" height="176.4" fill="#ece9f2" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="412" y="-52" font-size="11" fill="#3a4c58">家务·布草</text>
+<text x="412" y="-38" class="s">U10 19.5㎡</text>
+<rect x="472.8" y="-168.0" width="52.8" height="276.0" fill="#f1ede4" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="479" y="-152" font-size="11" fill="#3a4c58">过厅(北口)</text>
+<text x="479" y="-138" class="s">U03 25.3㎡</text>
+<rect x="529.2" y="-168.0" width="63.6" height="276.0" fill="#f0ede9" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="535" y="-152" font-size="11" fill="#3a4c58">活动·阅读</text>
+<text x="535" y="-138" class="s">U50 30.5㎡</text>
+<rect x="84.0" y="162.0" width="100.8" height="82.8" fill="#f7ecec" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="90" y="178" font-size="11" fill="#3a4c58">庄颜普通客房[G-ZY]</text>
+<text x="90" y="192" class="s">U21 14.5㎡</text>
+<rect x="188.4" y="162.0" width="49.2" height="33.6" fill="#f7ecec" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="194" y="178" font-size="11" fill="#3a4c58">客房门斗[G-ZY]</text>
+<text x="194" y="192" class="s">U22 2.9㎡</text>
+<rect x="188.4" y="199.2" width="49.2" height="45.6" fill="#e7f0ee" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="194" y="215" font-size="11" fill="#3a4c58">客房厕洗[G-ZY]</text>
+<text x="194" y="229" class="s">U23 3.9㎡</text>
+<rect x="404.4" y="111.6" width="188.4" height="133.2" fill="#fdf6e3" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="410" y="128" font-size="11" fill="#3a4c58">小起居室(含水吧台)</text>
+<text x="410" y="142" class="s">U40 43.6㎡</text>
+<rect x="84.0" y="111.6" width="316.8" height="46.8" fill="#f1ede4" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="90" y="128" font-size="11" fill="#3a4c58">主廊(客廊)</text>
+<text x="90" y="142" class="s">GA 25.7㎡</text>
+<rect x="71.4" y="-144.0" width="6" height="28.8" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="74.4" y1="-144.0" x2="74.4" y2="-115.2" stroke="#3593a0" stroke-width="0.7"/>
+<text x="79" y="-127" class="dim">W-W1</text>
+<rect x="71.4" y="187.2" width="6" height="33.6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="74.4" y1="187.2" x2="74.4" y2="220.8" stroke="#3593a0" stroke-width="0.7"/>
+<text x="79" y="207" class="dim">W-W3</text>
+<rect x="108.0" y="251.4" width="33.6" height="6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="108.0" y1="254.4" x2="141.6" y2="254.4" stroke="#3593a0" stroke-width="0.7"/>
+<text x="125" y="248" text-anchor="middle" class="dim">W-S1</text>
+<rect x="196.8" y="251.4" width="14.4" height="6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="196.8" y1="254.4" x2="211.2" y2="254.4" stroke="#3593a0" stroke-width="0.7"/>
+<text x="204" y="248" text-anchor="middle" class="dim">W-S2</text>
+<rect x="416.4" y="251.4" width="36.0" height="6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="416.4" y1="254.4" x2="452.4" y2="254.4" stroke="#3593a0" stroke-width="0.7"/>
+<text x="434" y="248" text-anchor="middle" class="dim">W-S3</text>
+<rect x="516.0" y="251.4" width="57.6" height="6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="516.0" y1="254.4" x2="573.6" y2="254.4" stroke="#3593a0" stroke-width="0.7"/>
+<text x="545" y="248" text-anchor="middle" class="dim">W-S4</text>
+<rect x="599.4" y="168.0" width="6" height="33.6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="602.4" y1="168.0" x2="602.4" y2="201.6" stroke="#3593a0" stroke-width="0.7"/>
+<text x="607" y="188" class="dim">W-E1</text>
+<rect x="599.4" y="-81.6" width="6" height="33.6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="602.4" y1="-81.6" x2="602.4" y2="-48.0" stroke="#3593a0" stroke-width="0.7"/>
+<text x="607" y="-62" class="dim">W-E2</text>
+<rect x="71.4" y="128.4" width="6" height="26.4" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="74.4" y1="128.4" x2="74.4" y2="154.8" stroke="#3593a0" stroke-width="0.7"/>
+<text x="79" y="145" class="dim">W-GAw</text>
+<rect x="100.8" y="-180.6" width="28.8" height="6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="100.8" y1="-177.6" x2="129.6" y2="-177.6" stroke="#3593a0" stroke-width="0.7"/>
+<text x="115" y="-184" text-anchor="middle" class="dim">W-N1</text>
+<rect x="182.4" y="-180.6" width="33.6" height="6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="182.4" y1="-177.6" x2="216.0" y2="-177.6" stroke="#3593a0" stroke-width="0.7"/>
+<text x="199" y="-184" text-anchor="middle" class="dim">W-N2a</text>
+<rect x="328.8" y="-180.6" width="33.6" height="6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="328.8" y1="-177.6" x2="362.4" y2="-177.6" stroke="#3593a0" stroke-width="0.7"/>
+<text x="346" y="-184" text-anchor="middle" class="dim">W-N2b</text>
+<rect x="422.4" y="-180.6" width="21.6" height="6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="422.4" y1="-177.6" x2="444.0" y2="-177.6" stroke="#3593a0" stroke-width="0.7"/>
+<text x="433" y="-184" text-anchor="middle" class="dim">W-N4</text>
+<rect x="72.2" y="-147.6" width="4.4" height="36.0" fill="#fafbfb"/>
+<line x1="74.4" y1="-147.6" x2="110.4" y2="-147.6" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 74.4 -111.6 A 0.0 0.0 0 0 0 110.4 -147.6" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="79" y="-127" font-size="8.5" fill="#3593a0">D-EW</text>
+<rect x="475.2" y="-179.8" width="38.4" height="4.4" fill="#fafbfb"/>
+<line x1="475.2" y1="-177.6" x2="475.2" y2="-139.2" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 513.6 -177.6 A 0.0 0.0 0 0 0 475.2 -139.2" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="494" y="-183" text-anchor="middle" font-size="8.5" fill="#3593a0">D-EN</text>
+<rect x="460.8" y="252.2" width="43.2" height="4.4" fill="#fafbfb"/>
+<line x1="460.8" y1="254.4" x2="460.8" y2="211.2" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 504.0 254.4 A 0.0 0.0 0 0 1 460.8 211.2" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="482" y="249" text-anchor="middle" font-size="8.5" fill="#3593a0">D-ES</text>
+<rect x="153.8" y="-129.6" width="4.4" height="21.6" fill="#fafbfb"/>
+<line x1="156.0" y1="-129.6" x2="177.6" y2="-129.6" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 156.0 -108.0 A 0.0 0.0 0 0 0 177.6 -129.6" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="161" y="-116" font-size="8.5" fill="#3593a0">D-U01a</text>
+<rect x="98.4" y="105.8" width="20.4" height="4.4" fill="#fafbfb"/>
+<line x1="98.4" y1="108.0" x2="98.4" y2="87.6" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 118.8 108.0 A 0.0 0.0 0 0 1 98.4 87.6" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="109" y="103" text-anchor="middle" font-size="8.5" fill="#3593a0">D-U13a</text>
+<rect x="253.4" y="-129.6" width="4.4" height="21.6" fill="#fafbfb"/>
+<line x1="255.6" y1="-129.6" x2="234.0" y2="-129.6" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 255.6 -108.0 A 0.0 0.0 0 0 1 234.0 -129.6" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="261" y="-116" font-size="8.5" fill="#3593a0">D-U05a</text>
+<rect x="253.4" y="45.6" width="4.4" height="20.4" fill="#fafbfb"/>
+<line x1="255.6" y1="45.6" x2="276.0" y2="45.6" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 255.6 66.0 A 0.0 0.0 0 0 0 276.0 45.6" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="261" y="59" font-size="8.5" fill="#3593a0">D-U13b</text>
+<rect x="300.2" y="-129.6" width="4.4" height="21.6" fill="#fafbfb"/>
+<line x1="302.4" y1="-129.6" x2="280.8" y2="-129.6" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 302.4 -108.0 A 0.0 0.0 0 0 1 280.8 -129.6" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="307" y="-116" font-size="8.5" fill="#3593a0">D-U07a</text>
+<rect x="300.2" y="45.6" width="4.4" height="20.4" fill="#fafbfb"/>
+<line x1="302.4" y1="45.6" x2="322.8" y2="45.6" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 302.4 66.0 A 0.0 0.0 0 0 0 322.8 45.6" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="307" y="59" font-size="8.5" fill="#3593a0">D-U13c</text>
+<rect x="467.0" y="-129.6" width="4.4" height="20.4" fill="#fafbfb"/>
+<line x1="469.2" y1="-129.6" x2="489.6" y2="-129.6" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 469.2 -109.2 A 0.0 0.0 0 0 0 489.6 -129.6" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="474" y="-116" font-size="8.5" fill="#3593a0">D-U06a</text>
+<rect x="196.8" y="159.8" width="22.8" height="4.4" fill="#fafbfb"/>
+<line x1="196.8" y1="162.0" x2="196.8" y2="184.8" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 219.6 162.0 A 0.0 0.0 0 0 0 196.8 184.8" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="208" y="157" text-anchor="middle" font-size="8.5" fill="#3593a0">D-U21a</text>
+<rect x="182.6" y="172.8" width="4.4" height="20.4" fill="#fafbfb"/>
+<line x1="184.8" y1="172.8" x2="164.4" y2="172.8" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 184.8 193.2 A 0.0 0.0 0 0 1 164.4 172.8" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="190" y="186" font-size="8.5" fill="#3593a0">D-U21b</text>
+<rect x="194.4" y="197.0" width="18.0" height="4.4" fill="#fafbfb"/>
+<line x1="194.4" y1="199.2" x2="194.4" y2="217.2" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 212.4 199.2 A 0.0 0.0 0 0 0 194.4 217.2" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="203" y="194" text-anchor="middle" font-size="8.5" fill="#3593a0">D-U23a</text>
+<rect x="398.6" y="120.0" width="4.4" height="25.2" fill="#fafbfb"/>
+<line x1="400.8" y1="145.2" x2="426.0" y2="145.2" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 400.8 120.0 A 0.0 0.0 0 0 1 426.0 145.2" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="406" y="136" font-size="8.5" fill="#3593a0">D-U40a</text>
+<rect x="196.8" y="140.4" width="21.6" height="13.2" fill="#f0d9a0" stroke="#7d8b94" stroke-width="0.9" rx="2" />
+<text x="208" y="150" text-anchor="middle" font-size="8.5" fill="#44545f" >箱</text>
+<rect x="417.6" y="218.4" width="43.2" height="21.6" fill="#c9e8d1" stroke="#7d8b94" stroke-width="0.9" rx="2" />
+<text x="439" y="232" text-anchor="middle" font-size="8.5" fill="#44545f" >沙发</text>
+<path d="M 207.6 172.8 L 207.6 146.4 L 280.8 134.4 L 334.8 148.8 L 324.0 168.0" fill="none" stroke="#c2504a" stroke-width="2" stroke-dasharray="7 4"/>
+<circle cx="208" cy="173" r="9" fill="#c2504a" opacity="0.92"/>
+<text x="208" y="176" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">①</text>
+<circle cx="208" cy="146" r="9" fill="#c2504a" opacity="0.92"/>
+<text x="208" y="150" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">②</text>
+<circle cx="281" cy="134" r="9" fill="#c2504a" opacity="0.92"/>
+<text x="281" y="138" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">③</text>
+<path d="M 328.8 158.4 L 386.4 134.4 L 434.4 158.4 L 439.2 213.6" fill="none" stroke="#c2504a" stroke-width="2" stroke-dasharray="7 4"/>
+<circle cx="329" cy="158" r="9" fill="#c2504a" opacity="0.92"/>
+<text x="329" y="162" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">④</text>
+<circle cx="386" cy="134" r="9" fill="#c2504a" opacity="0.92"/>
+<text x="386" y="138" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">⑤</text>
+<path d="M 451.2 244.8 L 482.4 314.4 L 496.8 398.4" fill="none" stroke="#c2504a" stroke-width="2" stroke-dasharray="7 4"/>
+<circle cx="451" cy="245" r="9" fill="#c2504a" opacity="0.92"/>
+<text x="451" y="248" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">⑥</text>
+<rect x="362.4" y="254.4" width="240.0" height="240.0" fill="#e5e9dd" stroke="#607787" stroke-width="2"/>
+<line x1="362.4" y1="254.4" x2="362.4" y2="494.4" stroke="#a77643" stroke-width="4"/>
+<line x1="362.4" y1="494.4" x2="602.4" y2="494.4" stroke="#a77643" stroke-width="4"/>
+<line x1="602.4" y1="254.4" x2="602.4" y2="494.4" stroke="#a77643" stroke-width="4"/>
+<text x="482" y="362" text-anchor="middle" class="s">南露台 100㎡（栏杆1.1m，东南向阳）</text>
+<circle cx="581" cy="468" r="6" fill="#cfd8bd" stroke="#7d8b94"/>
+<circle cx="581" cy="434" r="6" fill="#cfd8bd" stroke="#7d8b94"/>
+<circle cx="384" cy="468" r="6" fill="#cfd8bd" stroke="#7d8b94"/>
+<text x="581" y="403" text-anchor="middle" class="dim">盆栽</text>
+<text x="62" y="115" text-anchor="start" class="s">①客房门前放箱/敲门 ②隔门说话位 ③梯口拥抱(后退脚跟碰台阶扶扶手) ④扶离楼梯边缘 ⑤沙发躺下盖毯 ⑥醒后出玻璃门到露台栏杆位</text>
+</g>
+</svg>

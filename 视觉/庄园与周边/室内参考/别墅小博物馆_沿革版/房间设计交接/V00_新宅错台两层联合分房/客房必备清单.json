@@ -1,0 +1,76 @@
+{
+  "version": "guest-program-r3-2026-11-07",
+  "new_house_upper_guestrooms": 3,
+  "new_house_lower_guestrooms": 0,
+  "old_house_H9_guestrooms": 1,
+  "modern_whole_group_guestrooms": 4,
+  "rooms": [
+    {
+      "program_id": "G-ZY",
+      "required_label": "庄颜普通客房",
+      "building": "新宅",
+      "page_floor": 2,
+      "level": 24,
+      "origin_use": "原建普通客房",
+      "modern_use": "普通留客房，由庄颜占用；不是豪华主人套间",
+      "sleeping_net_target_m2": 14,
+      "needs": [
+        "独立可关/反锁门，从同层公共客廊进入",
+        "真实外墙窗；明确厕洗与收纳，不以沙发床凑数"
+      ]
+    },
+    {
+      "program_id": "G-A",
+      "required_label": "普通客房A",
+      "building": "新宅",
+      "page_floor": 2,
+      "level": 24,
+      "origin_use": "原家庭卧室一",
+      "modern_use": "故事期普通留客房；可恢复家庭使用",
+      "sleeping_net_target_m2": 16,
+      "needs": [
+        "独立可关/反锁门，从同层公共客廊进入",
+        "真实外墙窗；明确厕洗与收纳，不以沙发床凑数"
+      ]
+    },
+    {
+      "program_id": "G-B",
+      "required_label": "普通客房B",
+      "building": "新宅",
+      "page_floor": 2,
+      "level": 24,
+      "origin_use": "原家庭卧室二",
+      "modern_use": "故事期另一间普通留客房；可恢复家庭使用",
+      "sleeping_net_target_m2": 16,
+      "needs": [
+        "独立可关/反锁门，从同层公共客廊进入",
+        "真实外墙窗；明确厕洗与收纳，不以沙发床凑数"
+      ]
+    }
+  ],
+  "other_room": {
+    "id": "H9",
+    "building": "北侧老宅",
+    "page_floor": 2,
+    "level": 28.4,
+    "use": "另计一间访客房，不在V00图内替代任何新宅客房"
+  },
+  "acceptance": [
+    "二层SVG必须明确画出并标注上述三间客房；对应同三项program_id",
+    "一层不得靠增一间家庭卧室来补足新宅三卧；沙发、手作间不能计客房",
+    "三间是现代用途，不得把其中两间仅命名为主人/家庭卧室而缺少客房功能",
+    "原家庭卧室是沿革；现代不存在必须保留的罗辑主卧，罗辑住南岸主楼",
+    "家务、储物、公卫、活动间在满足三客房、起居与交通后安排，不能挤掉客房"
+  ],
+  "coordinate_axes": {
+    "villa_heading": 45,
+    "local_positive_X": "真东北45°",
+    "local_positive_Z": "真东南135°",
+    "local_negative_X": "真西南225°",
+    "local_negative_Z": "真西北315°",
+    "true_south_in_local_XZ": [
+      -0.7071067812,
+      0.7071067812
+    ]
+  }
+}

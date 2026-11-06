@@ -1,0 +1,314 @@
+{
+  "task_id": "V07",
+  "name": "工坊打铁修配间",
+  "priority": "背景补足，无直接正文场景",
+  "source_version": "villa-fixed-flues-and-forge-2026-11-06",
+  "source_json_sha256": "6fda4e7b219ffdf75a35695a5e40155bfa967942f4f19dfac16ac7e982283e4f",
+  "units": "m",
+  "axis": {
+    "x": "东",
+    "z": "南",
+    "floor": "0=页面1层，1=页面2层"
+  },
+  "rooms": [
+    {
+      "id": "F1",
+      "name": "旧打铁修配间",
+      "floor": 0,
+      "rect": [
+        -30,
+        -24,
+        6,
+        6
+      ],
+      "kind": "equipment",
+      "phase": 1,
+      "old_name": "打铁炉／工具五金修配间",
+      "converted": 7,
+      "ceiling_height": 4.5,
+      "wall_material": "brick",
+      "wall_thickness": 0.24,
+      "label_point": [
+        -27,
+        -20
+      ],
+      "note": "36㎡从原720㎡工坊内部划出，不增加生产院面积。砖砌围护，西开独立外门、东门接装配区；含打铁炉、罩口、铁砧和工具煤箱，独立VC7烟道。改馆后冷态保留。"
+    }
+  ],
+  "neighbors": [
+    {
+      "id": "W1",
+      "name": "主陈列厅北部／原机械厅",
+      "floor": 0,
+      "rect": [
+        -30,
+        -42,
+        30,
+        18
+      ],
+      "kind": "public",
+      "phase": 1,
+      "old_name": "主工坊机械／装配北厅",
+      "converted": 7,
+      "note": "540㎡；与南侧144㎡装配区及36㎡砖砌打铁修配间合计720㎡。北侧总轴及分支保留原动力关系。",
+      "ceiling_height": 4.5
+    },
+    {
+      "id": "W2",
+      "name": "主陈列厅南部／原装配区",
+      "floor": 0,
+      "rect": [
+        -24,
+        -24,
+        24,
+        6
+      ],
+      "kind": "public",
+      "phase": 1,
+      "old_name": "主工坊南侧装配／周转区",
+      "converted": 7,
+      "ceiling_height": 4.5,
+      "note": "144㎡，与北厅开放相连；东接装卸棚，南接住宅联系廊；西侧是独立砖砌修配间。"
+    }
+  ],
+  "doors": [
+    {
+      "id": "D071",
+      "kind": "door",
+      "floor": 0,
+      "page_floor": 1,
+      "center": [
+        -30,
+        -20.3
+      ],
+      "width": 1.4,
+      "tangent_axis": "z",
+      "endpoints": [
+        [
+          -30,
+          -21.0
+        ],
+        [
+          -30,
+          -19.6
+        ]
+      ],
+      "adjacent_rooms": [
+        "F1"
+      ],
+      "swing": "未定；任务内试排，不得改变门洞中心/宽度而不报告"
+    },
+    {
+      "id": "D072",
+      "kind": "door",
+      "floor": 0,
+      "page_floor": 1,
+      "center": [
+        -24,
+        -21.2
+      ],
+      "width": 1.2,
+      "tangent_axis": "z",
+      "endpoints": [
+        [
+          -24,
+          -21.8
+        ],
+        [
+          -24,
+          -20.599999999999998
+        ]
+      ],
+      "adjacent_rooms": [
+        "W2",
+        "F1"
+      ],
+      "swing": "未定；任务内试排，不得改变门洞中心/宽度而不报告"
+    }
+  ],
+  "chimneys": [
+    {
+      "id": "VC7",
+      "name": "工坊打铁炉独立烟囱",
+      "rect": [
+        -29.849999999999998,
+        -22.849999999999998,
+        0.9,
+        0.9
+      ],
+      "phase": 1,
+      "floors": [
+        0
+      ],
+      "top_height_working": 8,
+      "note": "位于砖砌修配间西墙边；打铁炉集烟罩独立接入，与水力轴孔、蒸汽机轴孔及木料仓分开。",
+      "channels": [
+        "VC7-H20"
+      ]
+    }
+  ],
+  "hearths": [
+    {
+      "id": "H20",
+      "room_id": "F1",
+      "chimney_id": "VC7",
+      "channel_id": "VC7-H20",
+      "floor": 0,
+      "point": [
+        -28.45,
+        -22.35
+      ],
+      "reserve": [
+        -29.2,
+        -23.0,
+        1.5,
+        1.3
+      ],
+      "kind": "forge",
+      "phase": 1,
+      "retired_phase": 7,
+      "flue_path": [
+        [
+          -28.45,
+          -22.35
+        ],
+        [
+          -29.4,
+          -22.4
+        ]
+      ]
+    }
+  ],
+  "requirements": [
+    "6×6m，在原720㎡工坊西南角内部；不扩大生产组，不变成另建钢铁厂。",
+    "H20打铁炉、VC7独立烟囱、集烟罩、铁砧、工具煤箱和水桶位置以定点数据为输入。",
+    "西门向室外、东门向南装配区；人、热加工和木材周转分别校核，北侧水力总轴不绕进打铁间。",
+    "前身是工具、机件、合页五金修配，改馆后可冷态保留；现代不默认在藏品陈列期间继续燃炉打铁。",
+    "砖砌围护、工作台、地面和操作范围具体化，但炉具型号、排烟净截面与耐火构造未确定，不伪称已符合某标准。"
+  ],
+  "issues": [
+    "未找到现行正文人物进入该打铁间的段落。只输出历史/空间定义，不自行补一场修工具或人物打铁的剧情。"
+  ],
+  "narrative_scenes": [],
+  "geometry_status": "工业组局部坐标保留；首层25.2m，与旧宅和新宅错台分开",
+  "windows": [],
+  "output_basename": "别墅_旧工坊打铁修配间布局",
+  "forge": {
+    "room_id": "F1",
+    "chimney_id": "VC7",
+    "hearth_id": "H20",
+    "anvil": [
+      -26.8,
+      -21
+    ],
+    "tool_coal_box": [
+      -25.6,
+      -23.2
+    ],
+    "quench_bucket": [
+      -27.2,
+      -19.3
+    ],
+    "note": "工具/合页/机件的小型打铁修配，不是冶炼厂；砖砌间内火工，木料留在东侧材仓，热加工不占水力传动路线。"
+  },
+  "mechanical_drive": {
+    "points": [
+      [
+        -34,
+        -39.2
+      ],
+      [
+        -4,
+        -39.2
+      ]
+    ],
+    "wall_opening": [
+      -30,
+      -39.2
+    ],
+    "personnel_door": [
+      -30,
+      -36
+    ],
+    "shaft_height": 3.4,
+    "pulleys": [
+      -34,
+      -26,
+      -18,
+      -10,
+      -4
+    ],
+    "branches": [
+      -24,
+      -14,
+      -4
+    ],
+    "steam_points": [
+      [
+        -5.5,
+        -46
+      ],
+      [
+        -5.5,
+        -39.2
+      ]
+    ],
+    "steam_wall_opening": [
+      -5.5,
+      -42
+    ],
+    "retired_phase": 4,
+    "note": "水力棚经共墙传动轴向主工坊总轴供动力，再经支轴/皮带带动分区机具；人员门另设。1880年代蒸汽机接入同一轴系，1890年代改发电后旧跨墙机械传动退役。"
+  },
+  "main_workshop": {
+    "ids": [
+      "W1",
+      "W2",
+      "F1"
+    ],
+    "area": 720,
+    "footprint": [
+      -30,
+      -42,
+      30,
+      24
+    ],
+    "note": "540㎡机械北厅＋144㎡开放装配南区＋36㎡砖砌修配间；仅打铁间隔墙封闭。"
+  },
+  "production_group": {
+    "ids": [
+      "W1",
+      "W2",
+      "F1",
+      "P1",
+      "R1",
+      "L1",
+      "S1",
+      "S2"
+    ],
+    "before_steam": 1056,
+    "with_steam": 1184,
+    "enclosed": 1072,
+    "covered_open": 112,
+    "note": "旧木作生产组按主工坊、材仓、水力棚、装卸棚及后加旧蒸汽附屋合计；不含转型供水后营业仓或1998年后专业保存附屋。"
+  },
+  "site_version": 13,
+  "source_site_sha256": "99b741103d34cb466a7814c777d5e03d8839c55cbb9a6ec173d4be5411380187",
+  "coordinate_system": {
+    "frame": "villa local X/Z",
+    "placement": {
+      "e": 790,
+      "n": 1940,
+      "y": 25.2,
+      "heading": 45
+    },
+    "transform": "E=e+cos(a)*X+sin(a)*Z; N=n+sin(a)*X-cos(a)*Z",
+    "note": "局部Z朝住宅下坡面，不等于正南；a=heading"
+  },
+  "level": 25.2,
+  "current_scope": {
+    "status": "reserve_only",
+    "date": "2026-11-07",
+    "note": "本轮不做精细室内设计；保留既有位置、功能、炉位与门洞，以后正文需要时再细化。"
+  }
+}

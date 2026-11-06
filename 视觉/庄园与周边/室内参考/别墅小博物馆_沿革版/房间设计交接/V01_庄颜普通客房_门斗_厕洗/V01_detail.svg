@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="454" viewBox="0 0 621 454">
+<rect width="621" height="454" fill="#fafbfb"/>
+<style>text{font-family:"Noto Sans CJK SC",sans-serif;fill:#263746;font-size:13px}.s{font-size:10px;fill:#5a6b76}.dim{font-size:9.5px;fill:#a77643}.step{font-size:9px;fill:#8a7a5c}</style>
+<text x="26" y="34" font-size="19">V01 · 庄颜普通客房套间细化（G-ZY）· 楼面24m</text>
+<defs><clipPath id="cpV01"><rect x="0" y="82" width="621" height="372"/></clipPath></defs>
+<g clip-path="url(#cpV01)">
+<rect x="60.0" y="96.0" width="501.4000000000001" height="294.4000000000001" fill="#ffffff" stroke="#263746" stroke-width="3"/>
+<rect x="92.2" y="-242.1" width="138.0" height="338.1" fill="#eceff1" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="98" y="-226" font-size="11" fill="#3a4c58">生活储藏A</text>
+<text x="98" y="-212" class="s">U13a 22.0㎡</text>
+<rect x="428.0" y="-433.0" width="82.8" height="529.0" fill="#f1ede4" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="434" y="-417" font-size="11" fill="#3a4c58">客廊纵巷</text>
+<text x="434" y="-403" class="s">GB2 20.7㎡</text>
+<rect x="237.1" y="-81.1" width="184.0" height="177.1" fill="#eceff1" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="243" y="-65" font-size="11" fill="#3a4c58">生活储藏B</text>
+<text x="243" y="-51" class="s">U13b 15.4㎡</text>
+<rect x="517.7" y="-81.1" width="184.0" height="177.1" fill="#eceff1" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="524" y="-65" font-size="11" fill="#3a4c58">生活储藏C</text>
+<text x="524" y="-51" class="s">U13c 15.4㎡</text>
+<rect x="92.2" y="199.5" width="193.2" height="158.7" fill="#f7ecec" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="98" y="216" font-size="11" fill="#3a4c58">庄颜普通客房[G-ZY]</text>
+<text x="98" y="230" class="s">U21 14.5㎡</text>
+<rect x="292.3" y="199.5" width="94.3" height="64.4" fill="#f7ecec" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="298" y="216" font-size="11" fill="#3a4c58">客房门斗[G-ZY]</text>
+<text x="298" y="230" class="s">U22 2.9㎡</text>
+<rect x="292.3" y="270.8" width="94.3" height="87.4" fill="#e7f0ee" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="298" y="287" font-size="11" fill="#3a4c58">客房厕洗[G-ZY]</text>
+<text x="298" y="301" class="s">U23 3.9㎡</text>
+<rect x="92.2" y="102.9" width="607.2" height="89.7" fill="#f1ede4" stroke="#8ea0ab" stroke-width="0.8"/>
+<text x="98" y="119" font-size="11" fill="#3a4c58">主廊(客廊)</text>
+<text x="98" y="133" class="s">GA 25.7㎡</text>
+<rect x="70.8" y="-387.0" width="6" height="55.2" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="73.8" y1="-387.0" x2="73.8" y2="-331.8" stroke="#3593a0" stroke-width="0.7"/>
+<text x="79" y="-356" class="dim">W-W1</text>
+<rect x="70.8" y="247.8" width="6" height="64.4" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="73.8" y1="247.8" x2="73.8" y2="312.2" stroke="#3593a0" stroke-width="0.7"/>
+<text x="79" y="283" class="dim">W-W3</text>
+<rect x="138.2" y="373.6" width="64.4" height="6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="138.2" y1="376.6" x2="202.6" y2="376.6" stroke="#3593a0" stroke-width="0.7"/>
+<text x="170" y="371" text-anchor="middle" class="dim">W-S1</text>
+<rect x="308.4" y="373.6" width="27.6" height="6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="308.4" y1="376.6" x2="336.0" y2="376.6" stroke="#3593a0" stroke-width="0.7"/>
+<text x="322" y="371" text-anchor="middle" class="dim">W-S2</text>
+<rect x="729.3" y="373.6" width="69.0" height="6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="729.3" y1="376.6" x2="798.3" y2="376.6" stroke="#3593a0" stroke-width="0.7"/>
+<text x="764" y="371" text-anchor="middle" class="dim">W-S3</text>
+<rect x="920.2" y="373.6" width="110.4" height="6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="920.2" y1="376.6" x2="1030.6" y2="376.6" stroke="#3593a0" stroke-width="0.7"/>
+<text x="975" y="371" text-anchor="middle" class="dim">W-S4</text>
+<rect x="1082.8" y="211.0" width="6" height="64.4" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="1085.8" y1="211.0" x2="1085.8" y2="275.4" stroke="#3593a0" stroke-width="0.7"/>
+<text x="1091" y="246" class="dim">W-E1</text>
+<rect x="1082.8" y="-267.4" width="6" height="64.4" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="1085.8" y1="-267.4" x2="1085.8" y2="-203.0" stroke="#3593a0" stroke-width="0.7"/>
+<text x="1091" y="-232" class="dim">W-E2</text>
+<rect x="70.8" y="135.1" width="6" height="50.6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="73.8" y1="135.1" x2="73.8" y2="185.7" stroke="#3593a0" stroke-width="0.7"/>
+<text x="79" y="163" class="dim">W-GAw</text>
+<rect x="124.4" y="-454.4" width="55.2" height="6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="124.4" y1="-451.4" x2="179.6" y2="-451.4" stroke="#3593a0" stroke-width="0.7"/>
+<text x="152" y="-457" text-anchor="middle" class="dim">W-N1</text>
+<rect x="280.8" y="-454.4" width="64.4" height="6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="280.8" y1="-451.4" x2="345.2" y2="-451.4" stroke="#3593a0" stroke-width="0.7"/>
+<text x="313" y="-457" text-anchor="middle" class="dim">W-N2a</text>
+<rect x="561.4" y="-454.4" width="64.4" height="6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="561.4" y1="-451.4" x2="625.8" y2="-451.4" stroke="#3593a0" stroke-width="0.7"/>
+<text x="594" y="-457" text-anchor="middle" class="dim">W-N2b</text>
+<rect x="740.8" y="-454.4" width="41.4" height="6" fill="#cfe3ea" stroke="#3593a0" stroke-width="1.2"/>
+<line x1="740.8" y1="-451.4" x2="782.2" y2="-451.4" stroke="#3593a0" stroke-width="0.7"/>
+<text x="762" y="-457" text-anchor="middle" class="dim">W-N4</text>
+<rect x="71.6" y="-393.9" width="4.4" height="69.0" fill="#fafbfb"/>
+<line x1="73.8" y1="-393.9" x2="142.8" y2="-393.9" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 73.8 -324.9 A 0.0 0.0 0 0 0 142.8 -393.9" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="79" y="-356" font-size="8.5" fill="#3593a0">D-EW</text>
+<rect x="842.0" y="-453.6" width="73.6" height="4.4" fill="#fafbfb"/>
+<line x1="842.0" y1="-451.4" x2="842.0" y2="-377.8" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 915.6 -451.4 A 0.0 0.0 0 0 0 842.0 -377.8" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="879" y="-456" text-anchor="middle" font-size="8.5" fill="#3593a0">D-EN</text>
+<rect x="814.4" y="374.4" width="82.8" height="4.4" fill="#fafbfb"/>
+<line x1="814.4" y1="376.6" x2="814.4" y2="293.8" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 897.2 376.6 A 0.0 0.0 0 0 1 814.4 293.8" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="856" y="372" text-anchor="middle" font-size="8.5" fill="#3593a0">D-ES</text>
+<rect x="228.0" y="-359.4" width="4.4" height="41.4" fill="#fafbfb"/>
+<line x1="230.2" y1="-359.4" x2="271.6" y2="-359.4" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 230.2 -318.0 A 0.0 0.0 0 0 0 271.6 -359.4" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="235" y="-336" font-size="8.5" fill="#3593a0">D-U01a</text>
+<rect x="119.8" y="93.8" width="39.1" height="4.4" fill="#fafbfb"/>
+<line x1="119.8" y1="96.0" x2="119.8" y2="56.9" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 158.9 96.0 A 0.0 0.0 0 0 1 119.8 56.9" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="139" y="91" text-anchor="middle" font-size="8.5" fill="#3593a0">D-U13a</text>
+<rect x="418.9" y="-359.4" width="4.4" height="41.4" fill="#fafbfb"/>
+<line x1="421.1" y1="-359.4" x2="379.7" y2="-359.4" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 421.1 -318.0 A 0.0 0.0 0 0 1 379.7 -359.4" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="426" y="-336" font-size="8.5" fill="#3593a0">D-U05a</text>
+<rect x="418.9" y="-23.6" width="4.4" height="39.1" fill="#fafbfb"/>
+<line x1="421.1" y1="-23.6" x2="460.2" y2="-23.6" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 421.1 15.5 A 0.0 0.0 0 0 0 460.2 -23.6" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="426" y="-1" font-size="8.5" fill="#3593a0">D-U13b</text>
+<rect x="508.6" y="-359.4" width="4.4" height="41.4" fill="#fafbfb"/>
+<line x1="510.8" y1="-359.4" x2="469.4" y2="-359.4" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 510.8 -318.0 A 0.0 0.0 0 0 1 469.4 -359.4" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="516" y="-336" font-size="8.5" fill="#3593a0">D-U07a</text>
+<rect x="508.6" y="-23.6" width="4.4" height="39.1" fill="#fafbfb"/>
+<line x1="510.8" y1="-23.6" x2="549.9" y2="-23.6" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 510.8 15.5 A 0.0 0.0 0 0 0 549.9 -23.6" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="516" y="-1" font-size="8.5" fill="#3593a0">D-U13c</text>
+<rect x="828.3" y="-359.4" width="4.4" height="39.1" fill="#fafbfb"/>
+<line x1="830.5" y1="-359.4" x2="869.6" y2="-359.4" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 830.5 -320.3 A 0.0 0.0 0 0 0 869.6 -359.4" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="836" y="-337" font-size="8.5" fill="#3593a0">D-U06a</text>
+<rect x="308.4" y="197.3" width="43.7" height="4.4" fill="#fafbfb"/>
+<line x1="308.4" y1="199.5" x2="308.4" y2="243.2" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 352.1 199.5 A 0.0 0.0 0 0 0 308.4 243.2" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="330" y="194" text-anchor="middle" font-size="8.5" fill="#3593a0">D-U21a</text>
+<rect x="283.2" y="220.2" width="4.4" height="39.1" fill="#fafbfb"/>
+<line x1="285.4" y1="220.2" x2="246.3" y2="220.2" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 285.4 259.3 A 0.0 0.0 0 0 1 246.3 220.2" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="290" y="243" font-size="8.5" fill="#3593a0">D-U21b</text>
+<rect x="303.8" y="268.6" width="34.5" height="4.4" fill="#fafbfb"/>
+<line x1="303.8" y1="270.8" x2="303.8" y2="305.3" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 338.3 270.8 A 0.0 0.0 0 0 0 303.8 305.3" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="321" y="266" text-anchor="middle" font-size="8.5" fill="#3593a0">D-U23a</text>
+<rect x="697.2" y="119.0" width="4.4" height="48.3" fill="#fafbfb"/>
+<line x1="699.4" y1="167.3" x2="747.7" y2="167.3" stroke="#3593a0" stroke-width="2.4"/>
+<path d="M 699.4 119.0 A 0.0 0.0 0 0 1 747.7 167.3" fill="none" stroke="#3593a0" stroke-width="0.8" stroke-dasharray="3 2.5"/>
+<text x="704" y="146" font-size="8.5" fill="#3593a0">D-U40a</text>
+<rect x="99.1" y="217.9" width="92.0" height="55.2" fill="#d9c9e8" stroke="#7d8b94" stroke-width="0.9" rx="2" />
+<text x="145" y="249" text-anchor="middle" font-size="8.5" fill="#44545f" >F-V01-01 床2.0×1.2</text>
+<rect x="195.7" y="206.4" width="20.7" height="20.7" fill="#e8ddd0" stroke="#7d8b94" stroke-width="0.9" rx="2" />
+<text x="206" y="220" text-anchor="middle" font-size="8.5" fill="#44545f" >F-02 床头柜</text>
+<rect x="207.2" y="330.6" width="59.8" height="23.0" fill="#c9d7e8" stroke="#7d8b94" stroke-width="0.9" rx="2" />
+<text x="237" y="345" text-anchor="middle" font-size="8.5" fill="#44545f" >F-03 画桌/写字台1.3</text>
+<rect x="262.4" y="266.2" width="23.0" height="55.2" fill="#c9d7e8" stroke="#7d8b94" stroke-width="0.9" rx="2" />
+<text x="274" y="297" text-anchor="middle" font-size="8.5" fill="#44545f" transform="rotate(-90 274 294)">F-04 衣柜</text>
+<rect x="145.1" y="199.5" width="41.4" height="20.7" fill="#b8946a" stroke="#7d8b94" stroke-width="0.9" rx="2" />
+<text x="166" y="213" text-anchor="middle" font-size="8.5" fill="#44545f" >壁炉芯VC3</text>
+<rect x="308.4" y="206.4" width="41.4" height="13.8" fill="#e0d9c9" stroke="#7d8b94" stroke-width="0.9" rx="2" />
+<text x="329" y="216" text-anchor="middle" font-size="8.5" fill="#44545f" >F-05 换鞋凳</text>
+<rect x="372.8" y="204.1" width="10.1" height="18.4" fill="#e0d9c9" stroke="#7d8b94" stroke-width="0.9" rx="2" />
+<text x="378" y="216" text-anchor="middle" font-size="8.5" fill="#44545f" >伞桶</text>
+<rect x="292.3" y="316.8" width="41.4" height="41.4" fill="#cfe3ea" stroke="#7d8b94" stroke-width="0.9" rx="2" />
+<text x="313" y="341" text-anchor="middle" font-size="8.5" fill="#44545f" >F-07 淋浴0.9</text>
+<rect x="340.6" y="335.2" width="23.0" height="20.7" fill="#cfe3ea" stroke="#7d8b94" stroke-width="0.9" rx="2" />
+<text x="352" y="349" text-anchor="middle" font-size="8.5" fill="#44545f" >F-08 坐便</text>
+<rect x="367.3" y="277.7" width="17.0" height="23.0" fill="#cfe3ea" stroke="#7d8b94" stroke-width="0.9" rx="2" />
+<text x="376" y="292" text-anchor="middle" font-size="8.5" fill="#44545f" >F-09 洗手盆</text>
+<rect x="405.0" y="328.3" width="105.8" height="25.3" fill="#c9d7e8" stroke="#7d8b94" stroke-width="0.9" rx="2" />
+<text x="458" y="344" text-anchor="middle" font-size="8.5" fill="#44545f" >F-10 画桌2.3</text>
+<rect x="409.6" y="220.2" width="55.2" height="46.0" fill="#e8e0d0" stroke="#7d8b94" stroke-width="0.9" rx="2" stroke-dasharray="4 3"/>
+<text x="437" y="246" text-anchor="middle" font-size="8.5" fill="#44545f" >F-11 画架位</text>
+<rect x="506.2" y="215.6" width="18.4" height="64.4" fill="#c9d7e8" stroke="#7d8b94" stroke-width="0.9" rx="2" />
+<text x="515" y="251" text-anchor="middle" font-size="8.5" fill="#44545f" transform="rotate(-90 515 248)">F-12 画材柜</text>
+<rect x="308.4" y="158.1" width="41.4" height="25.3" fill="#f0d9a0" stroke="#7d8b94" stroke-width="0.9" rx="2" />
+<text x="329" y="174" text-anchor="middle" font-size="8.5" fill="#44545f" >放箱位(24-L)</text>
+<path d="M 329.1 169.6 L 329.1 231.7 L 303.8 234.0" fill="none" stroke="#c2504a" stroke-width="2" stroke-dasharray="7 4"/>
+<circle cx="329" cy="170" r="9" fill="#c2504a" opacity="0.92"/>
+<text x="329" y="173" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">①</text>
+<text x="97" y="174" text-anchor="start" class="s">D-U21b反锁(内开)+D-U21a套间锁；20-L『我可以自己锁门』</text>
+<text x="529" y="381" text-anchor="end" class="dim">新增U24画角·衣帽 10.0㎡(V00缺口补全,G-ZY套内)</text>
+</g>
+</svg>

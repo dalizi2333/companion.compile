@@ -1,0 +1,41 @@
+Use case: sketch-to-render / historical architectural concept.
+Create ONE realistic landscape architectural visualization of a fictional western Norwegian lakeside woodworking-family estate, shown in its maintained present-day state. Correct the previous concept's wrong roof lock, missing stove/forge chimneys, and especially its false level waterfront.
+
+REFERENCE ROLES:
+Image 1 is ONLY a ROOFLESS building-location/footprint/floor-count diagram. The roofs and artificial flat ground/lake plane have deliberately been removed. Complete all buildings with plausible roofs of YOUR OWN DESIGN. Its open tops are diagram conventions, not courtyards or modern flat roofs. Keep the relative building locations and footprint hierarchy, NOT placeholder wall details, NOT schematic elevations as terrain.
+Image 2 is an actual late-19th-century Vassenden/Sunnfjord photograph: regional architectural vocabulary, roof proportions, timber construction and domestic chimneys. Do not copy the property, bridge, people, image frame, or sepia look.
+Image 3 is an actual Astruptunet/Jølster slope photograph: understand the SIGNIFICANT vertical separation between a house's garden terrace and the lake. Do not copy the specific buildings or default every roof to turf.
+
+REGION AND DATES:
+A fictional inland freshwater lake valley based on Jølster–Førde, western Norway (Vestland).
+1840–1855: the modest original timber family house.
+1855–1870: gradually expanded water-powered wood workshop, finally about 30 x 24 m / 720 sqm; 160 sqm timber drying/material warehouse, 64 sqm directly attached waterpower house, and 112 sqm open loading shelter.
+1870–1880: prosperous woodworking family expands their HOME: mixed two-storey domestic wing and single-storey reception/dining/music wing, ordinary home-scale windows, four bedrooms overall. Entire residence approximately 938 sqm across floors, not a hotel.
+1880–1888: steam/boiler annexes behind the workshop, later converted into accounts/business rooms.
+1890s: water-supply enterprise and hydroelectric conversion.
+Around 1970 onward: acquired by neighbouring estate family and gradually adapted into private small museum plus occasional guest accommodation. Later discreet archive/technical annexes at the rear. Depict maintained buildings and summer greenery, not an active smoky Victorian factory.
+
+MOST IMPORTANT TERRAIN CORRECTION:
+ALL MAIN BUILDINGS STAND ON A HIGH NATURAL BENCH/TERRACE WELL ABOVE THE LAKE. The lake-facing boundary of that bench falls sharply through a substantial ROCKY, GRASSY AND PARTLY WOODED ESCARPMENT to the water far below. The drop is many times the single-storey garden-stair height. Make the high bench and this steep bank a visually unmistakable, substantial part of the image.
+The planted elevated garden's exterior stair ends in the HOUSE-SIDE GARDEN ON THE UPPER BENCH, NOT at the lake and NOT on a waterfront promenade. From that upper garden one must undertake a SEPARATE, MUCH LONGER downhill path with several turns/steps to reach a small lower shoreline access. Show a narrow descending footpath along one side of the bank, not a broad new road.
+Keep a strip of garden and a low timber boundary railing above the escarpment. There is NO continuous flat garden between house walls and water, NO house directly at the water's edge, NO level lakeside boulevard, and NO retaining wall that simply ends directly in the lake a few feet below the door.
+The large woodworking group remains farther LANDWARD/NORTH on the bench, behind the home. Allow realistic modest height variations within the bench. Do not scatter the existing buildings down the escarpment.
+
+ROOFS — DESIGN FREELY:
+Do NOT reproduce the old model's imposed array of identical parallel gables. Choose credible late-19th-century western Norwegian roofs yourself: appropriate gabled, hipped or half-hipped forms and slopes suited to each phased building, ordinary eaves, regional roof materials and believable junctions. Keep the industrial workshop legible as the largest footprint and the home domestic in character. Timber structural bays can remain internal and need not dictate three identical external roofs. Work out an integrated yet accreted roofscape, not a hotel, palace or modern glass complex.
+Use the historical photograph for restrained regional proportion, not as a rigid tracing template.
+
+CHIMNEYS — FUNCTIONAL AND VISIBLE:
+Provide a small number of credible domestic masonry chimney stacks serving the old kitchen and iron heating stoves in the residential wings. Do not make the entire home chimneyless.
+Add a distinct medium-height brick chimney to a FIRE-SEPARATED masonry repair/blacksmithing nook at the perimeter of the OLD WOODWORKING SHOP, used historically for forging/repairing tools, hinges and fittings. This is a compact ancillary forge, not a separate steelworks or blast furnace; do not put an exposed forge next to timber stacks.
+Keep a separate, recognizable taller old brick boiler chimney at the rear steam/boiler annex, now decommissioned. Domestic stove flues, workshop forge flue and old boiler stack should look different in scale and location. No heavy active smoke.
+
+FIXED SPATIAL RELATIONS:
+The waterpower house touches the workshop's west wall because a mechanical shaft originally passed through the shared wall to drive machines. Do not detach it as a picturesque cottage. Forebay and upstream and downstream channels stay landward/north; tailwater returns north/downstream, not across the lake-facing garden or down the public-facing escarpment.
+Material warehouse touches workshop east side, open loading shelter links both. Keep the rear archive/old business buildings and small detached utility hut.
+The approximately 84 sqm ELEVATED PLANTED GARDEN remains between the domestic wings, outside the upstairs sitting room, partly above the single-storey music room and partly supported by stone pillars. It is a deliberate flat garden platform, NOT planting on the highest sloping roof. Low parapet, shallow beds, seats, a narrow water rill, usable paths. Discreet irrigation branch and separate drainage. Retain the adjacent ordinary upper terrace and the external straight stair down to the UPPER-BENCH courtyard garden. The much longer descent to the actual lake is a different route.
+
+VISUAL TREATMENT:
+Richly detailed, believable western Norwegian timber-clad architecture, stone plinths, restrained wooden trims, domestic windows, slightly uneven history of repairs and additions. Warm muted painted domestic timber, weathered darker workshop timber, roof coverings and roof shapes chosen to suit the building and period. Soft clear early-summer daylight, forested lake-valley setting, rock, grass, birch and evergreen trees at margins. Keep buildings unobscured.
+High oblique aerial view from the lake/southwest, wide enough to show the whole upper compound AND the steep drop and lake below in the foreground, so the terrain correction is obvious. Naturalistic architectural concept rendering, coherent scale and physically supported terraces.
+No labels, arrows, dimensions, UI, captions, image frames, collages, text or watermark. No new dams, highways, towers, luxury hotel signage, waterfront boardwalk, swimming pool or giant waterfall.

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="700" viewBox="0 0 980 700">
+<rect width="980" height="700" fill="#fafbfb"/>
+<style>text{font-family:"Noto Sans CJK SC",sans-serif;fill:#263746;font-size:13px}.s{font-size:11px;fill:#5a6b76}.dim{font-size:10.5px;fill:#a77643}</style>
+<text x="30" y="34" font-size="21">V00R3 · 主梯纵剖面 A-A · 西跑中线（x=-11.15）剖视，视线向东</text>
+<line x1="133" y1="471" x2="195" y2="471" stroke="#8a7a5c" stroke-width="2.5"/>
+<text x="133" y="463" class="s">北侧承土（坡地，一楼北墙无窗）</text>
+<line x1="195" y1="508" x2="468" y2="508" stroke="#263746" stroke-width="2.5"/>
+<text x="381" y="528" class="s">一楼楼面 20.8m（梯间起步厅；起步点z≈20.1东跑）</text>
+<rect x="170" y="310" width="25" height="19" fill="#b9c6cf" stroke="#263746" stroke-width="1.5"/>
+<text x="167" y="302" text-anchor="start" class="s">二楼实楼板（板底23.7）· 主廊侧</text>
+<line x1="195" y1="310" x2="195" y2="366" stroke="#a77643" stroke-width="3.5"/>
+<text x="216" y="353" class="dim">栏杆开口0.9高＝楼梯边缘(24-L)</text>
+<line x1="443" y1="112" x2="443" y2="508" stroke="#263746" stroke-width="3.5"/>
+<text x="447" y="192" class="s">二楼南外墙 z=24.0（VC4二楼段栏板在其北）</text>
+<line x1="170" y1="136" x2="443" y2="136" stroke="#263746" stroke-width="2"/>
+<line x1="170" y1="112" x2="443" y2="112" stroke="#263746" stroke-width="3.5"/>
+<text x="294" y="104" text-anchor="middle" class="s">屋面（结构底≈26.8 工作值）· 洞口段贯通到屋面底</text>
+<rect x="340" y="409" width="96" height="16" fill="#e8dfd0" stroke="#8a7a5c" stroke-width="1.5"/>
+<text x="388" y="403" text-anchor="middle" class="s">中间平台 22.4m</text>
+<line x1="437" y1="425" x2="437" y2="508" stroke="#8a7a5c" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="440" y="465" class="dim">平台支承墙(示意)</text>
+<path d="M 201 310 L 216 321 L 216 310 L 232 332 L 232 321 L 248 343 L 248 332 L 263 354 L 263 343 L 278 365 L 278 354 L 294 376 L 294 365 L 310 387 L 310 376 L 325 398 L 325 387 L 340 409 L 340 398 " fill="none" stroke="#8a7a5c" stroke-width="2"/>
+<line x1="201" y1="310" x2="340" y2="409" stroke="#b0a284" stroke-width="1" stroke-dasharray="5 4"/>
+<text x="216" y="319" class="dim">西跑9级↓ 踏面0.25×竖板0.178</text>
+<line x1="201" y1="428" x2="340" y2="527" stroke="#c2504a" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="241" y="433" class="s" fill="#c2504a">头部净空检查线1.9m：下行至z≈22.1后触二楼板底→</text>
+<text x="241" y="453" class="s" fill="#c2504a">该段上方必须开洞（本方案洞口已全覆盖z20.0~24.0）</text>
+<line x1="381" y1="409" x2="381" y2="136" stroke="#a77643" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="386" y="223" class="dim">平台上方净高≈4.4（转体无压头）</text>
+<line x1="112" y1="508" x2="170" y2="508" stroke="#a77643" stroke-width="0.8"/>
+<text x="106" y="512" text-anchor="end" class="dim">20.8m</text>
+<line x1="112" y1="409" x2="170" y2="409" stroke="#a77643" stroke-width="0.8"/>
+<text x="106" y="413" text-anchor="end" class="dim">22.4m</text>
+<line x1="112" y1="310" x2="170" y2="310" stroke="#a77643" stroke-width="0.8"/>
+<text x="106" y="314" text-anchor="end" class="dim">24.0m</text>
+<line x1="112" y1="136" x2="170" y2="136" stroke="#a77643" stroke-width="0.8"/>
+<text x="106" y="140" text-anchor="end" class="dim">26.8m</text>
+<text x="30" y="672" class="s">Z（南→）· 洞口3.6×4m于z20.0~24.0全开 · 东跑（未剖到）自一楼20.8在z20.1起步升至平台22.4 · 西跑自平台升至二楼24.0在z20.1跨出</text>
+</svg>

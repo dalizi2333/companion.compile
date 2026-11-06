@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1035" height="1090" viewBox="0 0 1035 1090">
+<rect width="100%" height="100%" fill="#f8f9fa"/>
+<style>text{font-family:"Noto Sans CJK SC",sans-serif;fill:#263746}.small{font-size:11px}.tiny{font-size:10px}.name{font-size:14px;font-weight:600}</style>
+<text x="28" y="30" font-size="20">V06 小博物馆数字机房 · 页面1层</text>
+<text x="28" y="53" class="small">米制坐标 X向东→ / Z向南↓ · 仅轮廓、门洞与预留，不含家具定稿</text>
+<defs><pattern id="grid" width="85" height="85" patternUnits="userSpaceOnUse"><path d="M 85 0 L 0 0 0 85" fill="none" stroke="#e2e7e9" stroke-width=".6"/></pattern><clipPath id="clip"><rect x="50.0" y="85.0" width="935.0" height="935.0"/></clipPath></defs>
+<rect x="50.0" y="85.0" width="935.0" height="935.0" fill="url(#grid)"/>
+<g clip-path="url(#clip)">
+<rect x="-332.5" y="892.5" width="2550" height="1530" fill="#edf0f1" stroke="#bdc6ca"/>
+<text x="517.5" y="956.25" text-anchor="middle" class="small" fill="#85929b">W1 邻室</text>
+<rect x="857.5" y="212.5" width="680" height="680" fill="#edf0f1" stroke="#bdc6ca"/>
+<text x="921.25" y="552.5" text-anchor="middle" class="small" fill="#85929b">S1 邻室</text>
+<rect x="177.5" y="212.5" width="680" height="680" fill="#cfced2" stroke="#445660" stroke-width="2"/>
+<text x="517.5" y="545.5" class="name" text-anchor="middle">N1 数字服务器机房</text>
+<text x="517.5" y="567.5" class="small" text-anchor="middle">8×8m · 64㎡</text>
+<path d="M 458.00000000000006 892.5 L 576.9999999999999 892.5" stroke="#fff" stroke-width="9"/>
+<path d="M 458.00000000000006 892.5 L 576.9999999999999 892.5" stroke="#b77734" stroke-width="3"/>
+<text x="524.5" y="885.5" class="tiny">D059 · 1.4m</text>
+<path d="M 458.00000000000006 212.5 L 576.9999999999999 212.5" stroke="#fff" stroke-width="9"/>
+<path d="M 458.00000000000006 212.5 L 576.9999999999999 212.5" stroke="#b77734" stroke-width="3"/>
+<text x="524.5" y="205.5" class="tiny">D063 · 1.4m</text>
+</g>
+<text x="28" y="1042" class="small">棕芯＝烟囱；金色虚框＝历史炉位预留；橙线＝现有门洞（门扇未定）；灰色＝邻室。</text>
+<text x="28" y="1064" class="small">全屋范围：X -25.5…-14.5m / Z -51.5…-40.5m · 源快照 6fda4e7b219f</text>
+</svg>
