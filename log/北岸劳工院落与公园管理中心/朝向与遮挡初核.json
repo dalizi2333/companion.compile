@@ -1,0 +1,163 @@
+{
+  "date": "2026-11-07",
+  "site_sha256": "f8d69c4909f915c2974b812ecb59ce888c9959a4c1b2a0e35e5937b3e8a056e6",
+  "method": "每2m采样至900m；首层主立面窗中心。仅az180°与现设冬至正午el5.6°对照，其他方位只记遮挡仰角，不当作同时刻太阳位置。未计树木及窗面/屋檐。",
+  "rows": [
+    {
+      "id": "N1",
+      "window_height": 17,
+      "main_facade_azimuth": 180,
+      "scope": "首层主立面窗中心；现有地形和建筑包络，未计树木及窗洞/屋檐细节",
+      "rays": [
+        {
+          "azimuth": 135,
+          "horizon_deg": 0.7,
+          "limiting_obstacle": "地形",
+          "clear_at_elevation_5_6": true
+        },
+        {
+          "azimuth": 180,
+          "horizon_deg": 0.7,
+          "limiting_obstacle": "地形",
+          "clear_at_elevation_5_6": true
+        },
+        {
+          "azimuth": 225,
+          "horizon_deg": 13.9,
+          "limiting_obstacle": "N4",
+          "clear_at_elevation_5_6": false
+        }
+      ]
+    },
+    {
+      "id": "NG",
+      "window_height": 22.3,
+      "main_facade_azimuth": 180,
+      "scope": "首层主立面窗中心；现有地形和建筑包络，未计树木及窗洞/屋檐细节",
+      "rays": [
+        {
+          "azimuth": 135,
+          "horizon_deg": 0.3,
+          "limiting_obstacle": "地形",
+          "clear_at_elevation_5_6": true
+        },
+        {
+          "azimuth": 180,
+          "horizon_deg": 0.3,
+          "limiting_obstacle": "地形",
+          "clear_at_elevation_5_6": true
+        },
+        {
+          "azimuth": 225,
+          "horizon_deg": 6.4,
+          "limiting_obstacle": "地形",
+          "clear_at_elevation_5_6": false
+        }
+      ]
+    },
+    {
+      "id": "N3",
+      "window_height": 19.9,
+      "main_facade_azimuth": 180,
+      "scope": "首层主立面窗中心；现有地形和建筑包络，未计树木及窗洞/屋檐细节",
+      "rays": [
+        {
+          "azimuth": 135,
+          "horizon_deg": 0.5,
+          "limiting_obstacle": "地形",
+          "clear_at_elevation_5_6": true
+        },
+        {
+          "azimuth": 180,
+          "horizon_deg": 4,
+          "limiting_obstacle": "地形",
+          "clear_at_elevation_5_6": true
+        },
+        {
+          "azimuth": 225,
+          "horizon_deg": 15.4,
+          "limiting_obstacle": "地形",
+          "clear_at_elevation_5_6": false
+        }
+      ]
+    },
+    {
+      "id": "N4",
+      "window_height": 20.3,
+      "main_facade_azimuth": 180,
+      "scope": "首层主立面窗中心；现有地形和建筑包络，未计树木及窗洞/屋檐细节",
+      "rays": [
+        {
+          "azimuth": 135,
+          "horizon_deg": 0.4,
+          "limiting_obstacle": "地形",
+          "clear_at_elevation_5_6": true
+        },
+        {
+          "azimuth": 180,
+          "horizon_deg": 3.7,
+          "limiting_obstacle": "N5",
+          "clear_at_elevation_5_6": true
+        },
+        {
+          "azimuth": 225,
+          "horizon_deg": 9.2,
+          "limiting_obstacle": "地形",
+          "clear_at_elevation_5_6": false
+        }
+      ]
+    },
+    {
+      "id": "N11",
+      "window_height": 21.599999999999998,
+      "main_facade_azimuth": 180,
+      "scope": "首层主立面窗中心；现有地形和建筑包络，未计树木及窗洞/屋檐细节",
+      "rays": [
+        {
+          "azimuth": 135,
+          "horizon_deg": 4,
+          "limiting_obstacle": "N5",
+          "clear_at_elevation_5_6": true
+        },
+        {
+          "azimuth": 180,
+          "horizon_deg": 3.1,
+          "limiting_obstacle": "地形",
+          "clear_at_elevation_5_6": true
+        },
+        {
+          "azimuth": 225,
+          "horizon_deg": 11.6,
+          "limiting_obstacle": "地形",
+          "clear_at_elevation_5_6": false
+        }
+      ]
+    },
+    {
+      "id": "N5",
+      "window_height": 16.3,
+      "main_facade_azimuth": 135,
+      "scope": "首层主立面窗中心；现有地形和建筑包络，未计树木及窗洞/屋檐细节",
+      "rays": [
+        {
+          "azimuth": 135,
+          "horizon_deg": 0.8,
+          "limiting_obstacle": "地形",
+          "clear_at_elevation_5_6": true
+        },
+        {
+          "azimuth": 180,
+          "horizon_deg": 2.9,
+          "limiting_obstacle": "地形",
+          "clear_at_elevation_5_6": true
+        },
+        {
+          "azimuth": 225,
+          "horizon_deg": 11.3,
+          "limiting_obstacle": "地形",
+          "clear_at_elevation_5_6": false
+        }
+      ]
+    }
+  ]
+}

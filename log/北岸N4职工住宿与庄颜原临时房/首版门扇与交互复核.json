@@ -1,0 +1,21 @@
+{
+  "door_sweep_furniture_conflicts": [],
+  "furniture_overlaps": [],
+  "rooms": 10,
+  "beds": 20,
+  "fixed_entry_pre_rotation": [
+    53,
+    -19
+  ],
+  "levels": [
+    18.6,
+    21.7
+  ],
+  "views": [
+    "floor0",
+    "floor1",
+    "R103"
+  ],
+  "story_route_toggle": true,
+  "browser_errors": []
+}

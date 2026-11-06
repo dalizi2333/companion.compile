@@ -1,0 +1,140 @@
+{
+  "site_version": 2,
+  "source_sha256": "2bc4f1d242d2e81a06cfc1a3b4f6a20d4a2a7ebd259638d4b91f6d70ddbf9366",
+  "patrol_centerline_unchanged": true,
+  "patrol_tread_and_margin_height_error": 0,
+  "patrol_water_samples": 0,
+  "clearances": [
+    {
+      "id": "N3",
+      "eaves_to_centerline_m": 12.77
+    },
+    {
+      "id": "N4",
+      "eaves_to_centerline_m": 70.27
+    },
+    {
+      "id": "N5",
+      "eaves_to_centerline_m": 51.05
+    },
+    {
+      "id": "N11",
+      "eaves_to_centerline_m": 25.25
+    },
+    {
+      "id": "N1",
+      "eaves_to_centerline_m": 113.58
+    },
+    {
+      "id": "N2",
+      "eaves_to_centerline_m": 85.84
+    },
+    {
+      "id": "N6",
+      "eaves_to_centerline_m": 12.75
+    },
+    {
+      "id": "N7",
+      "eaves_to_centerline_m": 40.95
+    },
+    {
+      "id": "N8",
+      "eaves_to_centerline_m": 84.83
+    },
+    {
+      "id": "N9",
+      "eaves_to_centerline_m": 64.51
+    },
+    {
+      "id": "N10",
+      "eaves_to_centerline_m": 99.23
+    },
+    {
+      "id": "NG",
+      "eaves_to_centerline_m": 140.02
+    },
+    {
+      "id": "NM",
+      "eaves_to_centerline_m": 245.56
+    },
+    {
+      "id": "NS",
+      "eaves_to_centerline_m": 255.61
+    }
+  ],
+  "grain_sunyard_samples": [
+    {
+      "point": [
+        89,
+        -9
+      ],
+      "south_horizon_deg": 0.9,
+      "open_at_model_winter_noon": true
+    },
+    {
+      "point": [
+        89,
+        -2
+      ],
+      "south_horizon_deg": 0.9,
+      "open_at_model_winter_noon": true
+    },
+    {
+      "point": [
+        89,
+        5
+      ],
+      "south_horizon_deg": 0.9,
+      "open_at_model_winter_noon": true
+    },
+    {
+      "point": [
+        107,
+        -9
+      ],
+      "south_horizon_deg": 0.8,
+      "open_at_model_winter_noon": true
+    },
+    {
+      "point": [
+        107,
+        -2
+      ],
+      "south_horizon_deg": 0.9,
+      "open_at_model_winter_noon": true
+    },
+    {
+      "point": [
+        107,
+        5
+      ],
+      "south_horizon_deg": 0.9,
+      "open_at_model_winter_noon": true
+    },
+    {
+      "point": [
+        125,
+        -9
+      ],
+      "south_horizon_deg": 0.8,
+      "open_at_model_winter_noon": true
+    },
+    {
+      "point": [
+        125,
+        -2
+      ],
+      "south_horizon_deg": 0.8,
+      "open_at_model_winter_noon": true
+    },
+    {
+      "point": [
+        125,
+        5
+      ],
+      "south_horizon_deg": 0.8,
+      "open_at_model_winter_noon": true
+    }
+  ],
+  "note": "晒场地表9点正南方向与模型冬至正午5.6°初核；含现有地形/建筑包络，不计树木与晒架，非全年日照验收。"
+}

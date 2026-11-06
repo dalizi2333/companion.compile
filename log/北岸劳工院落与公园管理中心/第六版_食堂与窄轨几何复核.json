@@ -1,0 +1,43 @@
+{
+  "site_version": 6,
+  "rail": {
+    "length_m": 198.45389047035133,
+    "max_grade": 0.003999996196378848,
+    "centerline_height_error_m": 1.7763568394002505e-15,
+    "eaves_clearance_min_m": 6.027526348160725,
+    "reserved_width_m": 9,
+    "bed_width_m": 3.4,
+    "sampled_curve_radius_min_m": 55.4123534783353
+  },
+  "canteen": {
+    "floor": 19.9,
+    "lower_landing_level": 14.3,
+    "rise_m": 5.599999999999998,
+    "stairs_eaves_clearance_min_m": 1.3,
+    "nearest_stair_obstacle": "N11",
+    "wood_path_clearance_m": 0.9953318805774026,
+    "wood_path_reaches_door": true,
+    "annexes_included": [
+      "N11_K"
+    ],
+    "pedestrian_connection_clearance_m": 2.443916550859313,
+    "risers": 35,
+    "riser_m": 0.16,
+    "tread_m": 0.31734253537873625,
+    "flights": [
+      12,
+      12,
+      11
+    ],
+    "rest_landings_m": 1.2,
+    "rear_ramp": {
+      "length_m": 61.53916695706192,
+      "max_grade": 0.09948497511671074,
+      "graded_height_error_m": 0.1425922289434034,
+      "eaves_clearance_min_m": 1.4999999999999958,
+      "width_m": 2.8,
+      "origin": "上方维修装卸院"
+    }
+  },
+  "note": "工作尺度与几何连通复核；未确定轨距/机车、外部铁路全线、排水或无障碍标准。后门坡道供内部搬运，不声称无障碍验收。"
+}
