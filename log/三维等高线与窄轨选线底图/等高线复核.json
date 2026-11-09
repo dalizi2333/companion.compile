@@ -1,0 +1,14 @@
+{
+  "interval": 2,
+  "majorInterval": 10,
+  "surfaces": 5,
+  "triangles": 915270,
+  "segments": 174574,
+  "labelCandidates": 1164,
+  "vertices": 349148,
+  "max_interval_error": 0.0000033569335897709607,
+  "browser_errors": [],
+  "browser_check_elapsed_ms": 63401,
+  "controls_verified": true,
+  "terrain_unchanged_by_controls": true
+}

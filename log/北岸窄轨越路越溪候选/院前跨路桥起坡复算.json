@@ -1,0 +1,162 @@
+{
+  "date": "2026-11-07",
+  "lower_crossing": [
+    140,
+    3.9807169963191997
+  ],
+  "road_ground_height": 14.78,
+  "road_surface_height_estimate": 14.95,
+  "existing_track_height": 14.780000000000001,
+  "cases": [
+    {
+      "start_x": 20.001877269697474,
+      "start_height": 14.30000750907879,
+      "run_m": 120.96164377626263,
+      "assumed_road_clearance_m": 3,
+      "assumed_deck_below_rail_m": 0.7,
+      "road_lowering_m": 0,
+      "required_rail_height": 18.65,
+      "rise_m": 4.349992490921208,
+      "maximum_grade_percent": 3.884218315665597
+    },
+    {
+      "start_x": 20.001877269697474,
+      "start_height": 14.30000750907879,
+      "run_m": 120.96164377626263,
+      "assumed_road_clearance_m": 3.5,
+      "assumed_deck_below_rail_m": 0.7,
+      "road_lowering_m": 0,
+      "required_rail_height": 19.15,
+      "rise_m": 4.849992490921208,
+      "maximum_grade_percent": 4.334824473779273
+    },
+    {
+      "start_x": 20.001877269697474,
+      "start_height": 14.30000750907879,
+      "run_m": 120.96164377626263,
+      "assumed_road_clearance_m": 4,
+      "assumed_deck_below_rail_m": 0.7,
+      "road_lowering_m": 0,
+      "required_rail_height": 19.65,
+      "rise_m": 5.349992490921208,
+      "maximum_grade_percent": 4.7854306318929485
+    },
+    {
+      "start_x": 45.79794979881116,
+      "start_height": 14.403191799195245,
+      "run_m": 95.16324451467725,
+      "assumed_road_clearance_m": 3,
+      "assumed_deck_below_rail_m": 0.7,
+      "road_lowering_m": 0,
+      "required_rail_height": 18.65,
+      "rise_m": 4.246808200804754,
+      "maximum_grade_percent": 4.939699308989739
+    },
+    {
+      "start_x": 45.79794979881116,
+      "start_height": 14.403191799195245,
+      "run_m": 95.16324451467725,
+      "assumed_road_clearance_m": 3.5,
+      "assumed_deck_below_rail_m": 0.7,
+      "road_lowering_m": 0,
+      "required_rail_height": 19.15,
+      "rise_m": 4.746808200804754,
+      "maximum_grade_percent": 5.526807048777446
+    },
+    {
+      "start_x": 45.79794979881116,
+      "start_height": 14.403191799195245,
+      "run_m": 95.16324451467725,
+      "assumed_road_clearance_m": 4,
+      "assumed_deck_below_rail_m": 0.7,
+      "road_lowering_m": 0,
+      "required_rail_height": 19.65,
+      "rise_m": 5.246808200804754,
+      "maximum_grade_percent": 6.113914788565154
+    },
+    {
+      "start_x": 59.94948744970279,
+      "start_height": 14.459797949798812,
+      "run_m": 80.98658428946908,
+      "assumed_road_clearance_m": 3,
+      "assumed_deck_below_rail_m": 0.7,
+      "road_lowering_m": 0,
+      "required_rail_height": 18.65,
+      "rise_m": 4.1902020502011865,
+      "maximum_grade_percent": 5.8464597102989115
+    },
+    {
+      "start_x": 59.94948744970279,
+      "start_height": 14.459797949798812,
+      "run_m": 80.98658428946908,
+      "assumed_road_clearance_m": 3.5,
+      "assumed_deck_below_rail_m": 0.7,
+      "road_lowering_m": 0,
+      "required_rail_height": 19.15,
+      "rise_m": 4.6902020502011865,
+      "maximum_grade_percent": 6.550818153524044
+    },
+    {
+      "start_x": 59.94948744970279,
+      "start_height": 14.459797949798812,
+      "run_m": 80.98658428946908,
+      "assumed_road_clearance_m": 4,
+      "assumed_deck_below_rail_m": 0.7,
+      "road_lowering_m": 0,
+      "required_rail_height": 19.65,
+      "rise_m": 5.1902020502011865,
+      "maximum_grade_percent": 7.255176596749174
+    },
+    {
+      "start_x": 71.19797949798811,
+      "start_height": 14.504791917991954,
+      "run_m": 69.64920702267055,
+      "assumed_road_clearance_m": 3,
+      "assumed_deck_below_rail_m": 0.7,
+      "road_lowering_m": 0,
+      "required_rail_height": 18.65,
+      "rise_m": 4.145208082008045,
+      "maximum_grade_percent": 6.882250891361894
+    },
+    {
+      "start_x": 71.19797949798811,
+      "start_height": 14.504791917991954,
+      "run_m": 69.64920702267055,
+      "assumed_road_clearance_m": 3.5,
+      "assumed_deck_below_rail_m": 0.7,
+      "road_lowering_m": 0,
+      "required_rail_height": 19.15,
+      "rise_m": 4.645208082008045,
+      "maximum_grade_percent": 7.720485002018164
+    },
+    {
+      "start_x": 71.19797949798811,
+      "start_height": 14.504791917991954,
+      "run_m": 69.64920702267055,
+      "assumed_road_clearance_m": 4,
+      "assumed_deck_below_rail_m": 0.7,
+      "road_lowering_m": 0,
+      "required_rail_height": 19.65,
+      "rise_m": 5.145208082008045,
+      "maximum_grade_percent": 8.558719112674433
+    }
+  ],
+  "comparison": {
+    "start_x": 71.19797949798811,
+    "start_height": 14.504791917991954,
+    "run_m": 69.64920702267055,
+    "maximum_grade_percent": 4,
+    "start_transition_m": 20,
+    "rail_height_at_bridge": 16.930760198898774,
+    "assumed_clearance_m": 3.5,
+    "assumed_deck_below_rail_m": 0.7,
+    "road_lowering_needed_m": 2.2192398011012244
+  },
+  "limitations": [
+    "现状送货车道是折线，实际渲染有圆角；本次交点在直段，仍属工作坐标。",
+    "3/3.5/4m道路净高与0.7m轨顶至梁底厚度只为比较，不是选定标准或桥型。",
+    "若从X20/40起坡，会侵入现有装卸段的纵坡，需要主线/装卸支线分开或重排，不能同时声称原装卸场完全水平。",
+    "从X70后离开装卸段、4%起坡的比较仍需桥两端变坡、道路降坡范围与排水专项；本轮不改地形。",
+    "桥梁标高满足几何比较，不代表牵引、制动、结构、净空与既有道路工程完成验收。"
+  ]
+}

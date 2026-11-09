@@ -1,0 +1,156 @@
+{
+  "trees": 1753,
+  "species": {
+    "birch": 533,
+    "scots_pine": 616,
+    "spruce": 604
+  },
+  "rocks": 253,
+  "stairs": 19,
+  "wall_length_m": 95.22126615012576,
+  "min_trunk_to_cycle_m": 6.539266617906334,
+  "min_trunk_to_road_m": 11.01647324776006,
+  "min_trunk_to_aqueduct_m": 9.031752598510767,
+  "terrain_unchanged": true,
+  "orchard": {
+    "trees": 1746,
+    "apple": 1045,
+    "plum": 701,
+    "rows": 56,
+    "area_ha": 8.132734701162784,
+    "patches": [
+      {
+        "id": "O1",
+        "species": "apple",
+        "rows": 7,
+        "trees": 191,
+        "width_m": 39.18984649658202,
+        "length_m": 180,
+        "level_m": 27
+      },
+      {
+        "id": "O2",
+        "species": "apple",
+        "rows": 6,
+        "trees": 160,
+        "width_m": 37.408489837646485,
+        "length_m": 180,
+        "level_m": 27
+      },
+      {
+        "id": "O3",
+        "species": "plum",
+        "rows": 7,
+        "trees": 187,
+        "width_m": 41.47101099650064,
+        "length_m": 178,
+        "level_m": 27
+      },
+      {
+        "id": "O4",
+        "species": "plum",
+        "rows": 7,
+        "trees": 181,
+        "width_m": 39.58596504211425,
+        "length_m": 178,
+        "level_m": 27
+      },
+      {
+        "id": "O5",
+        "species": "plum",
+        "rows": 6,
+        "trees": 231,
+        "width_m": 36.776303100586006,
+        "length_m": 206,
+        "level_m": 38
+      },
+      {
+        "id": "O6",
+        "species": "apple",
+        "rows": 5,
+        "trees": 105,
+        "width_m": 29.91013844807938,
+        "length_m": 170,
+        "level_m": 38
+      },
+      {
+        "id": "O7",
+        "species": "apple",
+        "rows": 5,
+        "trees": 243,
+        "width_m": 29.5997472589666,
+        "length_m": 254,
+        "level_m": 49
+      },
+      {
+        "id": "O8",
+        "species": "apple",
+        "rows": 4,
+        "trees": 62,
+        "width_m": 24.804092407226562,
+        "length_m": 138,
+        "level_m": 49
+      },
+      {
+        "id": "O9",
+        "species": "apple",
+        "rows": 5,
+        "trees": 284,
+        "width_m": 28.36740251020956,
+        "length_m": 332,
+        "level_m": 60
+      },
+      {
+        "id": "O10",
+        "species": "plum",
+        "rows": 4,
+        "trees": 102,
+        "width_m": 22.04431915283203,
+        "length_m": 204,
+        "level_m": 71
+      }
+    ],
+    "pavilion": {
+      "deck_m": [
+        7,
+        4.5
+      ],
+      "roof_height_m": 3.65,
+      "steps": 23,
+      "rise_m": 3.5434564435611406
+    },
+    "lookout": [
+      240.56049148762267,
+      1910.197760198384,
+      43.89857918716415
+    ],
+    "center": [
+      245.41001696879687,
+      1862.7924790373238
+    ]
+  },
+  "lakeside_trees": 720,
+  "north_trees": 634,
+  "story_wood_trees": 136,
+  "boundary_extension_trees": 211,
+  "trees_beyond_private_gate": 103,
+  "shore_row_trees": 52,
+  "stair_rise_m": 0.15585885436291586,
+  "stair_tread_m": 0.3157894736842017,
+  "knoll_top_m": 24.76045153956202,
+  "knoll_center": [
+    579.8919527137683,
+    1693.8856162405882
+  ],
+  "knoll_path_level_m": 21.57127153942443,
+  "wall_center": [
+    437.6112793234731,
+    1565.0897323374365
+  ],
+  "rock_center": [
+    682.440281591459,
+    1876.4066847399727
+  ],
+  "model_sha256": "d39d9e09fe679486e90e0a36331a1f5a808c6881a01785089b235fc50c4d1e16",
+  "boundary_clearance_m": 36.18363229557092
+}
