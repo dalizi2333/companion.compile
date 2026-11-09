@@ -70,6 +70,13 @@
 - 用途：Rosendal看多代家具与收藏，不将其1665年石砌外壳当南岸1856年木宅；Gamlehaugen看功能与园路，不借塔楼和城堡轮廓。
 - 状态：来源链接；未下载，不作为已获授权可直接发布的图包。
 
+### P08 Tomlebygningen
+
+- [馆藏建筑与照片](https://digitaltmuseum.no/011054059410/tomlebygningen) · [外观照片](https://ems.dimu.org/image/013AktFfuJi8?dimension=1200x1200) · [馆藏元数据](https://store-search.dimu.org/api/artifact?unique_id=011054059410&mapping=simple_json&api.key=demo)
+- 摄影为 Grethe Johnsrud，藏于 Lands Museum／Randsfjordmuseet。照片拍的是来自 Tomle 农庄的木构主屋在博物馆重立后的外观。馆藏记录写有住宿与餐饮用途，1968 年购入，1975 年重立。图像记录未列开放许可，以外链收录。
+- Innlandet 郡档案记述 Tomle 旧客栈原址朝院露出两层，朝路露出三层，并记有上下外廊。照片供观察木构与石基，原址的高差和楼层关系以档案文字为依据。[Innlandet 郡档案馆](https://www.visarkiv.no/nettutstillinger/samferdsel-i-oppland/hester/skysstrafikk/skysstrafikk-i-land/)
+- 用于[庄园总模里的东岸餐厅](../庄园三维体量模型_v3.html?focus=east)的顺坡分层、两层各自从室外进入，以及下层南门的石阶、木柱和有顶门廊。餐厅的湖景玻璃廊与拴马院沿用庄园公园期的设计。
+
 ## 使用优先级
 
-南岸外壳优先P03，北岸院落优先P04与本地P01/P02，西岸园路优先P05/P06，室内历史层次补看P05/P07。先按同一四岸总图组织建筑，再选取相应视角；不要把不同地产的前景、朝向和尺度拼成看似写实却不一致的总图。
+南岸外壳优先P03，北岸院落优先P04与本地P01/P02，西岸园路优先P05/P06，室内历史层次补看P05/P07。东岸餐厅的顺坡入口看P08。先按同一四岸总图组织建筑，再选取相应视角；不要把不同地产的前景、朝向和尺度拼成看似写实却不一致的总图。

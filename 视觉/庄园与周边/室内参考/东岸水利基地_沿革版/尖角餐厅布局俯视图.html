@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>尖角餐厅布局俯视图</title>
+<style>
+*{box-sizing:border-box}body{margin:24px;color:#243343;background:#f6f7f9;font:15px/1.65 system-ui,sans-serif}h1{font-size:24px;margin:0 0 7px}h2{font-size:18px;margin:0 0 8px}h3{font-size:15px;margin:0 0 6px}p{margin:5px 0 12px}a{color:#275e85}main{display:grid;grid-template-columns:minmax(490px,900px) minmax(260px,1fr);gap:26px;align-items:start;max-width:1400px}.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:7px 13px;margin:15px 0}.toolbar button{background:white;color:#263a4c;border:1px solid #9baab6;border-radius:5px;padding:6px 10px;cursor:pointer;font:inherit}.toolbar button[aria-pressed=true]{background:#344f64;color:white;border-color:#344f64}.toolbar label{white-space:nowrap;font-size:14px}.panel{background:white;border:1px solid #d2dce3;padding:15px}.drawing{background:white;border:1px solid #d2dce3;overflow:auto}.drawing svg{display:block;width:100%;min-width:530px}.legend{padding:8px 12px;border-top:1px solid #d2dce3;font-size:13px;display:flex;flex-wrap:wrap;gap:5px 15px}.legend span::before{content:"";display:inline-block;width:14px;height:8px;margin-right:5px;border:1px solid #82919d;background:var(--swatch)}aside ul{padding-left:20px;margin:0 0 15px}li{margin-bottom:7px}.notes{max-width:1400px;margin-top:24px}.tables{display:grid;grid-template-columns:1fr 1fr;gap:22px}.table-wrap{overflow:auto}table{border-collapse:collapse;background:white;font-size:13px;width:100%;font-variant-numeric:tabular-nums}td,th{padding:5px 7px;border:1px solid #a6b3be;text-align:left}th{background:#e7eef2}td:first-child{white-space:nowrap;color:#35546b}th:nth-child(3),td:nth-child(3){white-space:nowrap}.footer{font-size:13px;margin-top:12px}
+@media(max-width:920px){body{margin:12px}main,.tables{grid-template-columns:1fr}.drawing svg{min-width:530px}}
+@media print{.toolbar,.footer{display:none}main{grid-template-columns:2fr 1fr}.panel,.drawing{break-inside:avoid}}
+</style>
+<header>
+<h1>尖角餐厅 · 布局俯视图</h1>
+<p>西南向湖景主厅、玻璃廊与下层包间 · 1 m 网格 · 同一坐标叠对两层</p>
+</header>
+<div class="toolbar">
+  <button data-floor="upper" aria-pressed="true">1F 主厅、室内迎宾与露台</button>
+  <button data-floor="lower" aria-pressed="false">B1 包间、临湖分厨与地库</button>
+  <label><input type="checkbox" data-route="guest" checked> 来客</label>
+  <label><input type="checkbox" data-route="food" checked> 送餐</label>
+  <label><input type="checkbox" data-route="service" checked> 后勤</label>
+  <label><input type="checkbox" data-route="vehicle" checked> 车辆</label>
+</div>
+<main>
+  <section class="drawing">
+    <svg id="plan" viewBox="-17 -5 70 64" role="img" aria-label="尖角餐厅俯视图"></svg>
+    <div class="legend">
+      <span style="--swatch:#dce6eb">来客空间</span><span style="--swatch:#e9e0d4">备餐与后勤</span>
+      <span style="--swatch:#e1e3df">车行</span><span style="--swatch:#d5e9eb">玻璃廊／窗</span>
+      <span style="--swatch:#c79b87">暖水片</span><span style="--swatch:#d9bea2">门洞</span>
+    </div>
+  </section>
+  <aside class="panel">
+    <h2 id="floor-title"></h2><ul id="details"></ul>
+    <h3>正文场景</h3>
+    <ul>
+      <li><a href="../../../../正文/第一部/27-L_明天的早餐.md#L53">27-L 中央厨房</a> · 备菜、烤箱、早餐长桌、分类冷藏。</li>
+      <li><a href="../../../../正文/第一部/31-L_它最近有点奇怪.md#L3">31-L 厨房储藏与小屏</a> · 两只专用柜和门边终端，工作台下放锅与刀板。</li>
+      <li><a href="../../../../正文/第一部/38-L_窗里的灯.md#L29">38-L 冬至</a> · B1 临湖分厨、员工桌、冻存托盘和夜里的窗。</li>
+      <li><a href="../../../../正文/第一部/60-DL_这张发我一份.md#L63">60-DL 晚宴</a> · 达利兹进门与主人握手，正文未定外部入口。主厅多桌、鱼盘合影、玻璃廊门关上后停谈。</li>
+    </ul>
+    <p><a href="../../庄园三维体量模型_v3.html?focus=east">庄园三维总模 · 东岸</a></p>
+    <p>图上方向沿餐厅轴线，左侧为西南湖景，下端为通往拴马院的一侧。坐标原点是主楼体靠湖的北端角。x 向右，z 向下，单位米。</p>
+  </aside>
+</main>
+<section class="notes"><h2>门窗、家具与设备定位</h2>
+<p>设备 x/z 为左上角，宽沿 x、深沿 z。门窗为洞口两端。内装试排沿用两层外包络与现有高差，门扇、暖水片和楼梯按布局尺寸示意。</p>
+<div class="tables">
+  <div class="table-wrap"><table><thead><tr><th>编号</th><th>门窗</th><th>两端 x/z</th><th>宽 m</th></tr></thead><tbody id="openings"></tbody></table></div>
+  <div class="table-wrap"><table><thead><tr><th>编号</th><th>家具与设备</th><th>x/z</th><th>宽×深×高 m</th></tr></thead><tbody id="furniture"></tbody></table></div>
+</div></section>
+<p class="footer">两层隔墙、楼梯详排与家具为本图的室内试排。结构、排烟、洗消排水、消防与设备选型待专项设计。</p>
+<script>
+const plans = {"upper":{"rooms":[[0,0,47,38,"guest"],[-14,-0.5,14,39,"exterior"],[-4,3,4,32,"water"],[29,16,18,22,"service"],[38,10,9,6,"service"],[29,26,8.5,8.8,"storage"],[37.5,25,9.5,13,"storage"]],"walls":[[0,0,47,0],[47,0,47,27],[47,32,47,38],[47,38,0,38],[0,0,0,3],[0,19.4,0,20],[0,35,0,35.2],[0,37.35,0,38],[12.4,0,12.4,9],[12.4,9,19.15,9],[22.8,9,29,9],[29,9,29,10],[29,14,29,23],[29,26,29,38],[29,16,47,16],[38,10,47,10],[38,10,38,11.7],[38,13.3,38,16],[41,10,41,12.25],[44,10,44,12.25],[29,22.9,34.7,22.9],[36.3,22.9,37.5,22.9],[37.5,22.9,37.5,25.4],[37.5,27.3,37.5,31.7],[37.5,33.5,37.5,38],[-14,-0.5,0,-0.5],[-14,-0.5,-14,38.5],[-14,38.5,-8.4,38.5],[-5.6,38.5,0,38.5],[-4,3,0,3],[-4,35,0,35]],"openings":[{"id":"D02","name":"迎宾区 → 湖景主厅","a":[29,10],"b":[29,14],"kind":"double","swing":1},{"id":"D03","name":"主厅 → 玻璃廊（60-DL）","a":[0,16.4],"b":[0,19.4],"kind":"double","swing":1},{"id":"D04","name":"玻璃廊 → 室外露台","a":[-4,26],"b":[-4,28.2],"kind":"sliding"},{"id":"D05","name":"传菜厅 → 主厅","a":[29,23],"b":[29,26],"kind":"sliding"},{"id":"D06","name":"东侧高位卸货口","a":[47,27],"b":[47,32],"kind":"gate"},{"id":"D07","name":"洗手间入口","a":[38,11.7],"b":[38,13.3],"kind":"sliding"},{"id":"D11","name":"传菜厅 → 货梯前室","a":[37.5,25.4],"b":[37.5,27.3],"kind":"sliding"},{"id":"D12","name":"收货 → 污餐具回收与暂存","a":[37.5,31.7],"b":[37.5,33.5],"kind":"sliding"},{"id":"D13","name":"公用梯 → 迎宾与主厅通道","a":[19.15,9],"b":[22.8,9],"kind":"open"},{"id":"D14","name":"露台南端 → 沿湖步道","a":[-8.4,38.5],"b":[-5.6,38.5],"kind":"open"},{"id":"D15","name":"员工梯 → 传菜前室","a":[34.7,22.9],"b":[36.3,22.9],"kind":"open"},{"id":"W01","name":"主厅与玻璃廊内侧玻璃","a":[0,3],"b":[0,16.4],"kind":"glass"},{"id":"W02","name":"主厅与玻璃廊内侧玻璃","a":[0,20],"b":[0,30],"kind":"glass"},{"id":"W03","name":"主厅西南侧窗","a":[0,35.2],"b":[0,37.35],"kind":"glass"},{"id":"W04","name":"外廊湖景玻璃","a":[-4,3],"b":[-4,26],"kind":"glass"},{"id":"W05","name":"外廊湖景玻璃","a":[-4,28.2],"b":[-4,35],"kind":"glass"},{"id":"W06","name":"主厅与玻璃廊内侧玻璃","a":[0,30],"b":[0,35],"kind":"glass"}],"furniture":[{"id":"C01","name":"公用客梯核心","x":13.25,"z":1.2,"w":4.5,"d":7.6,"kind":"lift"},{"id":"C02","name":"公用折返梯，B1 至 1F，30 级","x":20.1,"z":0.2,"w":2.4,"d":8,"kind":"stair"},{"id":"C03","name":"员工折返梯，B1 至 1F，30 级","x":29.7,"z":18.8,"w":5.8,"d":3.3,"kind":"stair","turn":true},{"id":"C04","name":"货梯，接 B1 生产厨房","x":39.85,"z":25.2,"w":3.2,"d":3.6,"kind":"lift"},{"id":"C05","name":"小餐梯，接 B1 包间服务口","x":0.45,"z":21.2,"w":1.45,"d":1.6,"kind":"lift"},{"id":"C06","name":"南端室外台阶，51 级及两处平台","x":-8.4,"z":38.5,"w":2.8,"d":17.5,"kind":"stair","steps":51,"landings":2},{"id":"F01","name":"迎宾台","x":32.7,"z":5.9,"w":3.7,"d":0.82,"h":1.05,"kind":"counter"},{"id":"F02","name":"等候长椅","x":24.3,"z":1.2,"w":4.1,"d":0.62,"h":0.45,"kind":"chair"},{"id":"F03","name":"衣帽架","x":41,"z":3.25,"w":4.4,"d":0.65,"h":1.7,"kind":"storage"},{"id":"F04","name":"湖景廊倚靠长凳","x":-3.75,"z":8,"w":0.48,"d":3,"h":0.45,"kind":"chair"},{"id":"F05","name":"包间小餐梯落台","x":0.45,"z":23.25,"w":1.95,"d":0.65,"h":0.9,"kind":"counter"},{"id":"F06","name":"主厅传菜落台","x":30.2,"z":27.35,"w":3.4,"d":0.85,"h":0.92,"kind":"counter"},{"id":"F07","name":"卸货核验台","x":43.6,"z":34,"w":2.45,"d":0.75,"h":0.92,"kind":"counter"},{"id":"F08","name":"脏餐具回收暂存台","x":30.1,"z":32.85,"w":3.1,"d":0.8,"h":0.92,"kind":"counter"},{"id":"F09","name":"洁净餐盘柜","x":39.8,"z":16.25,"w":3.5,"d":0.7,"h":1.85,"kind":"storage"},{"id":"F10","name":"洁净配餐及保温台","x":46,"z":18.25,"w":0.8,"d":4.2,"h":0.92,"kind":"counter"},{"id":"F11","name":"厅内茶水柜","x":5.5,"z":0.45,"w":3.6,"d":0.7,"h":0.92,"kind":"counter"},{"id":"H01","name":"湖景玻璃内侧采暖带","x":0.22,"z":4.8,"w":0.18,"d":5.4,"kind":"heat"},{"id":"H02","name":"湖景玻璃内侧采暖带","x":0.22,"z":25,"w":0.18,"d":4,"kind":"heat"},{"id":"H03","name":"主厅南外墙暖水片","x":14.2,"z":34.46,"w":4.4,"d":0.19,"kind":"heat"},{"id":"T01","name":"主厅可移动餐桌","x":3.25,"z":11.389999999999999,"w":3.5,"d":1.62,"h":0.75,"kind":"table"},{"x":3.4375,"z":10.719999999999999,"w":0.5,"d":0.5,"kind":"chair"},{"x":3.4375,"z":13.18,"w":0.5,"d":0.5,"kind":"chair"},{"x":4.3125,"z":10.719999999999999,"w":0.5,"d":0.5,"kind":"chair"},{"x":4.3125,"z":13.18,"w":0.5,"d":0.5,"kind":"chair"},{"x":5.1875,"z":10.719999999999999,"w":0.5,"d":0.5,"kind":"chair"},{"x":5.1875,"z":13.18,"w":0.5,"d":0.5,"kind":"chair"},{"x":6.0625,"z":10.719999999999999,"w":0.5,"d":0.5,"kind":"chair"},{"x":6.0625,"z":13.18,"w":0.5,"d":0.5,"kind":"chair"},{"id":"T02","name":"主厅可移动餐桌","x":12.95,"z":11.389999999999999,"w":3.5,"d":1.62,"h":0.75,"kind":"table"},{"x":13.1375,"z":10.719999999999999,"w":0.5,"d":0.5,"kind":"chair"},{"x":13.1375,"z":13.18,"w":0.5,"d":0.5,"kind":"chair"},{"x":14.0125,"z":10.719999999999999,"w":0.5,"d":0.5,"kind":"chair"},{"x":14.0125,"z":13.18,"w":0.5,"d":0.5,"kind":"chair"},{"x":14.8875,"z":10.719999999999999,"w":0.5,"d":0.5,"kind":"chair"},{"x":14.8875,"z":13.18,"w":0.5,"d":0.5,"kind":"chair"},{"x":15.7625,"z":10.719999999999999,"w":0.5,"d":0.5,"kind":"chair"},{"x":15.7625,"z":13.18,"w":0.5,"d":0.5,"kind":"chair"},{"id":"T03","name":"主厅可移动餐桌","x":22.05,"z":14.69,"w":3.5,"d":1.62,"h":0.75,"kind":"table"},{"x":22.2375,"z":14.02,"w":0.5,"d":0.5,"kind":"chair"},{"x":22.2375,"z":16.48,"w":0.5,"d":0.5,"kind":"chair"},{"x":23.1125,"z":14.02,"w":0.5,"d":0.5,"kind":"chair"},{"x":23.1125,"z":16.48,"w":0.5,"d":0.5,"kind":"chair"},{"x":23.9875,"z":14.02,"w":0.5,"d":0.5,"kind":"chair"},{"x":23.9875,"z":16.48,"w":0.5,"d":0.5,"kind":"chair"},{"x":24.8625,"z":14.02,"w":0.5,"d":0.5,"kind":"chair"},{"x":24.8625,"z":16.48,"w":0.5,"d":0.5,"kind":"chair"},{"id":"T04","name":"主厅可移动餐桌","x":3.45,"z":19.44,"w":3.5,"d":1.62,"h":0.75,"kind":"table"},{"x":3.6375,"z":18.77,"w":0.5,"d":0.5,"kind":"chair"},{"x":3.6375,"z":21.23,"w":0.5,"d":0.5,"kind":"chair"},{"x":4.5125,"z":18.77,"w":0.5,"d":0.5,"kind":"chair"},{"x":4.5125,"z":21.23,"w":0.5,"d":0.5,"kind":"chair"},{"x":5.3875,"z":18.77,"w":0.5,"d":0.5,"kind":"chair"},{"x":5.3875,"z":21.23,"w":0.5,"d":0.5,"kind":"chair"},{"x":6.2625,"z":18.77,"w":0.5,"d":0.5,"kind":"chair"},{"x":6.2625,"z":21.23,"w":0.5,"d":0.5,"kind":"chair"},{"id":"T05","name":"晚宴鱼盘／合影席（60-DL）","x":15.850000000000001,"z":16.69,"w":3.5,"d":1.62,"h":0.75,"kind":"table"},{"x":16.0375,"z":16.02,"w":0.5,"d":0.5,"kind":"chair"},{"x":16.0375,"z":18.48,"w":0.5,"d":0.5,"kind":"chair"},{"x":16.9125,"z":16.02,"w":0.5,"d":0.5,"kind":"chair"},{"x":16.9125,"z":18.48,"w":0.5,"d":0.5,"kind":"chair"},{"x":17.7875,"z":16.02,"w":0.5,"d":0.5,"kind":"chair"},{"x":17.7875,"z":18.48,"w":0.5,"d":0.5,"kind":"chair"},{"x":18.6625,"z":16.02,"w":0.5,"d":0.5,"kind":"chair"},{"x":18.6625,"z":18.48,"w":0.5,"d":0.5,"kind":"chair"},{"id":"T06","name":"主厅可移动餐桌","x":22.55,"z":20.19,"w":3.5,"d":1.62,"h":0.75,"kind":"table"},{"x":22.7375,"z":19.52,"w":0.5,"d":0.5,"kind":"chair"},{"x":22.7375,"z":21.98,"w":0.5,"d":0.5,"kind":"chair"},{"x":23.6125,"z":19.52,"w":0.5,"d":0.5,"kind":"chair"},{"x":23.6125,"z":21.98,"w":0.5,"d":0.5,"kind":"chair"},{"x":24.4875,"z":19.52,"w":0.5,"d":0.5,"kind":"chair"},{"x":24.4875,"z":21.98,"w":0.5,"d":0.5,"kind":"chair"},{"x":25.3625,"z":19.52,"w":0.5,"d":0.5,"kind":"chair"},{"x":25.3625,"z":21.98,"w":0.5,"d":0.5,"kind":"chair"},{"id":"T07","name":"主厅可移动餐桌","x":3.6500000000000004,"z":25.84,"w":3.5,"d":1.62,"h":0.75,"kind":"table"},{"x":3.8375000000000004,"z":25.169999999999998,"w":0.5,"d":0.5,"kind":"chair"},{"x":3.8375000000000004,"z":27.63,"w":0.5,"d":0.5,"kind":"chair"},{"x":4.7125,"z":25.169999999999998,"w":0.5,"d":0.5,"kind":"chair"},{"x":4.7125,"z":27.63,"w":0.5,"d":0.5,"kind":"chair"},{"x":5.5875,"z":25.169999999999998,"w":0.5,"d":0.5,"kind":"chair"},{"x":5.5875,"z":27.63,"w":0.5,"d":0.5,"kind":"chair"},{"x":6.4625,"z":25.169999999999998,"w":0.5,"d":0.5,"kind":"chair"},{"x":6.4625,"z":27.63,"w":0.5,"d":0.5,"kind":"chair"},{"id":"T08","name":"主厅可移动餐桌","x":14.15,"z":26.89,"w":3.5,"d":1.62,"h":0.75,"kind":"table"},{"x":14.3375,"z":26.22,"w":0.5,"d":0.5,"kind":"chair"},{"x":14.3375,"z":28.68,"w":0.5,"d":0.5,"kind":"chair"},{"x":15.2125,"z":26.22,"w":0.5,"d":0.5,"kind":"chair"},{"x":15.2125,"z":28.68,"w":0.5,"d":0.5,"kind":"chair"},{"x":16.0875,"z":26.22,"w":0.5,"d":0.5,"kind":"chair"},{"x":16.0875,"z":28.68,"w":0.5,"d":0.5,"kind":"chair"},{"x":16.9625,"z":26.22,"w":0.5,"d":0.5,"kind":"chair"},{"x":16.9625,"z":28.68,"w":0.5,"d":0.5,"kind":"chair"},{"id":"T09","name":"主厅可移动餐桌","x":22.05,"z":29.89,"w":3.5,"d":1.62,"h":0.75,"kind":"table"},{"x":22.2375,"z":29.22,"w":0.5,"d":0.5,"kind":"chair"},{"x":22.2375,"z":31.68,"w":0.5,"d":0.5,"kind":"chair"},{"x":23.1125,"z":29.22,"w":0.5,"d":0.5,"kind":"chair"},{"x":23.1125,"z":31.68,"w":0.5,"d":0.5,"kind":"chair"},{"x":23.9875,"z":29.22,"w":0.5,"d":0.5,"kind":"chair"},{"x":23.9875,"z":31.68,"w":0.5,"d":0.5,"kind":"chair"},{"x":24.8625,"z":29.22,"w":0.5,"d":0.5,"kind":"chair"},{"x":24.8625,"z":31.68,"w":0.5,"d":0.5,"kind":"chair"},{"id":"P01","name":"露台四人桌","x":-10.510000000000002,"z":3.29,"w":1.42,"d":1.42,"h":0.75,"kind":"table"},{"x":-10.05,"z":2.66,"w":0.5,"d":0.5,"kind":"chair"},{"x":-10.05,"z":4.84,"w":0.5,"d":0.5,"kind":"chair"},{"x":-11.14,"z":3.75,"w":0.5,"d":0.5,"kind":"chair"},{"x":-8.96,"z":3.75,"w":0.5,"d":0.5,"kind":"chair"},{"id":"P02","name":"露台四人桌","x":-10.510000000000002,"z":8.29,"w":1.42,"d":1.42,"h":0.75,"kind":"table"},{"x":-10.05,"z":7.66,"w":0.5,"d":0.5,"kind":"chair"},{"x":-10.05,"z":9.84,"w":0.5,"d":0.5,"kind":"chair"},{"x":-11.14,"z":8.75,"w":0.5,"d":0.5,"kind":"chair"},{"x":-8.96,"z":8.75,"w":0.5,"d":0.5,"kind":"chair"},{"id":"P03","name":"露台四人桌","x":-10.510000000000002,"z":13.29,"w":1.42,"d":1.42,"h":0.75,"kind":"table"},{"x":-10.05,"z":12.66,"w":0.5,"d":0.5,"kind":"chair"},{"x":-10.05,"z":14.84,"w":0.5,"d":0.5,"kind":"chair"},{"x":-11.14,"z":13.75,"w":0.5,"d":0.5,"kind":"chair"},{"x":-8.96,"z":13.75,"w":0.5,"d":0.5,"kind":"chair"},{"id":"P04","name":"露台四人桌","x":-10.510000000000002,"z":23.29,"w":1.42,"d":1.42,"h":0.75,"kind":"table"},{"x":-10.05,"z":22.66,"w":0.5,"d":0.5,"kind":"chair"},{"x":-10.05,"z":24.84,"w":0.5,"d":0.5,"kind":"chair"},{"x":-11.14,"z":23.75,"w":0.5,"d":0.5,"kind":"chair"},{"x":-8.96,"z":23.75,"w":0.5,"d":0.5,"kind":"chair"},{"id":"P05","name":"露台四人桌","x":-10.510000000000002,"z":28.29,"w":1.42,"d":1.42,"h":0.75,"kind":"table"},{"x":-10.05,"z":27.66,"w":0.5,"d":0.5,"kind":"chair"},{"x":-10.05,"z":29.84,"w":0.5,"d":0.5,"kind":"chair"},{"x":-11.14,"z":28.75,"w":0.5,"d":0.5,"kind":"chair"},{"x":-8.96,"z":28.75,"w":0.5,"d":0.5,"kind":"chair"},{"id":"P06","name":"露台四人桌","x":-10.510000000000002,"z":33.29,"w":1.42,"d":1.42,"h":0.75,"kind":"table"},{"x":-10.05,"z":32.66,"w":0.5,"d":0.5,"kind":"chair"},{"x":-10.05,"z":34.84,"w":0.5,"d":0.5,"kind":"chair"},{"x":-11.14,"z":33.75,"w":0.5,"d":0.5,"kind":"chair"},{"x":-8.96,"z":33.75,"w":0.5,"d":0.5,"kind":"chair"},{"x":38.57,"z":10.55,"w":0.86,"d":1.55,"kind":"fixture"},{"x":38.55,"z":14.6,"w":0.9,"d":0.62,"kind":"fixture"},{"x":41.77,"z":10.55,"w":0.86,"d":1.55,"kind":"fixture"},{"x":41.75,"z":14.6,"w":0.9,"d":0.62,"kind":"fixture"},{"x":44.67,"z":10.55,"w":0.86,"d":1.55,"kind":"fixture"},{"x":44.65,"z":14.6,"w":0.9,"d":0.62,"kind":"fixture"}],"routes":[{"kind":"guest","name":"地库客梯 → 迎宾 → 主厅","points":[[17.75,5.2],[18.7,5.2],[18.7,8.5],[19.4,8.7],[20.3,9.5],[24.4,11.9],[27.7,12]]},{"kind":"guest","name":"60-DL 主厅 → 关门后在玻璃廊停谈","points":[[17.2,19.5],[12.8,20.2],[9.5,18],[5.2,17.8],[0,17.8],[-1.9,17.8],[-1.9,21.8]]},{"kind":"food","name":"B1 货梯上楼 → 传菜 → 宴会桌","points":[[41.5,24.7],[39.5,24.7],[39.5,26.4],[37.5,26.4],[35.9,26.4],[35.9,24.5],[29,24.5],[26.7,24.5],[22,24.5],[18.2,21.6]]},{"kind":"food","name":"传菜厅 → 小餐梯（包间送餐）","points":[[30.2,24.1],[29,24.1],[22,24.1],[12,23.8],[3.1,23],[1.9,22]]},{"kind":"service","name":"员工梯 → 传菜／收货区","points":[[35.5,20.45],[35.5,22.9],[35.5,24.5]]},{"kind":"service","name":"高位卸货 → 货梯","points":[[47.7,29.5],[44,29.5],[41.45,29.5],[41.45,28.8]]}],"labels":[[-10.4,3,"西南临湖露台"],[-2,5.2,"玻璃廊"],[-2.05,20.8,"停谈"],[9.4,8.8,"湖景主厅"],[34,3.55,"迎宾 · 候位"],[42.5,14.3,"客用洗手间"],[42.3,19.15,"洁净配餐"],[33.7,24.55,"出餐口"],[33.2,30.95,"回收暂存"],[43.1,36.2,"高位收货"],[-7,53.8,"↓ 拴马院与步道"],[-10.3,-1.4,"北端收栏"],[48.2,29.5,"← 卸货坪"],[14.3,19.7,"合影留位","small"],[-10.6,18.85,"湖景","small"]],"notes":["上层 +13.50 m。主厅试排九张八人桌，宴会桌可移动。T05 周围留站位，可拍鱼盘与合影。临湖露台摆六张四人桌，北端栏边封闭，南端下楼接步道。","60-DL 从主厅直接经 D03 进入玻璃廊。门可合拢，隔着内侧玻璃能继续看主厅。停谈区靠主厅门，D04 通露台的门另在南侧，避免两门正对。","东侧高位卸货进收货前室。原料和推车下楼用货梯，主厅上菜走传菜厅。污餐具先在回收间落台，按班次用货梯回洗消。服务员走员工梯。","小餐梯只用于包间送餐。上层 C05 旁设短停落台，下层由服务小间接餐。来客从 B1 经客梯或楼梯进入室内迎宾区，背坡侧为外墙。"]},"lower":{"rooms":[[-13.5,0,10,19,"guest"],[-13.5,19,10,19,"guest"],[-3.5,0,3.5,38,"guest"],[0,0,24,8.8,"guest"],[-13.5,0,10,7.6,"service"],[0,0,9,4.5,"service"],[0,8.8,24,29.2,"vehicle"],[24,0,23,18.8,"vehicle"],[24,18.8,20.4,11.2,"service"],[29.7,18.8,5.8,3.3,"service"],[0,20.35,2.2,3.2,"service"],[44.4,18.8,2.6,11.2,"service"],[24,30,7.5,8,"storage"],[31.5,30,8,8,"storage"],[39.5,30,7.5,8,"fuel"],[-3.825,38,4.15,2.65,"exterior"],[-3.075,40.65,2.65,4.3,"exterior"]],"walls":[[-13.5,0,0,0],[0,0,27,0],[39,0,47,0],[47,0,47,38],[47,38,18.5,38],[8.5,38,-0.55,38],[-2.95,38,-13.5,38],[-13.5,0,-13.5,0.45],[-13.5,18.55,-13.5,19.45],[-13.5,37.55,-13.5,38],[-13.5,19,-3.5,19],[-3.5,12,-3.5,27],[-3.5,30,-3.5,38],[-13.5,7.6,-3.5,7.6],[-3.5,0,-3.5,2.5],[-3.5,4.25,-3.5,9],[0,0,0,2.55],[0,4.1,0,4.5],[0,4.5,9,4.5],[9,0,9,4.5],[0,9,0,21.2],[0,22.8,0,38],[0,20.35,2.2,20.35],[2.2,20.35,2.2,23.55],[2.2,23.55,0,23.55],[0,8.8,8.45,8.8],[12,8.8,24,8.8],[24,0,24,38],[24,18.8,44.95,18.8],[46.45,18.8,47,18.8],[29.7,18.8,29.7,22.1],[29.7,22.1,35.5,22.1],[35.5,18.8,35.5,19.2],[35.5,20.85,35.5,22.1],[44.4,18.8,44.4,30],[24,30,26.5,30],[29.1,30,34,30],[36.5,30,44.95,30],[46.45,30,47,30],[31.5,30,31.5,38],[39.5,30,39.5,38]],"openings":[{"id":"D-B15","name":"包间客廊 → 临湖分厨","a":[-3.5,2.5],"b":[-3.5,4.25],"kind":"sliding"},{"id":"D-B16","name":"分厨对面 → 员工用餐间","a":[0,2.55],"b":[0,4.1],"kind":"sliding"},{"id":"D-B01","name":"拴马院门廊 · 双扇玻璃门","a":[-2.95,38],"b":[-0.55,38],"kind":"double","swing":-1},{"id":"D-B02","name":"南包间双扇门","a":[-3.5,30],"b":[-3.5,27],"kind":"double","swing":-1},{"id":"D-B03","name":"北包间双扇门","a":[-3.5,12],"b":[-3.5,9],"kind":"double","swing":-1},{"id":"D-B04","name":"包间廊 → 客梯前厅","a":[0,4],"b":[0,9],"kind":"open"},{"id":"D-B05","name":"车位区步行口","a":[8.45,8.8],"b":[12,8.8],"kind":"open"},{"id":"D-B06","name":"客梯门","a":[13.25,7.4],"b":[13.25,5.6],"kind":"sliding"},{"id":"D-B06a","name":"客梯前厅 → 楼梯","a":[20,6.45],"b":[20,8.15],"kind":"open"},{"id":"D-B07","name":"游客地库车行口","a":[8.5,38],"b":[18.5,38],"kind":"gate"},{"id":"D-B08","name":"除雪车西北车行口","a":[27,0],"b":[39,0],"kind":"gate"},{"id":"D-B09","name":"员工楼梯门","a":[35.5,19.2],"b":[35.5,20.85],"kind":"door","swing":1},{"id":"D-B10","name":"地窖冷藏推拉门","a":[26.5,30],"b":[29.1,30],"kind":"sliding"},{"id":"D-B11","name":"食品储备仓推拉门","a":[34,30],"b":[36.5,30],"kind":"sliding"},{"id":"D-B12","name":"地库设备侧维修门","a":[44.95,18.8],"b":[46.45,18.8],"kind":"door","swing":1},{"id":"D-B13","name":"独立燃料间检修门","a":[44.95,30],"b":[46.45,30],"kind":"door","swing":1},{"id":"D-B14","name":"包间送菜交接柜","a":[0,21.2],"b":[0,22.8],"kind":"sliding"},{"id":"W-B01","name":"北包间湖窗","a":[-13.5,7.6],"b":[-13.5,18.55],"kind":"glass"},{"id":"W-B03","name":"临湖分厨湖窗","a":[-13.5,0.45],"b":[-13.5,7.6],"kind":"glass"},{"id":"W-B02","name":"南包间湖窗","a":[-13.5,19.45],"b":[-13.5,37.55],"kind":"glass"}],"furniture":[{"id":"T-N","name":"北包间长桌","x":-11.55,"z":9.2,"w":5.8,"d":1.85,"kind":"table","h":0.75},{"id":"C-N1","name":"包间餐椅","x":-11.38,"z":8.47,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-N2","name":"包间餐椅","x":-10.47,"z":8.47,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-N3","name":"包间餐椅","x":-9.56,"z":8.47,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-N4","name":"包间餐椅","x":-8.65,"z":8.47,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-N5","name":"包间餐椅","x":-7.74,"z":8.47,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-N6","name":"包间餐椅","x":-6.830000000000001,"z":8.47,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-N7","name":"包间餐椅","x":-11.38,"z":11.26,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-N8","name":"包间餐椅","x":-10.47,"z":11.26,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-N9","name":"包间餐椅","x":-9.56,"z":11.26,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-N10","name":"包间餐椅","x":-8.65,"z":11.26,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-N11","name":"包间餐椅","x":-7.74,"z":11.26,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-N12","name":"包间餐椅","x":-6.830000000000001,"z":11.26,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"B-N","name":"包间备餐边柜","x":-7.25,"z":15.3,"w":2.55,"d":0.65,"kind":"counter","h":0.92},{"id":"H-N1","name":"湖窗下暖水片","x":-13.29,"z":2.9,"w":0.16,"d":3.4,"kind":"heat","h":0.6},{"id":"H-N2","name":"湖窗下暖水片","x":-13.29,"z":13.2,"w":0.16,"d":3.4,"kind":"heat","h":0.6},{"id":"T-S","name":"南包间长桌","x":-11.55,"z":28.2,"w":5.8,"d":1.85,"kind":"table","h":0.75},{"id":"C-S1","name":"包间餐椅","x":-11.38,"z":27.47,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-S2","name":"包间餐椅","x":-10.47,"z":27.47,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-S3","name":"包间餐椅","x":-9.56,"z":27.47,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-S4","name":"包间餐椅","x":-8.65,"z":27.47,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-S5","name":"包间餐椅","x":-7.74,"z":27.47,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-S6","name":"包间餐椅","x":-6.830000000000001,"z":27.47,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-S7","name":"包间餐椅","x":-11.38,"z":30.259999999999998,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-S8","name":"包间餐椅","x":-10.47,"z":30.259999999999998,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-S9","name":"包间餐椅","x":-9.56,"z":30.259999999999998,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-S10","name":"包间餐椅","x":-8.65,"z":30.259999999999998,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-S11","name":"包间餐椅","x":-7.74,"z":30.259999999999998,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"C-S12","name":"包间餐椅","x":-6.830000000000001,"z":30.259999999999998,"w":0.57,"d":0.6,"kind":"chair","h":0.85},{"id":"B-S","name":"包间备餐边柜","x":-7.25,"z":21.1,"w":2.55,"d":0.65,"kind":"counter","h":0.92},{"id":"H-S1","name":"湖窗下暖水片","x":-13.29,"z":21.9,"w":0.16,"d":3.4,"kind":"heat","h":0.6},{"id":"H-S2","name":"湖窗下暖水片","x":-13.29,"z":32.2,"w":0.16,"d":3.4,"kind":"heat","h":0.6},{"id":"K-L1","name":"四人备餐岛 · 包饺子与托盘","x":-10.4,"z":3.4,"w":3.55,"d":1.35,"kind":"counter","h":0.9},{"id":"K-L2","name":"煮制炉、排烟罩及落锅位","x":-9.5,"z":0.25,"w":3.3,"d":0.84,"kind":"appliance","h":0.9},{"id":"K-L3","name":"清洗和手洗水槽","x":-12.95,"z":0.25,"w":2.7,"d":0.84,"kind":"fixture","h":0.9},{"id":"K-L4","name":"窗边盛装台及墙钟","x":-13.1,"z":5,"w":0.72,"d":1.9,"kind":"counter","h":0.9},{"id":"K-L5","name":"饺子暂冻柜","x":-6.5,"z":6.35,"w":1.55,"d":0.95,"kind":"storage","h":1.95},{"id":"K-L6","name":"包间近端出餐台","x":-5.1,"z":5.55,"w":1.15,"d":0.65,"kind":"counter","h":0.92},{"id":"T-E","name":"38-L 员工四至六人桌","x":3.4,"z":1.45,"w":3,"d":1.22,"kind":"table","h":0.75},{"name":"员工餐椅","x":3.6,"z":0.68,"w":0.55,"d":0.55,"kind":"chair","h":0.85},{"name":"员工餐椅","x":4.65,"z":0.68,"w":0.55,"d":0.55,"kind":"chair","h":0.85},{"name":"员工餐椅","x":5.7,"z":0.68,"w":0.55,"d":0.55,"kind":"chair","h":0.85},{"name":"员工餐椅","x":3.6,"z":2.93,"w":0.55,"d":0.55,"kind":"chair","h":0.85},{"name":"员工餐椅","x":4.65,"z":2.93,"w":0.55,"d":0.55,"kind":"chair","h":0.85},{"name":"员工餐椅","x":5.7,"z":2.93,"w":0.55,"d":0.55,"kind":"chair","h":0.85},{"id":"ST-B1","name":"客用折返楼梯","x":20,"z":0.2,"w":2.5,"d":8,"kind":"stair"},{"id":"EL-B1","name":"客梯与前室","x":13.25,"z":1.2,"w":4.5,"d":7.6,"kind":"lift"},{"id":"EL-B2","name":"后勤货梯","x":39.85,"z":25.2,"w":3.2,"d":3.6,"kind":"lift"},{"id":"EL-B3","name":"包间小餐梯","x":0.45,"z":21.2,"w":1.45,"d":1.6,"kind":"lift"},{"id":"ST-B2","name":"员工折返楼梯","x":29.7,"z":18.8,"w":5.8,"d":3.3,"kind":"stair","turn":true},{"id":"ST-B3","name":"拴马院石阶，17 级","x":-3.075,"z":40.65,"w":2.65,"d":4.3,"kind":"stair","steps":17},{"id":"F-B03","name":"门廊石脚木柱","x":-3.78,"z":40.02,"w":0.56,"d":0.56,"kind":"fixture","h":3.1},{"id":"F-B04","name":"门廊石脚木柱","x":-0.28,"z":40.02,"w":0.56,"d":0.56,"kind":"fixture","h":3.1},{"id":"F-B01","name":"客梯前室等候长凳","x":8.2,"z":5.8,"w":4.3,"d":0.65,"kind":"fixture","h":0.48},{"id":"F-B02","name":"包间入口伞桶","x":-3.27,"z":37.25,"w":0.43,"d":0.43,"kind":"fixture","h":0.55},{"id":"P01","name":"公众车位","x":2.4,"z":9.3,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P02","name":"公众车位","x":2.4,"z":12.100000000000001,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P03","name":"公众车位","x":2.4,"z":14.9,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P04","name":"公众车位","x":2.4,"z":17.7,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P05","name":"公众车位","x":2.4,"z":20.5,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P06","name":"公众车位","x":2.4,"z":23.3,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P07","name":"公众车位","x":2.4,"z":26.099999999999998,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P08","name":"公众车位","x":2.4,"z":28.9,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P09","name":"公众车位","x":2.4,"z":31.7,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P10","name":"公众车位","x":17.6,"z":9.3,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P11","name":"公众车位","x":17.6,"z":12.100000000000001,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P12","name":"公众车位","x":17.6,"z":14.9,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P13","name":"公众车位","x":17.6,"z":17.7,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P14","name":"公众车位","x":17.6,"z":20.5,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P15","name":"公众车位","x":17.6,"z":23.3,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P16","name":"公众车位","x":17.6,"z":26.099999999999998,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P17","name":"公众车位","x":17.6,"z":28.9,"w":5.2,"d":2.8,"kind":"stall"},{"id":"P18","name":"公众车位","x":17.6,"z":31.7,"w":5.2,"d":2.8,"kind":"stall"},{"id":"E01","name":"除雪设备泊位","x":26.25,"z":9.5,"w":4.5,"d":9,"kind":"stall"},{"id":"EV01","name":"除雪设备参考体量","x":27.05,"z":10.35,"w":2.9,"d":7.2,"kind":"vehicle"},{"id":"E02","name":"除雪设备泊位","x":33.25,"z":9.5,"w":4.5,"d":9,"kind":"stall"},{"id":"EV02","name":"除雪设备参考体量","x":34.05,"z":10.35,"w":2.9,"d":7.2,"kind":"vehicle"},{"id":"E03","name":"除雪设备泊位","x":40.25,"z":9.5,"w":4.5,"d":9,"kind":"stall"},{"id":"EV03","name":"除雪设备参考体量","x":41.05,"z":10.35,"w":2.9,"d":7.2,"kind":"vehicle"},{"id":"K01","name":"回收台及污餐具暂存","x":24.5,"z":19.1,"w":3.1,"d":1.05,"kind":"counter","h":0.91},{"id":"K02","name":"预洗槽、洗碗机与净架","x":24.5,"z":20.35,"w":1.1,"d":4.45,"kind":"appliance","h":1.45},{"id":"K03","name":"洗菜槽与沥水台","x":24.5,"z":25.4,"w":1.05,"d":3.75,"kind":"counter","h":0.91},{"id":"K04","name":"中央洗切岛 · 台下锅、案板及护套刀具抽屉","x":28.05,"z":24.1,"w":4.2,"d":1.25,"kind":"counter","h":0.92},{"id":"K05","name":"热灶、锅位及独立排烟罩","x":29.45,"z":27.3,"w":6.2,"d":1.1,"kind":"appliance","h":0.94},{"id":"K06","name":"烤箱与烘焙出炉台","x":36,"z":27.3,"w":2.5,"d":1.1,"kind":"appliance","h":1.92},{"id":"K07","name":"烘焙长台 · 面包、水果及托盘","x":34.6,"z":24.1,"w":3.9,"d":1.2,"kind":"counter","h":0.92},{"id":"K08","name":"洁净装盘、餐车交接台","x":38.55,"z":20.6,"w":4.8,"d":1.2,"kind":"counter","h":0.95},{"id":"K10","name":"员工楼梯旁开关与本地小屏","x":35.72,"z":19,"w":0.42,"d":0.2,"kind":"fixture","h":1.45},{"id":"K11","name":"后勤货梯旁隔温收货柜","x":43.46,"z":24.85,"w":0.64,"d":3.96,"kind":"storage","h":1.9},{"id":"S01","name":"生肉冷柜","x":24.55,"z":32.05,"w":1.35,"d":1.45,"kind":"appliance","h":1.95},{"id":"S02","name":"蛋奶冷柜","x":24.55,"z":33.7,"w":1.35,"d":1.45,"kind":"appliance","h":1.95},{"id":"S03","name":"蔬菜冷柜","x":24.55,"z":35.35,"w":1.35,"d":1.45,"kind":"appliance","h":1.95},{"id":"S04","name":"冷冻柜 · 饺子托盘","x":29.1,"z":34.75,"w":1.85,"d":2.05,"kind":"appliance","h":1.95},{"id":"S05","name":"贴签原料货架","x":32.05,"z":32,"w":1,"d":5.05,"kind":"storage","h":2.05},{"id":"S06","name":"庄颜干货柜","x":37.6,"z":31.7,"w":1.32,"d":1.15,"kind":"storage","h":1.85},{"id":"S07","name":"庄颜调味料柜","x":37.6,"z":33.1,"w":1.32,"d":1.15,"kind":"storage","h":1.85},{"id":"S08","name":"备用干货及周转货架","x":37.6,"z":34.55,"w":1.32,"d":2.5,"kind":"storage","h":2.05},{"id":"FUEL-1","name":"燃料罐预留","x":40.35,"z":31.85,"w":3.9,"d":1.8,"kind":"fixture","h":1.85},{"id":"FUEL-2","name":"燃料罐预留","x":40.35,"z":34.75,"w":3.9,"d":1.8,"kind":"fixture","h":1.85},{"id":"FUEL-3","name":"室外独立加注口","x":47.15,"z":34.125,"w":0.9,"d":0.75,"kind":"fixture","h":1.1}],"labels":[[-8.45,2.25,"临湖分厨"],[-8.45,14.65,"北湖景包间 · 12席"],[4.5,3.95,"员工用餐间"],[-8.45,23.9,"南湖景包间 · 12席"],[-1.82,16.65,"包间客廊"],[-1.75,39.35,"有顶门廊"],[-1.75,44.9,"↓ 拴马院西门"],[6.2,7.15,"客梯前厅"],[15.52,3.85,"↑ 客梯"],[19.25,-0.85,"↑ 客用楼梯"],[12,13.2,"公众地库 · 18位"],[13.5,37.25,"↕ 南侧车道"],[33,3.15,"西北设备口"],[35.5,7.2,"除雪设备区 · 3泊位"],[32.6,18.27,"↑ 员工楼梯"],[37.2,22.8,"中央厨房 · 生产与后勤"],[41.45,24.74,"↑ 货梯"],[1.4,19.8,"小餐梯"],[28.2,31.3,"地窖／冷藏"],[35.5,31.3,"食品储备仓"],[43.3,37.2,"独立燃料间"],[45.65,23,"检修道"]],"routes":[{"kind":"food","name":"临湖分厨 → 对门员工餐间（38-L）","points":[[-6.2,3.3],[-3.5,3.3],[0,3.3],[2.8,3.3],[2.8,2.1]]},{"kind":"food","name":"临湖分厨 → 北包间近端出餐","points":[[-4.55,5.5],[-4.55,3.5],[-3.5,3.5],[-1.75,3.5],[-1.75,10.65],[-3.6,10.65]]},{"kind":"guest","name":"拴马院 → 包间短廊 → 客梯前厅","points":[[-1.75,44.75],[-1.75,38],[-1.75,5.05],[10.2,5.05],[12,6.5],[13.25,6.5]]},{"kind":"guest","name":"公众车位 → 客梯前厅","points":[[11.15,24.5],[10.2,8.8],[10.2,5.05]]},{"kind":"food","name":"冷藏 → 洗切／热灶 → 装盘 → 货梯上楼","points":[[27.75,33],[27.75,30],[27.75,26.8],[33.5,26.8],[33.5,23.25],[41.45,23.25],[41.45,25.2]]},{"kind":"food","name":"食品储备仓 → 厨房","points":[[35.25,34.1],[35.25,29.25],[27.75,29.25]]},{"kind":"food","name":"上层小餐梯 → 下层交接柜 → 包间","points":[[1.2,22],[0,22],[-1.3,22],[-1.3,28.55],[-3.6,28.55]]},{"kind":"service","name":"货梯回收餐车 → 独立洗消线","points":[[41.7,25.2],[42.5,22.55],[36.05,22.55],[27.6,22.55],[27.6,20.6],[26.5,20.2]]},{"kind":"service","name":"设备区检修 → 独立燃料间","points":[[46,7],[45.7,18.8],[45.7,30],[45.65,34.25]]},{"kind":"vehicle","name":"南侧公众车行口 → 双向地库车道","points":[[13.5,38],[13.5,34],[12.8,18],[12.8,10]]},{"kind":"vehicle","name":"西北设备坡道 → 设备泊位","points":[[33,0],[33,6],[35.5,7.4],[35.5,9.5]]}],"notes":["地库层完成面为 8.50m。两间湖景包间共用客廊，南端经 2.40m 双扇门接有顶平台和 2.65m 宽石阶。包间入口和上露台的大楼梯各自独立。","公众车位按 18 位试排，避开客梯、包间小餐梯、南侧车口和设备隔墙。公众从车位区走北侧的独立客梯前厅。除雪车自西北坡道进三车位设备区。","冷藏／干货沿中央厨房南侧直接开门。K03 洗菜沥水、K04 多人洗切、K05 热加工、K06／K07 烘焙、K08 装盘；K02 洗消与回收另靠西边。货梯共用，净餐车与污餐车分时交接。","27-L 的土豆、烤箱、面包与水果对应洗切和烘焙台，31-L 的独立干货柜、调味柜、台下锅和案板、刀抽屉及门边嵌屏均已定位。38-L 由西南向湖窗的 B1 临湖分厨承接，出门对面即员工餐间。临湖分厨负责两间包间的近端煮制、盛装与送餐，生产厨房仍负责集中备料。","货梯与员工楼梯直通上层备餐及收货；从上层发往包间的菜另走小餐梯，下层在客廊侧短距离交接。燃料室单独隔墙，车库侧检修并由室外加注。","本图细化设备与内隔墙。三维试排中的厨房色块与设备车位有重叠，本图以设备区与食品区之间的连续分隔为准；暖水片为位置预留。"]}};
+const NS = 'http://www.w3.org/2000/svg';
+const svg = document.querySelector('#plan');
+const fills = {guest:'#dce6eb',service:'#e9e0d4',vehicle:'#e1e3df',storage:'#e5d5c1',exterior:'#e8decb',water:'#d5e9eb',fuel:'#d9d8d4'};
+const equipment = {table:'#d7b68e',chair:'#dce0dc',fixture:'#e9eef2',counter:'#cbd6d6',appliance:'#b2c5c7',storage:'#d8cbb9',heat:'#c79b87',stair:'#e7ebef',lift:'#bac8d5',stall:'#eeefea',vehicle:'#c0b3a0'};
+const routeColors = {guest:'#3a805e',food:'#ac7832',service:'#6f6799',vehicle:'#3a808d'};
+const fmt = value => Number(value.toFixed(2)).toString();
+let active = location.hash === '#b1' ? 'lower' : 'upper';
+function add(tag,attributes,parent=svg) {
+  const element=document.createElementNS(NS,tag);
+  for(const [key,value] of Object.entries(attributes)) element.setAttribute(key,value);
+  parent.append(element);
+  return element;
+}
+function rect(x,z,w,d,fill,stroke='none',sw=.07,parent=svg) {
+  return add('rect',{x,y:z,width:w,height:d,fill,stroke,'stroke-width':sw},parent);
+}
+function line(a,b,stroke,width=.09,parent=svg) {
+  return add('line',{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke,'stroke-width':width},parent);
+}
+function text(x,z,value,size=.77,color='#293e4e',anchor='middle',parent=svg) {
+  const element=add('text',{x,y:z,fill:color,'font-size':size,'text-anchor':anchor,'paint-order':'stroke',stroke:'#fff','stroke-opacity':.8,'stroke-width':.105},parent);
+  element.textContent=value;
+  return element;
+}
+function swing(hinge,closed,direction,parent) {
+  const dx=closed[0]-hinge[0], dz=closed[1]-hinge[1], r=Math.hypot(dx,dz);
+  const open=[hinge[0]-direction*dz,hinge[1]+direction*dx];
+  line(hinge,open,'#4285a1',.09,parent);
+  add('path',{d:'M '+closed.join(' ')+' A '+r+' '+r+' 0 0 '+(direction===1?1:0)+' '+open.join(' '),fill:'none',stroke:'#4285a1','stroke-width':.055},parent);
+}
+function opening(item) {
+  const {a,b,kind,id}=item;
+  const mid=[(a[0]+b[0])/2,(a[1]+b[1])/2];
+  const group=add('g',{});
+  add('title',{},group).textContent=id+' '+item.name;
+  if(kind==='glass') {
+    line(a,b,'#4d9cb7',.27,group);
+    line(a,b,'#b5e2ee',.08,group);
+    return;
+  }
+  line(a,b,'#d49650',.15,group);
+  if(kind==='door') swing(a,b,item.swing??1,group);
+  if(kind==='double') {
+    swing(a,mid,item.swing??1,group);
+    swing(b,mid,-(item.swing??1),group);
+  }
+  if(kind==='sliding') {
+    const vertical=a[0]===b[0];
+    const dx=vertical?.15:0, dz=vertical?0:.15;
+    line([a[0]+dx,a[1]+dz],[mid[0]+dx,mid[1]+dz],'#4285a1',.10,group);
+    line([mid[0]-dx,mid[1]-dz],[b[0]-dx,b[1]-dz],'#4285a1',.10,group);
+  }
+  text(mid[0]+(a[0]===b[0]?.5:0),mid[1]+(a[1]===b[1]?-.26:.20),id,.54,'#7c4a24',a[0]===b[0]?'start':'middle',group);
+}
+function object(item) {
+  const {x,z,w,d,kind,id}=item;
+  const group=add('g',{});
+  if(item.name) add('title',{},group).textContent=(id?id+' ':'')+item.name;
+  rect(x,z,w,d,equipment[kind]??'#e2e7eb',kind==='heat'?'#a76e58':'#687e8e',.08,group);
+  if(kind==='stair') {
+    const length=item.turn?w:d, span=item.turn?d:w;
+    const stepLine=(along,across1,across2,width=.055)=>{
+      if(item.turn) line([x+along,z+across1],[x+along,z+across2],'#8694a1',width,group);
+      else line([x+across1,z+along],[x+across2,z+along],'#8694a1',width,group);
+    };
+    if(item.steps) {
+      const flights=(item.landings??0)+1, landingDepth=1.25;
+      const run=(length-landingDepth*(flights-1))/flights;
+      const count=item.steps/flights;
+      for(let flight=0;flight<flights;flight++) {
+        const from=flight*(run+landingDepth);
+        for(let i=0;i<=count;i++) stepLine(from+run*i/count,0,span);
+      }
+    } else {
+      const landing=Math.min(1.5,length*.23), end=length-.78;
+      for(let i=0;i<=14;i++) stepLine(landing+(end-landing)*i/14,0,span);
+      if(item.turn) line([x+landing,z+span/2],[x+end,z+span/2],'#506b7f',.12,group);
+      else line([x+span/2,z+landing],[x+span/2,z+end],'#506b7f',.12,group);
+    }
+  }
+  if(kind==='lift') {
+    rect(x+.14,z+.14,w-.28,d-.28,'none','#71899b',.08,group);
+    line([x+w*.29,z+d*.23],[x+w*.71,z+d*.77],'#71899b',.06,group);
+    line([x+w*.71,z+d*.23],[x+w*.29,z+d*.77],'#71899b',.06,group);
+  }
+  if(id&&item.label!==false&&kind!=='chair') {
+    const slim=Math.min(w,d)<.36;
+    text(x+w/2+(slim&&d>w?.5:0),z+d/2+(slim&&w>d?.48:.19),id,slim?.48:.53,'#304b60','middle',group);
+  }
+}
+function addRoute(route,group) {
+  const color=routeColors[route.kind];
+  const element=add('polyline',{points:route.points.map(p=>p.join(',')).join(' '),fill:'none',stroke:color,'stroke-width':.14,'stroke-linejoin':'round','stroke-dasharray':'.37 .2','marker-end':'url(#'+route.kind+'-arrow)'},group);
+  add('title',{},element).textContent=route.name;
+}
+function tableRows(target,rows) {
+  const body=document.querySelector(target);
+  body.replaceChildren(...rows.map(row=>{
+    const tr=document.createElement('tr');
+    for(const value of row) {
+      const td=document.createElement('td');td.textContent=value;tr.append(td);
+    }
+    return tr;
+  }));
+}
+function draw() {
+  const plan=plans[active];
+  svg.replaceChildren();
+  const defs=add('defs',{});
+  const pattern=add('pattern',{id:'grid',width:1,height:1,patternUnits:'userSpaceOnUse'},defs);
+  add('path',{d:'M 1 0 H 0 V 1',fill:'none',stroke:'#889cab','stroke-opacity':.32,'stroke-width':.04},pattern);
+  for(const [kind,color] of Object.entries(routeColors)) {
+    const marker=add('marker',{id:kind+'-arrow',viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:5,markerHeight:5,orient:'auto'},defs);
+    add('path',{d:'M 0 0 L 10 5 L 0 10 z',fill:color},marker);
+  }
+  rect(-15.2,-2.9,66,60.3,'#f9fbfc');
+  for(const [x,z,w,d,kind,label] of plan.rooms) rect(x,z,w,d,fills[kind]??fills.guest);
+  rect(-15.2,-2.9,66,60.3,'url(#grid)');
+  for(let x=-15;x<=50;x+=5) {
+    text(x,-3.5,x,.52,'#536e80');
+    line([x,-2.9],[x,57.4],'#8199aa',.034);
+  }
+  for(let z=0;z<=55;z+=5) {
+    text(-15.85,z+.19,z,.52,'#536e80');
+    line([-15.2,z],[50.8,z],'#8199aa',.034);
+  }
+  const routeLayer=add('g',{id:'route-layer'});
+  for(const item of plan.furniture) object(item);
+  for(const [x,z,x2,z2] of plan.walls) line([x,z],[x2,z2],'#455d6e',.22);
+  for(const item of plan.openings) opening(item);
+  for(const [x,z,w,d,kind,label] of plan.rooms) if(label) text(x+w/2,z+d/2,label);
+  for(const [x,z,value,variant] of plan.labels) text(x,z,value,variant==='small'?.58:.77);
+  line([-12.8,56],[-7.8,56],'#355468',.12);
+  for(const x of [-12.8,-7.8]) line([x,55.8],[x,56.2],'#355468',.10);
+  text(-10.3,55.55,'5 m',.62);
+  text(46.8,55.6,'↗ 真北',.65);
+  for(const route of plan.routes) {
+    if(document.querySelector('[data-route='+route.kind+']').checked) addRoute(route,routeLayer);
+  }
+  document.querySelector('#floor-title').textContent=active==='upper'?'1F · +13.50 m':'B1 · +8.50 m';
+  document.querySelector('#details').replaceChildren(...plan.notes.map(note=>{
+    const li=document.createElement('li');li.textContent=note;return li;
+  }));
+  tableRows('#openings',plan.openings.map(({id,name,a,b})=>[id,name,a.map(fmt).join('/')+' → '+b.map(fmt).join('/'),fmt(Math.hypot(b[0]-a[0],b[1]-a[1]))]));
+  tableRows('#furniture',plan.furniture.filter(o=>o.id).map(({id,name,x,z,w,d,h})=>[id,name,fmt(x)+' / '+fmt(z),[w,d,h].filter(n=>n!==undefined).map(fmt).join(' × ')]));
+  for(const button of document.querySelectorAll('[data-floor]')) button.setAttribute('aria-pressed',String(button.dataset.floor===active));
+}
+for(const button of document.querySelectorAll('[data-floor]')) button.onclick=()=>{
+  active=button.dataset.floor;
+  history.replaceState(null,'',active==='lower'?'#b1':'#1f');
+  draw();
+};
+for(const control of document.querySelectorAll('[data-route]')) control.onchange=draw;
+draw();
+</script></html>
