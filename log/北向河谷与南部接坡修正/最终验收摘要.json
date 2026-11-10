@@ -1,0 +1,620 @@
+{
+  "js_tests": 56,
+  "python_tests": 3,
+  "html_sha256": "787b541dea6b5b989fdb32a2efbaebba239c8b6bb03664fa5814c3540e24b863",
+  "http_status": 200,
+  "browser_errors": [],
+  "outlet": {
+    "water": {
+      "startN": 2940,
+      "endN": 19800,
+      "rows": 601,
+      "startLevel": -4.955,
+      "endLevel": -35.303000000000004
+    },
+    "mainRefinement": {
+      "vertices": 0,
+      "triangles": 20398,
+      "sharedEdgeSplits": 0,
+      "hangingEdges": 0
+    },
+    "outerRefinement": {
+      "vertices": 74603,
+      "triangles": 153228,
+      "sharedEdgeSplits": 74603,
+      "hangingEdges": 0
+    },
+    "centerDepthMin": 2.59999846598307,
+    "wetDepthMin": 1.6900891649407521,
+    "bankClearanceMin": 1.440732789198094,
+    "maxBedRise": -0.06659877654044521
+  },
+  "river_cross_sections": 458,
+  "outer_vertices": 95147,
+  "outer_triangles": 187715,
+  "seam_error_m": 0,
+  "slope_surface": {
+    "forest_patches": [
+      {
+        "id": "SWF01",
+        "name": "红框坡北缘接续混交林",
+        "trees": 480
+      },
+      {
+        "id": "SWF02",
+        "name": "红框坡中央凹地桦松林",
+        "trees": 312
+      },
+      {
+        "id": "SWF03",
+        "name": "红框坡高肩沟槽疏松林",
+        "trees": 185
+      },
+      {
+        "id": "SWF04",
+        "name": "红框坡脚顺坡桦林带",
+        "trees": 126
+      },
+      {
+        "id": "SWF05",
+        "name": "红框坡南侧低肩疏林",
+        "trees": 185
+      },
+      {
+        "id": "SWF06",
+        "name": "红框坡脚旧林联络混交林",
+        "trees": 130
+      }
+    ],
+    "rock_patches": [
+      {
+        "id": "SWR01",
+        "name": "红框坡上肩连续冰蚀露岩",
+        "triangles": 4159
+      },
+      {
+        "id": "SWR02",
+        "name": "红框坡中央顺坡岩肋",
+        "triangles": 3505
+      },
+      {
+        "id": "SWR03",
+        "name": "红框坡南肩草甸岩窗",
+        "triangles": 2831
+      },
+      {
+        "id": "SWR04",
+        "name": "红框坡脚风化岩片",
+        "triangles": 1154
+      }
+    ],
+    "species": {
+      "spruce": 70,
+      "pine": 392,
+      "birch": 972
+    },
+    "min_canopy_road_clearance_m": null,
+    "min_canopy_river_clearance_m": null,
+    "trees": 1434,
+    "shrubs": 349,
+    "fractured_slabs": 9,
+    "scope_bounds": [
+      1050,
+      1870,
+      560,
+      1600
+    ],
+    "total_vegetation": 1783,
+    "solar_corridor_trees": 0,
+    "protected_ground_trees": 0,
+    "tree_ground_range_m": [
+      45.33470554690069,
+      206.59617404148676
+    ]
+  },
+  "solar_points": 48,
+  "solar_noon": "12:34",
+  "noon_elevation": 5.059999999999998,
+  "solar_groups": {
+    "garden_ground": {
+      "points": 15,
+      "sunnyAtNoon": 12,
+      "anyDirectSun": 15,
+      "minMinutes": 25,
+      "maxMinutes": 205
+    },
+    "garden_ground_person": {
+      "points": 15,
+      "sunnyAtNoon": 15,
+      "anyDirectSun": 15,
+      "minMinutes": 190,
+      "maxMinutes": 215
+    },
+    "forecourt_ground": {
+      "points": 5,
+      "sunnyAtNoon": 4,
+      "anyDirectSun": 5,
+      "minMinutes": 100,
+      "maxMinutes": 210
+    },
+    "forecourt_ground_person": {
+      "points": 5,
+      "sunnyAtNoon": 4,
+      "anyDirectSun": 5,
+      "minMinutes": 110,
+      "maxMinutes": 220
+    },
+    "entrance_ground": {
+      "points": 1,
+      "sunnyAtNoon": 1,
+      "anyDirectSun": 1,
+      "minMinutes": 205,
+      "maxMinutes": 205
+    },
+    "entrance_ground_person": {
+      "points": 1,
+      "sunnyAtNoon": 1,
+      "anyDirectSun": 1,
+      "minMinutes": 205,
+      "maxMinutes": 205
+    },
+    "facade": {
+      "points": 6,
+      "sunnyAtNoon": 5,
+      "anyDirectSun": 5,
+      "minMinutes": 0,
+      "maxMinutes": 235
+    }
+  },
+  "sunlight_changed_points": [
+    {
+      "id": "garden_18_596",
+      "before": [
+        {
+          "start": "11:14",
+          "end": "13:54",
+          "minutes": 160
+        }
+      ],
+      "after": [
+        {
+          "start": "11:14",
+          "end": "13:59",
+          "minutes": 165
+        }
+      ],
+      "minutes_delta": 5
+    },
+    {
+      "id": "garden_18_596_person",
+      "before": [
+        {
+          "start": "10:54",
+          "end": "13:59",
+          "minutes": 185
+        }
+      ],
+      "after": [
+        {
+          "start": "10:54",
+          "end": "14:04",
+          "minutes": 190
+        }
+      ],
+      "minutes_delta": 5
+    },
+    {
+      "id": "garden_38_596_person",
+      "before": [
+        {
+          "start": "10:54",
+          "end": "13:59",
+          "minutes": 185
+        }
+      ],
+      "after": [
+        {
+          "start": "10:54",
+          "end": "14:09",
+          "minutes": 195
+        }
+      ],
+      "minutes_delta": 10
+    },
+    {
+      "id": "garden_58_596_person",
+      "before": [
+        {
+          "start": "10:54",
+          "end": "14:04",
+          "minutes": 190
+        }
+      ],
+      "after": [
+        {
+          "start": "10:54",
+          "end": "14:14",
+          "minutes": 200
+        }
+      ],
+      "minutes_delta": 10
+    },
+    {
+      "id": "garden_78_596_person",
+      "before": [
+        {
+          "start": "10:54",
+          "end": "14:09",
+          "minutes": 195
+        }
+      ],
+      "after": [
+        {
+          "start": "10:54",
+          "end": "14:24",
+          "minutes": 210
+        }
+      ],
+      "minutes_delta": 15
+    },
+    {
+      "id": "garden_98_596_person",
+      "before": [
+        {
+          "start": "10:49",
+          "end": "14:14",
+          "minutes": 205
+        }
+      ],
+      "after": [
+        {
+          "start": "10:49",
+          "end": "14:19",
+          "minutes": 210
+        },
+        {
+          "start": "14:29",
+          "end": "14:29",
+          "minutes": 0
+        }
+      ],
+      "minutes_delta": 5
+    },
+    {
+      "id": "garden_18_610",
+      "before": [
+        {
+          "start": "10:59",
+          "end": "14:04",
+          "minutes": 185
+        }
+      ],
+      "after": [
+        {
+          "start": "10:59",
+          "end": "13:59",
+          "minutes": 180
+        }
+      ],
+      "minutes_delta": -5
+    },
+    {
+      "id": "garden_18_610_person",
+      "before": [
+        {
+          "start": "10:44",
+          "end": "14:04",
+          "minutes": 200
+        }
+      ],
+      "after": [
+        {
+          "start": "10:44",
+          "end": "14:09",
+          "minutes": 205
+        }
+      ],
+      "minutes_delta": 5
+    },
+    {
+      "id": "garden_58_610",
+      "before": [
+        {
+          "start": "11:04",
+          "end": "14:04",
+          "minutes": 180
+        }
+      ],
+      "after": [
+        {
+          "start": "11:04",
+          "end": "14:14",
+          "minutes": 190
+        }
+      ],
+      "minutes_delta": 10
+    },
+    {
+      "id": "garden_58_610_person",
+      "before": [
+        {
+          "start": "10:49",
+          "end": "14:04",
+          "minutes": 195
+        }
+      ],
+      "after": [
+        {
+          "start": "10:49",
+          "end": "14:14",
+          "minutes": 205
+        }
+      ],
+      "minutes_delta": 10
+    },
+    {
+      "id": "garden_78_610_person",
+      "before": [
+        {
+          "start": "10:49",
+          "end": "14:09",
+          "minutes": 200
+        }
+      ],
+      "after": [
+        {
+          "start": "10:49",
+          "end": "14:19",
+          "minutes": 210
+        }
+      ],
+      "minutes_delta": 10
+    },
+    {
+      "id": "garden_98_610_person",
+      "before": [
+        {
+          "start": "10:54",
+          "end": "14:14",
+          "minutes": 200
+        }
+      ],
+      "after": [
+        {
+          "start": "10:54",
+          "end": "14:29",
+          "minutes": 215
+        }
+      ],
+      "minutes_delta": 15
+    },
+    {
+      "id": "garden_18_624",
+      "before": [
+        {
+          "start": "10:44",
+          "end": "14:04",
+          "minutes": 200
+        }
+      ],
+      "after": [
+        {
+          "start": "10:44",
+          "end": "14:09",
+          "minutes": 205
+        }
+      ],
+      "minutes_delta": 5
+    },
+    {
+      "id": "garden_58_624",
+      "before": [
+        {
+          "start": "10:54",
+          "end": "14:04",
+          "minutes": 190
+        }
+      ],
+      "after": [
+        {
+          "start": "10:54",
+          "end": "14:14",
+          "minutes": 200
+        }
+      ],
+      "minutes_delta": 10
+    },
+    {
+      "id": "garden_58_624_person",
+      "before": [
+        {
+          "start": "10:44",
+          "end": "14:09",
+          "minutes": 205
+        }
+      ],
+      "after": [
+        {
+          "start": "10:44",
+          "end": "14:14",
+          "minutes": 210
+        }
+      ],
+      "minutes_delta": 5
+    },
+    {
+      "id": "garden_78_624_person",
+      "before": [
+        {
+          "start": "10:49",
+          "end": "14:09",
+          "minutes": 200
+        }
+      ],
+      "after": [
+        {
+          "start": "10:49",
+          "end": "14:19",
+          "minutes": 210
+        }
+      ],
+      "minutes_delta": 10
+    },
+    {
+      "id": "garden_98_624",
+      "before": [
+        {
+          "start": "10:59",
+          "end": "14:14",
+          "minutes": 195
+        }
+      ],
+      "after": [
+        {
+          "start": "10:59",
+          "end": "14:24",
+          "minutes": 205
+        }
+      ],
+      "minutes_delta": 10
+    },
+    {
+      "id": "garden_98_624_person",
+      "before": [
+        {
+          "start": "10:49",
+          "end": "14:14",
+          "minutes": 205
+        }
+      ],
+      "after": [
+        {
+          "start": "10:49",
+          "end": "14:24",
+          "minutes": 215
+        }
+      ],
+      "minutes_delta": 10
+    },
+    {
+      "id": "forecourt_58",
+      "before": [
+        {
+          "start": "10:44",
+          "end": "14:09",
+          "minutes": 205
+        }
+      ],
+      "after": [
+        {
+          "start": "10:44",
+          "end": "14:14",
+          "minutes": 210
+        }
+      ],
+      "minutes_delta": 5
+    },
+    {
+      "id": "forecourt_72",
+      "before": [
+        {
+          "start": "10:44",
+          "end": "11:39",
+          "minutes": 55
+        },
+        {
+          "start": "13:29",
+          "end": "14:09",
+          "minutes": 40
+        }
+      ],
+      "after": [
+        {
+          "start": "10:44",
+          "end": "11:39",
+          "minutes": 55
+        },
+        {
+          "start": "13:29",
+          "end": "14:14",
+          "minutes": 45
+        }
+      ],
+      "minutes_delta": 5
+    },
+    {
+      "id": "forecourt_72_person",
+      "before": [
+        {
+          "start": "10:39",
+          "end": "11:39",
+          "minutes": 60
+        },
+        {
+          "start": "13:29",
+          "end": "14:14",
+          "minutes": 45
+        }
+      ],
+      "after": [
+        {
+          "start": "10:39",
+          "end": "11:39",
+          "minutes": 60
+        },
+        {
+          "start": "13:29",
+          "end": "14:19",
+          "minutes": 50
+        }
+      ],
+      "minutes_delta": 5
+    },
+    {
+      "id": "forecourt_98",
+      "before": [
+        {
+          "start": "10:59",
+          "end": "14:14",
+          "minutes": 195
+        }
+      ],
+      "after": [
+        {
+          "start": "10:59",
+          "end": "14:24",
+          "minutes": 205
+        }
+      ],
+      "minutes_delta": 10
+    },
+    {
+      "id": "forecourt_98_person",
+      "before": [
+        {
+          "start": "10:44",
+          "end": "14:14",
+          "minutes": 210
+        }
+      ],
+      "after": [
+        {
+          "start": "10:44",
+          "end": "14:24",
+          "minutes": 220
+        }
+      ],
+      "minutes_delta": 10
+    }
+  ],
+  "max_unsampled_tail_m": 199.9071315006695,
+  "nearest_visible_outer_boundary_m": 13782.038937310697,
+  "visual_review": [
+    "北向河谷_坝下望出口",
+    "北向河谷_远段俯瞰",
+    "南部东段_田后接坡",
+    "南部西段_牧坡脚接坡",
+    "红框坡面_林岩覆盖",
+    "红框坡面_由田后回看"
+  ]
+}
